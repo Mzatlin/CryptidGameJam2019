@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(PlayerPhysics))]
+public class PlayerMoveController : MonoBehaviour
+{
+    [SerializeField]
+    float speed = 10f;
+    [SerializeField]
+    float sensitivity = 10f;
+    PlayerPhysics physics;
+    float xMove, zMove, yRotation, xRotation, cameraRotationX;
+    Vector3 moveHorizontal, moveVertical, moveVelocity, rotation;
+    // Start is called before the first frame update
+    void Start()
+    {
+        physics = GetComponent<PlayerPhysics>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        CalculateMovement();
+        CalculateRotation();
+
+
+
+    }
+
+    void CalculateRotation()
+    {
+        yRotation = Input.GetAxisRaw("Mouse X");
+        rotation = new Vector3(0, yRotation, 0) *sensitivity;
+        physics.SetRotation(rotation);
+
+        xRotation = Input.GetAxisRaw("Mouse Y");
+        cameraRotationX = xRotation * sensitivity;
+        physics.CameraRotation(cameraRotationX);
+    }
+
+    void CalculateMovement()
+    {
+        xMove = Input.GetAxis("Horizontal");
+        moveHorizontal = transform.right * xMove;
+
+        zMove = Input.GetAxis("Vertical");
+        moveVertical = transform.forward * zMove;
+
+        moveVelocity = (moveHorizontal + moveVertical) * speed;
+        physics.SetVelocity(moveVelocity);
+    }
+}
