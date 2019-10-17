@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IMovable 
 {
-    void CalculateMoveDirection();
+    void CalculateMovement();
     void CalculateRotation(); 
 }

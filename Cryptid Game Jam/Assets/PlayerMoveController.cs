@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerPhysics))]
-public class PlayerMoveController : MonoBehaviour
+public class PlayerMoveController : MonoBehaviour, IMovable
 {
     [SerializeField]
     float speed = 10f;
     [SerializeField]
     float sensitivity = 10f;
+    [SerializeField]
+    PlayerStatsSO player;
     PlayerPhysics physics;
     float xMove, zMove, yRotation, xRotation, cameraRotationX;
     Vector3 moveHorizontal, moveVertical, moveVelocity, rotation;
@@ -22,17 +24,21 @@ public class PlayerMoveController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player.isOccupied)
+        {
+            physics.SetVelocity(Vector3.zero);
+            physics.SetRotation(Vector3.zero);
+            physics.CameraRotation(0f);
+            return;
+        }
         CalculateMovement();
         CalculateRotation();
-
-
-
     }
 
-    void CalculateRotation()
+    public void CalculateRotation()
     {
         yRotation = Input.GetAxisRaw("Mouse X");
-        rotation = new Vector3(0, yRotation, 0) *sensitivity;
+        rotation = new Vector3(0, yRotation, 0) * sensitivity;
         physics.SetRotation(rotation);
 
         xRotation = Input.GetAxisRaw("Mouse Y");
@@ -40,7 +46,7 @@ public class PlayerMoveController : MonoBehaviour
         physics.CameraRotation(cameraRotationX);
     }
 
-    void CalculateMovement()
+    public void CalculateMovement()
     {
         xMove = Input.GetAxis("Horizontal");
         moveHorizontal = transform.right * xMove;
