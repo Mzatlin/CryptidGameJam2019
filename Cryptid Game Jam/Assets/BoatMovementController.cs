@@ -7,8 +7,10 @@ public class BoatMovementController : MonoBehaviour, IMovable
 {
     [SerializeField]
     float boatSpeed = 10f;
+    [SerializeField]
+    float boatTorque = 10f;
     float xMove, zMove;
-    Vector3 moveVertical;
+    Vector3 moveVertical, moveHorizontal;
     BoatPhysics physics;
     // Start is called before the first frame update
     void Start()
@@ -33,10 +35,14 @@ public class BoatMovementController : MonoBehaviour, IMovable
         zMove = Input.GetAxis("Vertical");
         moveVertical = -(transform.forward * zMove);
         physics.SetVelocity(moveVertical*boatSpeed);
+
+
     }
 
     public void CalculateRotation()
     {
-     //   throw new System.NotImplementedException();
+        xMove = Input.GetAxis("Horizontal");
+     //   moveHorizontal = (transform.right * xMove);
+        physics.SetRotation(xMove * boatTorque);
     }
 }
