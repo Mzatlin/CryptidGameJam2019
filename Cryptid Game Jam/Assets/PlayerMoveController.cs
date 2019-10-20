@@ -13,12 +13,14 @@ public class PlayerMoveController : MonoBehaviour, IMovable
     [SerializeField]
     PlayerStatsSO player;
     PlayerPhysics physics;
+    Rigidbody rb;
     float xMove, zMove, yRotation, xRotation, cameraRotationX;
     Vector3 moveHorizontal, moveVertical, moveVelocity, rotation;
     // Start is called before the first frame update
     void Start()
     {
         physics = GetComponent<PlayerPhysics>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,8 @@ public class PlayerMoveController : MonoBehaviour, IMovable
             physics.CameraRotation(0f);
             return;
         }
+
+
         CalculateMovement();
         CalculateRotation();
     }
