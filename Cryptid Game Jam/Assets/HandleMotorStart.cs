@@ -5,24 +5,35 @@ using UnityEngine;
 public class HandleMotorStart : MonoBehaviour
 {
 
-    public static bool isMotorActive = false;
-
     [SerializeField]
     PlayerStatsSO playerStats;
-    StartMotor[] children;
+    StartMotor[] startChildren;
+    StopMotor[] stopChildren;
     [SerializeField]
     Transform player;
+    HandleMotorStart start;
+   
   
     void Awake()
     {
         playerStats.isOccupied = false;
-        children = GetComponentsInChildren<StartMotor>();
-        foreach(var child in children)
+        startChildren = GetComponentsInChildren<StartMotor>();
+        stopChildren = GetComponentsInChildren<StopMotor>();
+        foreach(var child in startChildren)
         {
-            
             if(child != null)
             {
                 child.OnStartMotor += HandleStart;
+          
+            }
+        }
+        foreach (var child in stopChildren)
+        {
+            if (child != null)
+            {
+                child.OnStopMotor += HandleStop;
+              
+
             }
         }
 
@@ -31,14 +42,19 @@ public class HandleMotorStart : MonoBehaviour
     void HandleStart()
     {
         Debug.Log("Motor Started");
-        isMotorActive = true;
+        BoatMovementController.isMotorActive = true;
         playerStats.isOccupied = true;
         player.parent = transform;
-
+        player.gameObject.SetActive(false);
     }
-    // Update is called once per frame
-    void Update()
+
+    void HandleStop()
     {
-
+        Debug.Log("Motor Stopped");
+        BoatMovementController.isMotorActive = false;
+        playerStats.isOccupied = false;
+        player.parent = null;
+        player.gameObject.SetActive(true);
     }
+
 }

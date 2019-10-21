@@ -12,6 +12,9 @@ public class BoatMovementController : MonoBehaviour, IMovable
     float xMove, zMove;
     Vector3 moveVertical, moveHorizontal;
     BoatPhysics physics;
+
+    public static bool isMotorActive = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +24,7 @@ public class BoatMovementController : MonoBehaviour, IMovable
     // Update is called once per frame
     void Update()
     {
-        if (!HandleMotorStart.isMotorActive)
+        if (!isMotorActive)
         {
             physics.SetVelocity(Vector3.zero);
             return;
@@ -35,8 +38,6 @@ public class BoatMovementController : MonoBehaviour, IMovable
         zMove = Input.GetAxis("Vertical");
         moveVertical = -(transform.forward * zMove);
         physics.SetVelocity(moveVertical*boatSpeed);
-
-
     }
 
     public void CalculateRotation()

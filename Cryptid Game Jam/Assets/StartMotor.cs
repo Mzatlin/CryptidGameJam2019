@@ -12,7 +12,7 @@ public class StartMotor : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         var player = other.GetComponent<PlayerMoveController>();
-        if (player != null && !playerStats.isOccupied && Input.GetKeyDown(KeyCode.E) && !HandleMotorStart.isMotorActive)
+        if (player != null && !playerStats.isOccupied && Input.GetKeyDown(KeyCode.E) && !BoatMovementController.isMotorActive)
         {
             OnStartMotor();
         }
