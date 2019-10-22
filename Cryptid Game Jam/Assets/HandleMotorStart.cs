@@ -11,11 +11,14 @@ public class HandleMotorStart : MonoBehaviour
     StopMotor[] stopChildren;
     [SerializeField]
     Transform player;
+    [SerializeField]
+    Camera boatCam;
     HandleMotorStart start;
    
   
     void Awake()
     {
+        boatCam.enabled = false;
         playerStats.isOccupied = false;
         startChildren = GetComponentsInChildren<StartMotor>();
         stopChildren = GetComponentsInChildren<StopMotor>();
@@ -46,6 +49,7 @@ public class HandleMotorStart : MonoBehaviour
         playerStats.isOccupied = true;
         player.parent = transform;
         player.gameObject.SetActive(false);
+        boatCam.enabled = true;
     }
 
     void HandleStop()
@@ -55,6 +59,7 @@ public class HandleMotorStart : MonoBehaviour
         playerStats.isOccupied = false;
         player.parent = null;
         player.gameObject.SetActive(true);
+        boatCam.enabled = false;
     }
 
 }
