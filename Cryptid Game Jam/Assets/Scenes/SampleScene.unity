@@ -346,8 +346,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.5199366, y: 1, z: 1.8637656}
-  m_Center: {x: -0.25901502, y: 0, z: -0.43188247}
+  m_Size: {x: 3.5199366, y: 1, z: 2.3967123}
+  m_Center: {x: -0.25901502, y: 0, z: -0.6983557}
 --- !u!114 &121798537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatSpeed: 15
-  boatTorque: 3000
+  boatTorque: 3300
 --- !u!114 &121798543
 MonoBehaviour:
   m_ObjectHideFlags: 0
