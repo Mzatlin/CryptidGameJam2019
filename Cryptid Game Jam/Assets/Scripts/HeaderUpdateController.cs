@@ -22,11 +22,12 @@ public class HeaderUpdateController : MonoBehaviour
 
     void Start()
     {
-        header.WriteHeader("Head to Boat");
+        header.WriteHeader("Repair Engine");
     }
 
     void HandleWrite()
     {
+        StopCoroutine(TypeMessage(header.message));
         StartCoroutine(TypeMessage(header.message));
     }
 
