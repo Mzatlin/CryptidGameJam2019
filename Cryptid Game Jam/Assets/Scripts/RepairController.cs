@@ -13,15 +13,12 @@ public class RepairController : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI[] images;
     [SerializeField]
-    Canvas RepairCanvas;
-    [SerializeField]
     Dictionary<KeyCode, string> keyPresses = new Dictionary<KeyCode, string>();
     private int index = 0; 
     
     // Start is called before the first frame update
     void Start()
     {
-        RepairCanvas.enabled = true;
         for(int i = 0; i< images.Length; i++)
         {
             images[i].text = keys[i].ToString();
@@ -39,7 +36,7 @@ public class RepairController : MonoBehaviour
                 images[index].faceColor = new Color32(255, 0, 0, 255);
                 if(index >= images.Length-1)
                 {
-                    RepairCanvas.enabled = false;
+               //     RepairCanvas.enabled = false;
                 }
                 else
                 {

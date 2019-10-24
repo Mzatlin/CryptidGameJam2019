@@ -1628,6 +1628,7 @@ GameObject:
   - component: {fileID: 672118476}
   - component: {fileID: 672118481}
   - component: {fileID: 672118482}
+  - component: {fileID: 672118483}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1753,6 +1754,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bddaed04035a6b47be8343ab005d8b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &672118483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672118475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa6d26d34f6a254388588b6e0843b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDist: 10
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4076,7 +4093,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 12
+  m_firstOverflowCharacterIndex: 7
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4105,7 +4122,7 @@ MonoBehaviour:
     spaceCount: 3
     wordCount: 2
     linkCount: 0
-    lineCount: 2
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -4144,7 +4161,9 @@ GameObject:
   - component: {fileID: 1757211709}
   - component: {fileID: 1757211708}
   - component: {fileID: 1757211707}
-  m_Layer: 0
+  - component: {fileID: 1757211713}
+  - component: {fileID: 1757211712}
+  m_Layer: 8
   m_Name: ShipEngine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4169,7 +4188,6 @@ MonoBehaviour:
   - {fileID: 229267597}
   - {fileID: 1157747363}
   - {fileID: 772869171}
-  RepairCanvas: {fileID: 151224633}
 --- !u!65 &1757211708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4243,6 +4261,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1757211712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757211706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443ab34d6c0fcaa459f91e16644b6a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RepairMinigame: {fileID: 151224633}
+  isActive: 0
+--- !u!114 &1757211713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757211706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24a3e27b223a9144b22af94f89c5f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1799493711
 PrefabInstance:
   m_ObjectHideFlags: 0
