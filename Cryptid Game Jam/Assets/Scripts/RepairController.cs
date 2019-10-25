@@ -7,21 +7,23 @@ using TMPro;
 public class RepairController : MonoBehaviour
 {
 
-    public static bool isActive = false;
     [SerializeField]
     KeyCode[] keys;
+    List<KeyCode> finalKeys = new List<KeyCode>();
     [SerializeField]
     TextMeshProUGUI[] images;
-    [SerializeField]
-    Dictionary<KeyCode, string> keyPresses = new Dictionary<KeyCode, string>();
     private int index = 0; 
     
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i< images.Length; i++)
+        for (int i = 0; i < images.Length; i++)
         {
-            images[i].text = keys[i].ToString();
+            finalKeys.Add(keys[Random.Range(0, keys.Length)]);
+        }
+        for (int i = 0; i< images.Length; i++)
+        {
+            images[i].text = finalKeys[i].ToString();
         }
     }
 
@@ -30,7 +32,7 @@ public class RepairController : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            if (Input.GetKeyDown(keys[index]))
+            if (Input.GetKeyDown(finalKeys[index]))
             {
                 Debug.Log("You pressed the right key!");
                 images[index].faceColor = new Color32(255, 0, 0, 255);
