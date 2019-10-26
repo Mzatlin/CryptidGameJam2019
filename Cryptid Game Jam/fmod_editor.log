@@ -1,0 +1,52 @@
+[LOG] System::create                           : Header version = 2.00.05. Current version = 2.00.05.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
+[LOG] SystemI::init                            : Initialize version=20005 (105402), maxchannels=256, flags=0x00020000
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
+[LOG] OutputCoreAudio::init                    : Output running 2 channels at 48000Hz sample rate.
+[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0x7f8f1de17208 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : done
+[LOG] PlaybackSystem::init                     : 
+[LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] PlaybackSystem::init                     : done
+[LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] Manager::init                            : done.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8ecfafb988
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8ecfafb988
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8ecfc2f188
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8ecfc2f188
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8ecfa28448
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8ecfa28448
+[LOG] SoundI::release                          : Boat_Adrift_FuMa_WWW.001 (0x7f8ecfc82708)
+[LOG] SoundI::release                          :     Boat_Adrift_FuMa_WWW.001 (0x7f8ecfaf9808)
+[LOG] SoundI::release                          :     Boat_Adrift_FuMa_WWW.001 (0x7f8ecfa28448)
+[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7f8ecfad1018)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f8ecfc59848)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f8ecfafb988)
+[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7f8ecfa27ad8)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f8ecf7ddaa8)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f8ecfc2f188)
+[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7f8ed80e9b68)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f8ed8cdde78)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f8ed8cde008)
+[LOG] SoundI::release                          : Nanjing_Woods_ODC-0049-156 (0x7f8ed8018638)
+[LOG] SoundI::release                          :     Nanjing_Woods_ODC-0049-156 (0x7f8ed8cde768)
+[LOG] SoundI::release                          :     Nanjing_Woods_ODC-0049-156 (0x7f8ed8cde9c8)
+[LOG] SoundI::release                          : Lake_Theme_Concept (0x7f8ecf5019a8)
+[LOG] SoundI::release                          :     Lake_Theme_Concept (0x7f8ed8cdd1b8)
+[LOG] SoundI::release                          :     Lake_Theme_Concept (0x7f8ed8cdd448)
+[LOG] SoundI::release                          : CW005_Moody_Winds_Deep_Dark (0x7f8ecf5ccf38)
+[LOG] SoundI::release                          :     CW005_Moody_Winds_Deep_Dark (0x7f8ed8cc1d98)
+[LOG] SoundI::release                          :     CW005_Moody_Winds_Deep_Dark (0x7f8ed8cc1f28)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
