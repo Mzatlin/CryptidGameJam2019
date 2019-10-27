@@ -7,4 +7,5 @@ public class ShipHealthSO : ScriptableObject
 {
     public int health;
     public bool isDead;
+    public bool isBeingDriven;
 }
