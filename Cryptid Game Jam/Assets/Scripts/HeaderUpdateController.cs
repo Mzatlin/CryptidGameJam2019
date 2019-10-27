@@ -35,6 +35,7 @@ public class HeaderUpdateController : MonoBehaviour
     {
         foreach(char i in content.ToCharArray())
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Medium Voice");
             textContent.text += i;
             yield return new WaitForSeconds(typingSpeed);
         }
