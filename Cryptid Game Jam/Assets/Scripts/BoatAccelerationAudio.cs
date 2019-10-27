@@ -24,10 +24,10 @@ public class BoatAccelerationAudio : MonoBehaviour
         if (playerStats.isOccupied && Input.GetKeyDown(KeyCode.W) && (PlaybackState(accelerate) != PLAYBACK_STATE.PLAYING))
         {
             accelerate = FMODUnity.RuntimeManager.CreateInstance(sound);
-            accelerate.setParameterByName("Throttle", 0f);
+            //accelerate.setParameterByName("Throttle", 0f);
             accelerate.start();
         }
-        if(playerStats.isOccupied && Input.GetKeyUp(KeyCode.W) && (PlaybackState(accelerate) == PLAYBACK_STATE.PLAYING)) 
+        if(playerStats.isOccupied && Input.GetKeyUp(KeyCode.W) && (PlaybackState(accelerate) == PLAYBACK_STATE.PLAYING) && BoatMovementController.isMotorActive) 
         {
             accelerate.setParameterByName("Throttle", 1f);
             accelerate.release();
