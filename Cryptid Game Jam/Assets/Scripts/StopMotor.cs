@@ -16,7 +16,7 @@ public class StopMotor : MonoBehaviour
         if (playerStats.isOccupied && Input.GetKeyDown(KeyCode.Escape))
         {
             OnStopMotor();
-            //FMODUnity.RuntimeManager.CreateInstance(path);
+            FMODUnity.RuntimeManager.PlayOneShot(path);
         }
     }
 }
