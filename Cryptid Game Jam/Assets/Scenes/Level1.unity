@@ -322,6 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a5df5a521bace439d25dae87e724e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  path: 
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
 --- !u!114 &34495244
 MonoBehaviour:
@@ -485,6 +486,7 @@ GameObject:
   - component: {fileID: 121798541}
   - component: {fileID: 121798543}
   - component: {fileID: 121798537}
+  - component: {fileID: 121798544}
   m_Layer: 0
   m_Name: Boat
   m_TagString: MainCamera
@@ -599,6 +601,20 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
   player: {fileID: 672118480}
   boatCam: {fileID: 1842332054}
+--- !u!114 &121798544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121798535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d71eda0591b40ec941828a518ba91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: event:/Boat Motor Accelerate
+  playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
 --- !u!1 &151224630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,6 +1278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a5df5a521bace439d25dae87e724e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  path: event:/Test
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
 --- !u!1 &441436817
 GameObject:
@@ -1537,7 +1554,7 @@ GameObject:
   - component: {fileID: 602813628}
   m_Layer: 0
   m_Name: DockPiece (2)
-  m_TagString: Untagged
+  m_TagString: Dock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1582,7 +1599,7 @@ GameObject:
   - component: {fileID: 612393197}
   m_Layer: 0
   m_Name: DockPiece
-  m_TagString: Untagged
+  m_TagString: Dock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1846,6 +1863,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bddaed04035a6b47be8343ab005d8b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  footstepEvent: event:/Footsteps
+  floortag: 
+  currentTag: Dirt
 --- !u!114 &672118483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2951,6 +2971,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CGJ_Dock_01e
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 79965543d7c097b45aa9ba71e0bb146f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 79965543d7c097b45aa9ba71e0bb146f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3639,7 +3664,7 @@ GameObject:
   - component: {fileID: 1383588375}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Dirt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3774,6 +3799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CGJ_Dock_01e
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 79965543d7c097b45aa9ba71e0bb146f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 79965543d7c097b45aa9ba71e0bb146f,
         type: 3}
@@ -3962,7 +3992,7 @@ GameObject:
   - component: {fileID: 1456165891}
   m_Layer: 0
   m_Name: DockPiece (1)
-  m_TagString: Untagged
+  m_TagString: Dock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4225,6 +4255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CGJ_Dock_01e
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 79965543d7c097b45aa9ba71e0bb146f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 79965543d7c097b45aa9ba71e0bb146f,
         type: 3}
@@ -4636,11 +4671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keys: 690000006f000000700000007500000079000000680000006a000000
-  images:
-  - {fileID: 1014461122}
-  - {fileID: 229267597}
-  - {fileID: 1157747363}
-  - {fileID: 772869171}
+  keyText: []
 --- !u!65 &1757211708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4727,7 +4758,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RepairMinigame: {fileID: 151224633}
-  isActive: 0
 --- !u!114 &1757211713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5030,6 +5060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CGJ_PlayersHouse_01
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e83e8efe941be104b94541191674fff5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dock
       objectReference: {fileID: 0}
     - target: {fileID: -6387348875324558863, guid: e83e8efe941be104b94541191674fff5,
         type: 3}
