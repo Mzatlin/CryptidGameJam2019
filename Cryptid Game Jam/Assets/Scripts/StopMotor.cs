@@ -13,7 +13,7 @@ public class StopMotor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerStats.isOccupied && Input.GetKeyDown(KeyCode.Escape))
+        if (playerStats.isOccupied && Input.GetKeyDown(KeyCode.Escape) && BoatMovementController.isMotorActive)
         {
             //FMODUnity.RuntimeManager.PlayOneShot(path);
             OnStopMotor();
