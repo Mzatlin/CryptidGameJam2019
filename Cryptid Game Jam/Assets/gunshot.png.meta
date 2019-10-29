@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: fd9975b1ff5c4c141b385c28aa1f37d4
+guid: 4eabe7bda65e2704583bd01b0c04e892
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8621754595287809605
-    second: YeAYgFWA_0
+      213: 2894344322067435035
+    second: gunshot_0
   - first:
-      213: -6716040882603753887
-    second: YeAYgFWA_1
+      213: 1854805946613122561
+    second: gunshot_1
+  - first:
+      213: 3853447666439838866
+    second: gunshot_2
+  - first:
+      213: -4363412190920081700
+    second: gunshot_3
+  - first:
+      213: 3321317296271084997
+    second: gunshot_4
+  - first:
+      213: 3999724938359492365
+    second: gunshot_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: YeAYgFWA_0
+      name: gunshot_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 23
         y: 0
-        width: 12
-        height: 29
+        width: 51
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab20d51c2b742374eb9c94e4001ec9ec
-      internalID: -8621754595287809605
+      spriteID: a320726ce4c59a64b9c4635b7a733c36
+      internalID: 2894344322067435035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YeAYgFWA_1
+      name: gunshot_1
       rect:
         serializedVersion: 2
-        x: 23
+        x: 120
         y: 0
-        width: 12
-        height: 28
+        width: 51
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +163,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3ff45c8012c7c14e8c9893df706b57d
-      internalID: -6716040882603753887
+      spriteID: 7ea7ea6f8e34de646bfcaa2bd285c3f1
+      internalID: 1854805946613122561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunshot_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 51
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd9751c6de263b40ba54a47e58bca10
+      internalID: 3853447666439838866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunshot_3
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 0
+        width: 51
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93bbf930b975d954c8aec0510066899d
+      internalID: -4363412190920081700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunshot_4
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 0
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92793bf5f78ec234ab4ea12d700d5805
+      internalID: 3321317296271084997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gunshot_5
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 0
+        width: 51
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9776fb9d3ad3e438dea5c37cf66d19
+      internalID: 3999724938359492365
       vertices: []
       indices: 
       edges: []
@@ -160,7 +256,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f16c6048042d25945b97b960db2ec4d6
+    spriteID: c33373ea9963461409f18be98a4fcd35
     internalID: 0
     vertices: []
     indices: 
