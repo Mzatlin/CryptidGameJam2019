@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -322,7 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a5df5a521bace439d25dae87e724e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
 --- !u!114 &34495244
 MonoBehaviour:
@@ -1363,7 +1362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a5df5a521bace439d25dae87e724e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
 --- !u!1 &399356084
 GameObject:
@@ -1551,7 +1549,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 16
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -3069,6 +3067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74ab161a2722e04f85da933f2b8c144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  path: event:/Test
   currentHealth: 10
   maxHealth: 1
   isDead: 0
@@ -5454,7 +5453,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 7
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5483,7 +5482,7 @@ MonoBehaviour:
     spaceCount: 3
     wordCount: 2
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -5982,6 +5981,7 @@ GameObject:
   - component: {fileID: 2009375421}
   - component: {fileID: 2009375420}
   - component: {fileID: 2009375419}
+  - component: {fileID: 2009375424}
   m_Layer: 0
   m_Name: Test Billboard (2)
   m_TagString: Untagged
@@ -6067,14 +6067,30 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009375418}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3, y: -1.661, z: -2.74}
+  m_LocalRotation: {x: -0.00053080765, y: 0.008320707, z: 0.0025803337, w: 0.9999619}
+  m_LocalPosition: {x: 5.3003087, y: -1.6609728, z: -2.740024}
   m_LocalScale: {x: 1.3330826, y: 1.8239105, z: 0.16}
   m_Children:
   - {fileID: 839426368}
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.063, y: 0.95300007, z: 0.29500002}
+--- !u!114 &2009375424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009375418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74ab161a2722e04f85da933f2b8c144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: event:/Test2
+  currentHealth: 1
+  maxHealth: 1
+  isDead: 0
 --- !u!1001 &2021701065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6198,7 +6214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.200012, y: -10.5}
+  m_AnchoredPosition: {x: 7.199951, y: -10.5}
   m_SizeDelta: {x: -69.2, y: -139.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098903601

@@ -6,81 +6,103 @@
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fee44ef7008 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fee720fe608 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] SoundI::release                          : Boat_Adrift_FuMa_WWW.001 (0x7fee5525f018)
-[LOG] SoundI::release                          :     Boat_Adrift_FuMa_WWW.001 (0x7fee5584b4b8)
-[LOG] SoundI::release                          :     Boat_Adrift_FuMa_WWW.001 (0x7fee5584b718)
-[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7fee553bd898)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fee558491a8)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fee55849a78)
-[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7fee5683ca28)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fee5584be78)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fee5584c0d8)
-[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7fee55384be8)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fee5584abc8)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fee5584ad58)
-[LOG] SoundI::release                          : Nanjing_Woods_ODC-0049-156 (0x7fee552d2978)
-[LOG] SoundI::release                          :     Nanjing_Woods_ODC-0049-156 (0x7fee5584a2d8)
-[LOG] SoundI::release                          :     Nanjing_Woods_ODC-0049-156 (0x7fee5584a468)
-[LOG] SoundI::release                          : Lake_Theme_Concept (0x7fee56c3e5a8)
-[LOG] SoundI::release                          :     Lake_Theme_Concept (0x7fee55841328)
-[LOG] SoundI::release                          :     Lake_Theme_Concept (0x7fee558415b8)
-[LOG] SoundI::release                          :  (0x7fee56c0a8a8)
-[LOG] SoundI::release                          :     Dialogue Scroll Medium (0x7fee56c38838)
-[LOG] SoundI::release                          :  (0x7fee5698f3c8)
-[LOG] SoundI::release                          :     Footsteps (0x7fee55138258)
-[LOG] SoundI::release                          :  (0x7fee533ef398)
-[LOG] SoundI::release                          :     Footsteps_1 (0x7fee56910118)
-[LOG] SoundI::release                          :  (0x7fee56965608)
-[LOG] SoundI::release                          :     Footsteps_2 (0x7fee5698f698)
-[LOG] SoundI::release                          :  (0x7fee55f5c248)
-[LOG] SoundI::release                          :     Footsteps_3 (0x7fee54f64f98)
-[LOG] SoundI::release                          :  (0x7fee547c4218)
-[LOG] SoundI::release                          :     Footsteps_4 (0x7fee5696ec38)
-[LOG] SoundI::release                          :  (0x7fee547e9d88)
-[LOG] SoundI::release                          :     Footsteps_5 (0x7fee56983928)
-[LOG] SoundI::release                          :  (0x7fee556c0eb8)
-[LOG] SoundI::release                          :     Footsteps_6 (0x7fee5510a3c8)
-[LOG] SoundI::release                          :  (0x7fee5562d418)
-[LOG] SoundI::release                          :     Footsteps_7 (0x7fee547e8b88)
-[LOG] SoundI::release                          :  (0x7fee5696c4c8)
-[LOG] SoundI::release                          :     Footsteps_boat (0x7fee569928c8)
-[LOG] SoundI::release                          :  (0x7fee55633f38)
-[LOG] SoundI::release                          :     Footsteps_boat_1 (0x7fee55619228)
-[LOG] SoundI::release                          :  (0x7fee55661838)
-[LOG] SoundI::release                          :     Footsteps_boat_2 (0x7fee556290b8)
-[LOG] SoundI::release                          :  (0x7fee56958678)
-[LOG] SoundI::release                          :     Footsteps_boat_3 (0x7fee556a9b08)
-[LOG] SoundI::release                          :  (0x7fee55139fa8)
-[LOG] SoundI::release                          :     Footsteps_boat_4 (0x7fee5562cb38)
-[LOG] SoundI::release                          :  (0x7fee55138468)
-[LOG] SoundI::release                          :     Footsteps_boat_5 (0x7fee5512a3a8)
-[LOG] SoundI::release                          :  (0x7fee5698bf38)
-[LOG] SoundI::release                          :     Footsteps_boat_6 (0x7fee547e7d48)
-[LOG] SoundI::release                          :  (0x7fee556a54d8)
-[LOG] SoundI::release                          :     Footsteps_boat_7 (0x7fee56911258)
-[LOG] SoundI::release                          :  (0x7fee56950b88)
-[LOG] SoundI::release                          :     Footsteps_wood (0x7fee5560aa98)
-[LOG] SoundI::release                          :  (0x7fee55f978d8)
-[LOG] SoundI::release                          :     Footsteps_wood_1 (0x7fee55f3ec98)
-[LOG] SoundI::release                          :  (0x7fee56978878)
-[LOG] SoundI::release                          :     Footsteps_wood_2 (0x7fee556a0768)
-[LOG] SoundI::release                          :  (0x7fee55f98ad8)
-[LOG] SoundI::release                          :     Footsteps_wood_3 (0x7fee55cb2f78)
-[LOG] SoundI::release                          :  (0x7fee5564a478)
-[LOG] SoundI::release                          :     Footsteps_wood_4 (0x7fee55128ca8)
-[LOG] SoundI::release                          :  (0x7fee556a7198)
-[LOG] SoundI::release                          :     Footsteps_wood_5 (0x7fee556b67f8)
-[LOG] SoundI::release                          :  (0x7fee56c62028)
-[LOG] SoundI::release                          :     Footsteps_wood_6 (0x7fee56c2e8a8)
-[LOG] SoundI::release                          :  (0x7fee5697c4c8)
-[LOG] SoundI::release                          :     Footsteps_wood_7 (0x7fee5695af48)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 24020736
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 31488
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000ee148bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x13ebc2aa2
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x13ebc2b59
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x13ebc2b89
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x13ebc2c29
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fee57634668
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Shotgun_Shot_1', format=2, channels=1, frequency=48000, lengthbytes=6080, lengthpcm=32184, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.451639.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 24020736
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 31488
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000ee148bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x13ebc2aa2
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x13ebc2b59
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x13ebc2b89
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x13ebc2c29
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fee57634668
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Shotgun_Shot_2', format=2, channels=1, frequency=48000, lengthbytes=4576, lengthpcm=24744, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.387910.
+[LOG] SoundI::release                          :  (0x7fee558f48f8)
+[LOG] SoundI::release                          :     Dialogue Scroll Medium (0x7fee558f4a68)
+[LOG] SoundI::release                          :  (0x7fee57253fc8)
+[LOG] SoundI::release                          :     Shotgun_Shot_1 (0x7fee572a9b48)
+[LOG] SoundI::release                          :  (0x7fee545425c8)
+[LOG] SoundI::release                          :     Shotgun_Shot_2 (0x7fee5703ad98)
+[LOG] SoundI::release                          :  (0x7fee558f1978)
+[LOG] SoundI::release                          :     Black-Eyed Child_Scream (0x7fee558f1ae8)
+[LOG] SoundI::release                          :  (0x7fee558efbc8)
+[LOG] SoundI::release                          :     Footsteps (0x7fee558efd38)
+[LOG] SoundI::release                          :  (0x7fee558eba28)
+[LOG] SoundI::release                          :     Footsteps_1 (0x7fee558eeb68)
+[LOG] SoundI::release                          :  (0x7fee558f07a8)
+[LOG] SoundI::release                          :     Footsteps_2 (0x7fee558f0918)
+[LOG] SoundI::release                          :  (0x7fee558f5328)
+[LOG] SoundI::release                          :     Footsteps_3 (0x7fee558f5498)
+[LOG] SoundI::release                          :  (0x7fee558eefe8)
+[LOG] SoundI::release                          :     Footsteps_4 (0x7fee558ef158)
+[LOG] SoundI::release                          :  (0x7fee558f2b48)
+[LOG] SoundI::release                          :     Footsteps_5 (0x7fee558f2cb8)
+[LOG] SoundI::release                          :  (0x7fee558e8828)
+[LOG] SoundI::release                          :     Footsteps_6 (0x7fee558ebe28)
+[LOG] SoundI::release                          :  (0x7fee558f1388)
+[LOG] SoundI::release                          :     Footsteps_7 (0x7fee558f14f8)
+[LOG] SoundI::release                          :  (0x7fee558e6488)
+[LOG] SoundI::release                          :     Footsteps_boat (0x7fee558e65f8)
+[LOG] SoundI::release                          :  (0x7fee558ec2a8)
+[LOG] SoundI::release                          :     Footsteps_boat_1 (0x7fee558ea6f8)
+[LOG] SoundI::release                          :  (0x7fee558e83e8)
+[LOG] SoundI::release                          :     Footsteps_boat_2 (0x7fee558e8558)
+[LOG] SoundI::release                          :  (0x7fee558ece58)
+[LOG] SoundI::release                          :     Footsteps_boat_3 (0x7fee558ecfc8)
+[LOG] SoundI::release                          :  (0x7fee558f3728)
+[LOG] SoundI::release                          :     Footsteps_boat_4 (0x7fee558f3898)
+[LOG] SoundI::release                          :  (0x7fee558f01b8)
+[LOG] SoundI::release                          :     Footsteps_boat_5 (0x7fee558f0328)
+[LOG] SoundI::release                          :  (0x7fee558eb438)
+[LOG] SoundI::release                          :     Footsteps_boat_6 (0x7fee558eb5a8)
+[LOG] SoundI::release                          :  (0x7fee558f2558)
+[LOG] SoundI::release                          :     Footsteps_boat_7 (0x7fee558f26c8)
+[LOG] SoundI::release                          :  (0x7fee558f0d98)
+[LOG] SoundI::release                          :     Footsteps_wood (0x7fee558f0f08)
+[LOG] SoundI::release                          :  (0x7fee558f5918)
+[LOG] SoundI::release                          :     Footsteps_wood_1 (0x7fee558f5a88)
+[LOG] SoundI::release                          :  (0x7fee558eab78)
+[LOG] SoundI::release                          :     Footsteps_wood_2 (0x7fee558ec9d8)
+[LOG] SoundI::release                          :  (0x7fee558f5f08)
+[LOG] SoundI::release                          :     Footsteps_wood_3 (0x7fee558f6078)
+[LOG] SoundI::release                          :  (0x7fee558f3138)
+[LOG] SoundI::release                          :     Footsteps_wood_4 (0x7fee558f32a8)
+[LOG] SoundI::release                          :  (0x7fee558f1f68)
+[LOG] SoundI::release                          :     Footsteps_wood_5 (0x7fee558f20d8)
+[LOG] SoundI::release                          :  (0x7fee558f3d18)
+[LOG] SoundI::release                          :     Footsteps_wood_6 (0x7fee558f3e88)
+[LOG] SoundI::release                          :  (0x7fee558ef5d8)
+[LOG] SoundI::release                          :     Footsteps_wood_7 (0x7fee558ef748)
+[LOG] SoundI::release                          :  (0x7fee558f4308)
+[LOG] SoundI::release                          :     Goose_Honk_1 (0x7fee558f4478)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
