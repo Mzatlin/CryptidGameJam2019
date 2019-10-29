@@ -6,91 +6,18 @@
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7f8393a1b208 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fd9e33b5008 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] SoundI::release                          : Boat_Adrift_FuMa_WWW.001 (0x7f8395132308)
-[LOG] SoundI::release                          :     Boat_Adrift_FuMa_WWW.001 (0x7f8390dfba88)
-[LOG] SoundI::release                          :     Boat_Adrift_FuMa_WWW.001 (0x7f83926dfbb8)
-[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7f8395133968)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f839459f198)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f8392608048)
-[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7f83951302c8)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f83945bb828)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f83926ba478)
-[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7f839473c668)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f839459f928)
-[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7f83926d1fe8)
-[LOG] SoundI::release                          : Nanjing_Woods_ODC-0049-156 (0x7f839512ddb8)
-[LOG] SoundI::release                          :     Nanjing_Woods_ODC-0049-156 (0x7f839450fd98)
-[LOG] SoundI::release                          :     Nanjing_Woods_ODC-0049-156 (0x7f8390d4cc88)
-[LOG] SoundI::release                          : Lake_Theme_Concept (0x7f839364f3d8)
-[LOG] SoundI::release                          :     Lake_Theme_Concept (0x7f839512b368)
-[LOG] SoundI::release                          :     Lake_Theme_Concept (0x7f839512b4f8)
-[LOG] SoundI::release                          : CW005_Moody_Winds_Deep_Dark (0x7f8394315078)
-[LOG] SoundI::release                          :     CW005_Moody_Winds_Deep_Dark (0x7f839436c778)
-[LOG] SoundI::release                          :     CW005_Moody_Winds_Deep_Dark (0x7f83940216c8)
-[LOG] SoundI::release                          :  (0x7f8394028128)
-[LOG] SoundI::release                          :     Dialogue Scroll Medium (0x7f839435edc8)
-[LOG] SoundI::release                          :  (0x7f839407bae8)
-[LOG] SoundI::release                          :     Footsteps (0x7f8394032218)
-[LOG] SoundI::release                          :  (0x7f8394369118)
-[LOG] SoundI::release                          :     Footsteps_1 (0x7f839402daa8)
-[LOG] SoundI::release                          :  (0x7f8394313fa8)
-[LOG] SoundI::release                          :     Footsteps_2 (0x7f83925bdb08)
-[LOG] SoundI::release                          :  (0x7f83925c6fe8)
-[LOG] SoundI::release                          :     Footsteps_3 (0x7f8394361a98)
-[LOG] SoundI::release                          :  (0x7f8394373fa8)
-[LOG] SoundI::release                          :     Footsteps_4 (0x7f839437f058)
-[LOG] SoundI::release                          :  (0x7f83943338e8)
-[LOG] SoundI::release                          :     Footsteps_5 (0x7f839431ffa8)
-[LOG] SoundI::release                          :  (0x7f83943814d8)
-[LOG] SoundI::release                          :     Footsteps_6 (0x7f8394020cd8)
-[LOG] SoundI::release                          :  (0x7f83925e0c18)
-[LOG] SoundI::release                          :     Footsteps_7 (0x7f83909d8908)
-[LOG] SoundI::release                          :  (0x7f839436bcb8)
-[LOG] SoundI::release                          :     Footsteps_boat (0x7f8394314e68)
-[LOG] SoundI::release                          :  (0x7f83940911f8)
-[LOG] SoundI::release                          :     Footsteps_boat_1 (0x7f83940952e8)
-[LOG] SoundI::release                          :  (0x7f83925c9bc8)
-[LOG] SoundI::release                          :     Footsteps_boat_2 (0x7f83925e9838)
-[LOG] SoundI::release                          :  (0x7f83925b96d8)
-[LOG] SoundI::release                          :     Footsteps_boat_3 (0x7f8394383388)
-[LOG] SoundI::release                          :  (0x7f83925f5168)
-[LOG] SoundI::release                          :     Footsteps_boat_4 (0x7f839400f6f8)
-[LOG] SoundI::release                          :  (0x7f8394374c88)
-[LOG] SoundI::release                          :     Footsteps_boat_5 (0x7f8394384358)
-[LOG] SoundI::release                          :  (0x7f8394374e78)
-[LOG] SoundI::release                          :     Footsteps_boat_6 (0x7f8394028d88)
-[LOG] SoundI::release                          :  (0x7f8394098fd8)
-[LOG] SoundI::release                          :     Footsteps_boat_7 (0x7f839434f5e8)
-[LOG] SoundI::release                          :  (0x7f8394353168)
-[LOG] SoundI::release                          :     Footsteps_wood (0x7f83925ec048)
-[LOG] SoundI::release                          :  (0x7f83943331e8)
-[LOG] SoundI::release                          :     Footsteps_wood_1 (0x7f8394376e48)
-[LOG] SoundI::release                          :  (0x7f839400adf8)
-[LOG] SoundI::release                          :     Footsteps_wood_2 (0x7f83943657f8)
-[LOG] SoundI::release                          :  (0x7f839437ccc8)
-[LOG] SoundI::release                          :     Footsteps_wood_3 (0x7f83925cc738)
-[LOG] SoundI::release                          :  (0x7f83925f5588)
-[LOG] SoundI::release                          :     Footsteps_wood_4 (0x7f8394337c38)
-[LOG] SoundI::release                          :  (0x7f839404ebd8)
-[LOG] SoundI::release                          :     Footsteps_wood_5 (0x7f839401d868)
-[LOG] SoundI::release                          :  (0x7f839431ae48)
-[LOG] SoundI::release                          :     Footsteps_wood_6 (0x7f8394345d68)
-[LOG] SoundI::release                          :  (0x7f839437bf48)
-[LOG] SoundI::release                          :     Footsteps_wood_7 (0x7f83925c27f8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
