@@ -21,7 +21,7 @@ public class BoatAccelerationAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerStats.isOccupied && Input.GetKeyDown(KeyCode.W) && (PlaybackState(accelerate) != PLAYBACK_STATE.PLAYING))
+        if (playerStats.isOccupied && Input.GetKey(KeyCode.W) && (PlaybackState(accelerate) != PLAYBACK_STATE.PLAYING))
         {
             accelerate = FMODUnity.RuntimeManager.CreateInstance(sound);
             //accelerate.setParameterByName("Throttle", 0f);

@@ -1725,7 +1725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bddaed04035a6b47be8343ab005d8b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
   footstepEvent: event:/Footsteps
   floortag: 
   currentTag: Dirt
@@ -3956,7 +3955,7 @@ MonoBehaviour:
   Preload: 0
   Params:
   - Name: Lake Ambience Volume
-    Value: 9.05
+    Value: 10
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
