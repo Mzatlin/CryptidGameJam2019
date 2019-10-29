@@ -242,7 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a5df5a521bace439d25dae87e724e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
 --- !u!114 &34495244
 MonoBehaviour:
@@ -499,9 +498,11 @@ GameObject:
   - component: {fileID: 121798543}
   - component: {fileID: 121798537}
   - component: {fileID: 121798544}
+  - component: {fileID: 121798545}
+  - component: {fileID: 121798546}
   m_Layer: 0
   m_Name: Boat
-  m_TagString: MainCamera
+  m_TagString: Boat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -546,7 +547,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121798535}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.87, y: -2.89, z: -29.47}
   m_LocalScale: {x: 2.997469, y: 0.37264547, z: 4.609332}
   m_Children:
@@ -626,6 +627,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2744886, y: 4.110014, z: 2.7488785}
   m_Center: {x: -2.2080176, y: 2.1311073, z: -0.52119356}
+--- !u!114 &121798545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121798535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Boat Adrift
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Volume
+    Value: 6.06
+  OverrideAttenuation: 1
+  OverrideMinDistance: 4.74
+  OverrideMaxDistance: 15
+--- !u!114 &121798546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121798535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d71eda0591b40ec941828a518ba91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: event:/Boat Motor Accelerate
+  playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
 --- !u!1 &151224630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a5df5a521bace439d25dae87e724e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: event:/Test
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
 --- !u!1 &405062506
 GameObject:
@@ -1686,6 +1725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bddaed04035a6b47be8343ab005d8b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
   footstepEvent: event:/Footsteps
   floortag: 
   currentTag: Dirt
@@ -2373,6 +2413,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2387,7 +2428,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -2447,6 +2488,19 @@ Transform:
   m_Father: {fileID: 672118480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &1014461120
 GameObject:
   m_ObjectHideFlags: 0
@@ -3237,12 +3291,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.7151258
+      value: -3.7151256
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06912435
+      value: -0.06912463
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
         type: 3}
@@ -3776,6 +3830,8 @@ GameObject:
   - component: {fileID: 1534582355}
   - component: {fileID: 1534582354}
   - component: {fileID: 1534582353}
+  - component: {fileID: 1534582357}
+  - component: {fileID: 1534582358}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -3856,6 +3912,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1534582357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534582352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Wind
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1534582358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534582352}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Lake Ambience
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Lake Ambience Volume
+    Value: 9.05
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1571244959
 GameObject:
   m_ObjectHideFlags: 0

@@ -60,11 +60,10 @@ public class PlayerPhysics : MonoBehaviour
             FootstepGround();
 
         }
-        else
+        else 
         {
             footsteps.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
-
 
         rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
         rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
