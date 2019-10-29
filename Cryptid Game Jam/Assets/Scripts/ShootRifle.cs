@@ -36,6 +36,7 @@ public class ShootRifle : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             animate.Play("gunshot");
+            //PlayOneShot
             ray = new Ray(transform.position, -transform.up);
             Debug.DrawRay(ray.origin, ray.direction * shootRange);
             if (Physics.Raycast(ray, out hit, shootRange))

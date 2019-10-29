@@ -15,9 +15,8 @@ public class StopMotor : MonoBehaviour
     {
         if (playerStats.isOccupied && Input.GetKeyDown(KeyCode.Escape) && BoatMovementController.isMotorActive)
         {
-            //FMODUnity.RuntimeManager.PlayOneShot(path);
             OnStopMotor();
-
+            FMODUnity.RuntimeManager.PlayOneShot(path);
         }
     }
 }
