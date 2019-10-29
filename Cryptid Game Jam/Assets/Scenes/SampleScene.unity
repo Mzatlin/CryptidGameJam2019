@@ -1399,7 +1399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.27588058, y: 0.8187501}
   m_AnchorMax: {x: 0.7851195, y: 0.95312494}
-  m_AnchoredPosition: {x: 0, y: -237.5}
+  m_AnchoredPosition: {x: 0, y: -221}
   m_SizeDelta: {x: 1.8999939, y: 2.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405062508
@@ -1491,7 +1491,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -18.6791, y: 0, z: -18.270905, w: 0}
+  m_margin: {x: -52.128525, y: -12.369698, z: -61.79883, w: 0}
   m_textInfo:
     textComponent: {fileID: 405062508}
     characterCount: 17
@@ -2123,10 +2123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa6d26d34f6a254388588b6e0843b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDist: 10
+  interactDist: 2
   interactLayer:
     serializedVersion: 2
     m_Bits: 256
+  playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
 --- !u!1001 &691008564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3555,8 +3556,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100669629}
+  - component: {fileID: 1100669630}
   m_Layer: 0
-  m_Name: Hover Message Manager
+  m_Name: Description Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3577,6 +3579,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1100669630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100669628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88fffc2ecdd82644b9343e51d828d554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content: {fileID: 405062508}
+  descObject: {fileID: 11400000, guid: a64f2d7c597c5094f85859481b8507c6, type: 2}
 --- !u!1 &1157747361
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,6 +4167,7 @@ GameObject:
   - component: {fileID: 1308336039}
   - component: {fileID: 1308336041}
   - component: {fileID: 1308336040}
+  - component: {fileID: 1308336042}
   m_Layer: 8
   m_Name: Test Billboard
   m_TagString: Untagged
@@ -4258,7 +4275,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   writer: {fileID: 11400000, guid: 5aaa15f94ed556a4bb6e8ff1977aaf6c, type: 2}
   dialog:
-  - Hi, I'm a Kelpie! Finish the Fucking Game
+  - 'Hi, I''m a Kelpie! '
+  - GOD LEFT ME UNFINISHED!
+  - FINISH ME ALREADY YOU FUCKING SADIST
 --- !u!114 &1308336041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4271,6 +4290,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24a3e27b223a9144b22af94f89c5f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1308336042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308336034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc041848865de9f41b3b6c66de4df935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descObject: {fileID: 11400000, guid: a64f2d7c597c5094f85859481b8507c6, type: 2}
+  description: Talk To Kelpie
 --- !u!1 &1383588369
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,9 +4829,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfe15d0fa0afb94d866741175902b89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typingSpeed: 0.05
   textContent: {fileID: 1755444074}
   header: {fileID: 11400000, guid: 7df10baaba8c56745970f3bab8d01c41, type: 2}
-  typingSpeed: 0.05
 --- !u!4 &1571244961
 Transform:
   m_ObjectHideFlags: 0
@@ -4924,6 +4957,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1640054513}
+  - component: {fileID: 1640054514}
   m_Layer: 0
   m_Name: Dialog Manager
   m_TagString: Untagged
@@ -4946,6 +4980,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1640054514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640054512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbb88093a696c7343809e043dc274501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.05
+  textContent: {fileID: 1911307994}
+  messageBox: {fileID: 11400000, guid: 5aaa15f94ed556a4bb6e8ff1977aaf6c, type: 2}
+  playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
+  panel: {fileID: 1627612450}
+  continueText: {fileID: 1221537974}
 --- !u!1001 &1695916353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5280,7 +5332,7 @@ GameObject:
   - component: {fileID: 1757211707}
   - component: {fileID: 1757211713}
   - component: {fileID: 1757211712}
-  - component: {fileID: 1757211714}
+  - component: {fileID: 1757211715}
   m_Layer: 8
   m_Name: ShipEngine
   m_TagString: Untagged
@@ -5405,7 +5457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24a3e27b223a9144b22af94f89c5f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1757211714
+--- !u!114 &1757211715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5414,12 +5466,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1757211706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 747aa182e3bd26949ac975ad14c9c9d9, type: 3}
+  m_Script: {fileID: 11500000, guid: fc041848865de9f41b3b6c66de4df935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: Press "E" to Repair Engine
-  interactCanvas: {fileID: 62578607}
-  interactText: {fileID: 405062508}
+  descObject: {fileID: 11400000, guid: a64f2d7c597c5094f85859481b8507c6, type: 2}
+  description: Press "E" To Fix Engine
 --- !u!1001 &1799493711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5955,7 +6006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.2, y: -10.5}
+  m_AnchoredPosition: {x: 7.200012, y: -10.5}
   m_SizeDelta: {x: -69.2, y: -139.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098903601

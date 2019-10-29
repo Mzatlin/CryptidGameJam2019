@@ -9,9 +9,13 @@ public class PlayerInteract : MonoBehaviour
     float interactDist = 10f;
     [SerializeField]
     private LayerMask interactLayer;
+    [SerializeField]
+    PlayerStatsSO playerStats;
     Ray ray;
     RaycastHit hit;
     bool lastTouched = false;
+    bool isInteracted = false;
+    IInteractable interact;
 
 
     // Update is called once per frame
@@ -19,13 +23,18 @@ public class PlayerInteract : MonoBehaviour
     {
         ray = new Ray(transform.position, transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * interactDist);
-        if (Physics.Raycast(ray, out hit, interactDist, interactLayer))
+        if (Physics.Raycast(ray, out hit, interactDist, interactLayer) && !playerStats.isOccupied)
         {
-            lastTouched = true;
-            var interact = hit.transform.GetComponent<IInteractable>();
-            if (interact != null && Input.GetKeyDown(KeyCode.E))
+            interact = hit.transform.GetComponent<IInteractable>();
+            if (interact != null)
             {
-                interact.RecieveInteraction();
+                lastTouched = true;
+                interact.ReceiveMouseHover();
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    interact.ReceiveInteraction();
+                    interact.ReceiveHoverLeave();
+                }
             }
         }
         else
@@ -33,15 +42,10 @@ public class PlayerInteract : MonoBehaviour
             if (lastTouched)
             {
                 lastTouched = false;
-                Debug.Log("Remove Header");
+                interact.ReceiveHoverLeave();
             }
 
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 
 

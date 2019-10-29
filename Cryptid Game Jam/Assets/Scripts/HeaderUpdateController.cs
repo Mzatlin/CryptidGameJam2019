@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class HeaderUpdateController : MonoBehaviour
+public class HeaderUpdateController : WriterBase
 {
     [SerializeField]
-    TextMeshProUGUI textContent;
-    [SerializeField]
     HeaderText header;
-    [SerializeField]
-    private float typingSpeed = 0.05f;
 
     // Start is called before the first frame update
     void Awake()
@@ -31,15 +27,5 @@ public class HeaderUpdateController : MonoBehaviour
         StartCoroutine(TypeMessage(header.message));
     }
 
-    IEnumerator TypeMessage(string content)
-    {
-        foreach(char i in content.ToCharArray())
-        {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Medium Voice");
-            textContent.text += i;
-            yield return new WaitForSeconds(typingSpeed);
-        }
-      
-    }
 
 }

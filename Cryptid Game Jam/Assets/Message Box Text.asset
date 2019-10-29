@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe2441854268ad14aa90dc206e9010d9, type: 3}
   m_Name: Message Box Text
   m_EditorClassIdentifier: 
+  dialogMessages:
+  - Hi, I'm a Kelpie! Finish the Fucking Game

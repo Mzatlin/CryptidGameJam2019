@@ -6,8 +6,9 @@ using System;
 public interface IInteractable 
 {
     event Action OnInteract;
-    //event Action OnHover
-    //event Action OnLeaveHover
-    void RecieveInteraction();
-    //void RecieveMouseHover
+    event Action OnHover;
+    event Action OnLeaveHover;
+    void ReceiveInteraction();
+    void ReceiveMouseHover();
+    void ReceiveHoverLeave();
 }
