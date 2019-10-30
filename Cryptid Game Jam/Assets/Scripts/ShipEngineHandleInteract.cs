@@ -15,11 +15,14 @@ public class ShipEngineHandleInteract : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RepairMinigame.enabled = false;
-        interact = GetComponent<InteractionController>();
-        interact.OnInteract += HandleInteract;
-        repair = GetComponent<RepairController>();
-        repair.OnCompletion += HandleCompletion;
+        if (RepairMinigame != null)
+        {
+            RepairMinigame.enabled = false;
+            interact = GetComponent<InteractionController>();
+            interact.OnInteract += HandleInteract;
+            repair = GetComponent<RepairController>();
+            repair.OnCompletion += HandleCompletion;
+        }
     }
 
     void HandleInteract()

@@ -445,6 +445,7 @@ GameObject:
   - component: {fileID: 8121463597417625599}
   - component: {fileID: 8121463597417625596}
   - component: {fileID: 8121463597417625597}
+  - component: {fileID: 4977913364454760228}
   m_Layer: 0
   m_Name: Exterior
   m_TagString: Untagged
@@ -540,6 +541,22 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
   player: {fileID: 0}
   boatCam: {fileID: 8121463598052830187}
+--- !u!114 &4977913364454760228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8121463597417625344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d74ab161a2722e04f85da933f2b8c144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: event:/Shotgun Shot
+  currentHealth: 5
+  maxHealth: 1
+  isDead: 0
 --- !u!1 &8121463598052830185
 GameObject:
   m_ObjectHideFlags: 0
