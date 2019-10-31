@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class HandleHoverInteractions : MonoBehaviour
 {
-    [SerializeField]
-    DescriptionText descObject;
-    [SerializeField]
-    string description;
+   
+    public DescriptionText descObject;
+    public string description;
     InteractionController interactHover;
     // Start is called before the first frame update
     void Start()

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class DialogUpdateController : WriterBase
 {
+    public event Action OnCloseDialog = delegate { };
 
     [SerializeField]
     MessageBoxText messageBox;
@@ -66,6 +68,7 @@ public class DialogUpdateController : WriterBase
         panel.enabled = false;
         textContent.text = "";
         continueText.enabled = false;
+        OnCloseDialog();
     }
 
     void HandleWrite()

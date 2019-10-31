@@ -8,6 +8,6 @@ public class StartButton : MonoBehaviour
     public void OnStart()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/Boat Horn");
-        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level1House", LoadSceneMode.Single);
     }
 }
