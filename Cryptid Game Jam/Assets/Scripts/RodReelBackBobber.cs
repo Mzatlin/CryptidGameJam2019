@@ -46,11 +46,19 @@ public class RodReelBackBobber : MonoBehaviour
 
     void RetrieveBobber()
     {
+        StartCoroutine(Delay());
+
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(0.2f);
         OnReel();
         stats.isOccupied = false;
         bobber.transform.SetParent(transform);
         bobber.transform.position = transform.position;
         bobber.SetActive(false);
         isReelable = false;
+
     }
 }

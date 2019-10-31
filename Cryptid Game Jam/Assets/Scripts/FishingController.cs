@@ -13,6 +13,8 @@ public class FishingController : MonoBehaviour
     [SerializeField]
     List<GameObject> fish = new List<GameObject>();
     RodReelBackBobber reelBack;
+    [SerializeField]
+    PlayerStatsSO playerstats;
 
     Coroutine fishRoutine = null;
 
@@ -25,8 +27,8 @@ public class FishingController : MonoBehaviour
     void Start()
     {
         reelBack = FindObjectOfType<RodReelBackBobber>();
-        holster = FindObjectOfType<ItemHolsterManager>();
-        bobber = FindObjectOfType<BobberHitWater>();
+        //   holster = FindObjectOfType<ItemHolsterManager>();
+        //bobber = FindObjectOfType<BobberHitWater>();
         reelBack.OnReel += HandleReel;
         bobber.OnHitWater += HandleMinigame;
         fishing = FishState.Missed;
@@ -64,9 +66,10 @@ public class FishingController : MonoBehaviour
 
     IEnumerator CatchDelay()
     {
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.1f);
         holster.SetItem(fish[Random.Range(0, fish.Count - 1)]);
         header.WriteHeader("Place in Front Chest");
+        playerstats.isOccupied = false;
     }
 
     void HandleMinigame()
