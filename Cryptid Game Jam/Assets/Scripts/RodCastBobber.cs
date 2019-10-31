@@ -7,6 +7,8 @@ public class RodCastBobber : MonoBehaviour
     [SerializeField]
     float castingRange = 20f;
     [SerializeField]
+    PlayerStatsSO stats; 
+    [SerializeField]
     GameObject bobber;
     Ray ray;
     RaycastHit hit;
@@ -15,8 +17,16 @@ public class RodCastBobber : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bobber.SetActive(false);
-        rb = bobber.GetComponent<Rigidbody>();
+        if(bobber == null)
+        {
+            Debug.Log("No reference to the bobber was found. Please Attach it to the RodCastBobber Component");
+        }
+        else
+        {
+            bobber.SetActive(false);
+        }
+
+        
     }
 
     // Update is called once per frame
@@ -26,10 +36,11 @@ public class RodCastBobber : MonoBehaviour
     }
     void CastBobber()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !stats.isOccupied)
         {
             if (!bobber.activeInHierarchy)
             {
+                stats.isOccupied = true;
                 bobber.SetActive(true);
                 bobber.GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * castingRange);
                 bobber.transform.parent = null;

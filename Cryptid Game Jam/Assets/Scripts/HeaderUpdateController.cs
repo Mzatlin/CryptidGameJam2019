@@ -7,6 +7,7 @@ public class HeaderUpdateController : WriterBase
 {
     [SerializeField]
     HeaderText header;
+    Coroutine headerRoutine = null;
 
     // Start is called before the first frame update
     void Awake()
@@ -23,8 +24,12 @@ public class HeaderUpdateController : WriterBase
 
     void HandleWrite()
     {
-        StopCoroutine(TypeMessage(header.message));
-        StartCoroutine(TypeMessage(header.message));
+        textContent.text = "";
+        if (headerRoutine != null)
+        {
+            StopCoroutine(headerRoutine);
+        }
+        headerRoutine = StartCoroutine(TypeMessage(header.message));
     }
 
 
