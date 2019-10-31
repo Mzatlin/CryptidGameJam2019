@@ -171,23 +171,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &-8956522688226635981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Boat Adrift/Volume
-  m_EditorClassIdentifier: 
-  Name: Volume
-  Min: 0
-  Max: 10
-  Default: 7
-  Exists: 1
 --- !u!114 &-8945796998404070476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +205,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-8799105491148980138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Death Stinger
+  m_EditorClassIdentifier: 
+  Path: event:/Death Stinger
+  guid: 09fe400937098549b7c1dfb0b3df14e9
+  Banks:
+  - {fileID: 4052181958217091955}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8500
 --- !u!114 &-8726388320468831093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,12 +346,12 @@ MonoBehaviour:
   guid: 5d373fdb7baf584c8fc1264ade19d961
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -8956522688226635981}
+  - {fileID: -2264600468679366527}
   MinDistance: 1
   MaxDistance: 20
   Length: 120120
@@ -416,7 +422,7 @@ MonoBehaviour:
   Path: event:/Boat Take Damage
   guid: 443c682a132d50458a1c706d7a9c8913
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -543,6 +549,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-8263192794594391108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
+  Exists: 0
 --- !u!114 &-8223366275527569260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,7 +581,7 @@ MonoBehaviour:
   Path: event:/Boat Horn
   guid: 5e188a70aa546145b910dbd0d57a6996
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -704,6 +727,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-7917471396297301625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dirt
+  m_EditorClassIdentifier: 
+  Name: Dirt
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-7849603188523111308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,7 +760,7 @@ MonoBehaviour:
   guid: 54aadb4719113b4b97c0640c44fa501e
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -915,7 +955,7 @@ MonoBehaviour:
   guid: 1e1290e4e3eef94f8b089bcc376a23cc
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -939,7 +979,7 @@ MonoBehaviour:
   guid: 40f8a2e004878840a07ec17f3f6d6e9a
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -947,23 +987,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 900
---- !u!114 &-7308915704316272750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Lake Ambience/Lake Ambience Volume
-  m_EditorClassIdentifier: 
-  Name: Lake Ambience Volume
-  Min: 0
-  Max: 10
-  Default: 10
-  Exists: 1
 --- !u!114 &-7272803652503162444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1118,6 +1141,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-6937625321651411963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Boat
+  m_EditorClassIdentifier: 
+  Name: Boat
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-6865986222625522533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,7 +1208,7 @@ MonoBehaviour:
   Path: event:/Water Horse Hurt
   guid: 0e6b3737eb18bd44b1769d0cce8e135c
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1349,7 +1389,7 @@ MonoBehaviour:
   guid: 82243d22b1b4b64b84fb2d8cbcd40f84
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1372,7 +1412,7 @@ MonoBehaviour:
   Path: event:/Engine Fix Action
   guid: c2e684a98ea4744a9c06f8ffe8b9c8d9
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1482,6 +1522,23 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 0
+--- !u!114 &-6538874624956146659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Lake Ambience/Lake Ambience Volume
+  m_EditorClassIdentifier: 
+  Name: Lake Ambience Volume
+  Min: 0
+  Max: 10
+  Default: 10
   Exists: 0
 --- !u!114 &-6523133870055130897
 MonoBehaviour:
@@ -1655,6 +1712,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-6255641688527836873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dock
+  m_EditorClassIdentifier: 
+  Name: Dock
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-6251294154147224983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1776,6 +1850,23 @@ MonoBehaviour:
   lastModified: 637079450000000000
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-6068960950720197970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Adrift/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
   Exists: 0
 --- !u!114 &-6047739658874697880
 MonoBehaviour:
@@ -2211,7 +2302,7 @@ MonoBehaviour:
   Path: event:/Blank
   guid: 1c030512ddd5ed43bd508f5d723476b4
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2219,6 +2310,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5274547073375806605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Motor Accelerate/Throttle
+  m_EditorClassIdentifier: 
+  Name: Throttle
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-5145557316100259876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2252,6 +2360,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 0
+--- !u!114 &-5134844176870262506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637080935910000000
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &-5131806975628483233
 MonoBehaviour:
@@ -2373,6 +2499,29 @@ MonoBehaviour:
   Max: 10
   Default: 10
   Exists: 1
+--- !u!114 &-4926572741547805546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Door Creak
+  m_EditorClassIdentifier: 
+  Path: event:/Door Creak
+  guid: 2e63e69b0f0bf342882e8bcc2fe29b89
+  Banks:
+  - {fileID: 4052181958217091955}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4857242499167576909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,6 +2710,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-4508232690922605403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dock
+  m_EditorClassIdentifier: 
+  Name: Dock
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-4472577595205559727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2681,6 +2847,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4297340913093608177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Door Slam
+  m_EditorClassIdentifier: 
+  Path: event:/Door Slam
+  guid: 3cbe37508e12114582b68d1fe25e4a9c
+  Banks:
+  - {fileID: 4052181958217091955}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4231479426397579946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2696,7 +2885,7 @@ MonoBehaviour:
   Path: event:/BEC Track
   guid: e626e7bf0af3eb48bb3826bb074cf7c5
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -2737,14 +2926,14 @@ MonoBehaviour:
   Path: event:/Fall in water
   guid: e7a7a540ac06f442b4bd2fdd08d4a181
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 2220
+  Length: 2170
 --- !u!114 &-4051314128063267457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2883,23 +3072,6 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
---- !u!114 &-3779898608309236831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Footsteps/Dirt
-  m_EditorClassIdentifier: 
-  Name: Dirt
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &-3769432870322255243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2951,7 +3123,7 @@ MonoBehaviour:
   guid: 327cfb5e0ad74b4999a3b265ef98262e
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -3010,7 +3182,7 @@ MonoBehaviour:
   Path: event:/Bobber Splash
   guid: 0e6992858dd98f4782718ed68a058d2e
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3170,7 +3342,7 @@ MonoBehaviour:
   Path: event:/Engine Fix Success
   guid: 31d754a6a194f44f8b3b8158a597214f
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -3210,7 +3382,7 @@ MonoBehaviour:
   Path: event:/Item Put Away
   guid: 691017feaddcce448a363854270427ad
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3354,7 +3526,7 @@ MonoBehaviour:
   Path: event:/BEC Laughter
   guid: 29fec9ed3a905745a0049273229c8871
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -3362,6 +3534,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 15
   Length: 8000
+--- !u!114 &-2991333344346756515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dock
+  m_EditorClassIdentifier: 
+  Name: Dock
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-2966708164488015257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3618,7 +3807,7 @@ MonoBehaviour:
   Path: event:/Goose Honks
   guid: 275bc5f2c430f34682620a14858533fc
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -3729,6 +3918,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-2454577962663849691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
+  Exists: 0
 --- !u!114 &-2442465505200286226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3831,6 +4037,41 @@ MonoBehaviour:
   Max: 10
   Default: 7
   Exists: 1
+--- !u!114 &-2264600468679366527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Adrift/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
+  Exists: 1
+--- !u!114 &-2162516776229126991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637080953620000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-2110821001137916545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3933,7 +4174,7 @@ MonoBehaviour:
   Path: event:/Player Take Damage
   guid: 8e146e148406264eb793cd500658e204
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4161,7 +4402,7 @@ MonoBehaviour:
   Path: event:/Rod Cast
   guid: dc6823667bee15458ed9df84cd5f40b8
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4169,6 +4410,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 993
+--- !u!114 &-1684951180042693674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dirt
+  m_EditorClassIdentifier: 
+  Name: Dirt
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-1561348749561493873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4237,7 +4495,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &-1285268439423250438
+--- !u!114 &-1327698535092992651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4288,23 +4546,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &-1168679150391128470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Boat Motor Accelerate/Throttle
-  m_EditorClassIdentifier: 
-  Name: Throttle
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &-1165879133184601002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4373,24 +4614,6 @@ MonoBehaviour:
   Max: 10
   Default: 7
   Exists: 0
---- !u!114 &-1082516682757402130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637080824681435627
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
 --- !u!114 &-1030736311360497215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4545,6 +4768,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-741376796403647888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
+  Exists: 0
 --- !u!114 &-730291290874434430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4560,7 +4800,7 @@ MonoBehaviour:
   Path: event:/Water Horse Bite
   guid: b5885766b1595a47951c291f0ca008ba
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4721,6 +4961,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-542455926053701180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dock
+  m_EditorClassIdentifier: 
+  Name: Dock
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-487090296456541745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4928,6 +5185,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-219782489187566049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Motor Accelerate/Throttle
+  m_EditorClassIdentifier: 
+  Name: Throttle
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-210647967037166250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4962,6 +5236,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-157181366453012753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dock
+  m_EditorClassIdentifier: 
+  Name: Dock
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-149078391191970324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4978,6 +5269,23 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 0
+--- !u!114 &-125412063546934515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Adrift/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
   Exists: 0
 --- !u!114 &-91017446210500166
 MonoBehaviour:
@@ -4997,6 +5305,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-69660167155119309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637080949850000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5011,7 +5337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 8235920755148581439}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   EditorEvents:
   - {fileID: 5494824210810479540}
   - {fileID: -3669636871185511412}
@@ -5046,13 +5372,36 @@ MonoBehaviour:
   - {fileID: -6700695943091789023}
   - {fileID: 594209450559064619}
   - {fileID: -3176805336385719206}
+  - {fileID: -8799105491148980138}
+  - {fileID: -4926572741547805546}
+  - {fileID: -4297340913093608177}
+  - {fileID: 3223075865756403177}
+  - {fileID: 6338265579323451448}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   StringsBanks:
   - {fileID: 8235920755148581439}
-  stringsBankWriteTime: 637080824681505423
+  stringsBankWriteTime: 637080964260000000
   cacheVersion: 3
+--- !u!114 &65288678244165634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637080937950000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &70993747613348909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5138,6 +5487,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &143811295622429057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Lake Ambience/Lake Ambience Volume
+  m_EditorClassIdentifier: 
+  Name: Lake Ambience Volume
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 1
 --- !u!114 &174193316969898457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5275,6 +5641,23 @@ MonoBehaviour:
   Min: 0
   Max: 10
   Default: 7
+  Exists: 0
+--- !u!114 &373209887026595161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dirt
+  m_EditorClassIdentifier: 
+  Name: Dirt
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &389434817391820623
 MonoBehaviour:
@@ -5445,7 +5828,7 @@ MonoBehaviour:
   Path: event:/Engine Fix Fail
   guid: f74359655b05ac4ca2fb192d257909db
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -5987,6 +6370,23 @@ MonoBehaviour:
   Max: 10
   Default: 10
   Exists: 0
+--- !u!114 &1496313918346315237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Lake Ambience/Lake Ambience Volume
+  m_EditorClassIdentifier: 
+  Name: Lake Ambience Volume
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
 --- !u!114 &1501217774934752606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6072,6 +6472,23 @@ MonoBehaviour:
   Max: 10
   Default: 7
   Exists: 0
+--- !u!114 &1629691236524872615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Boat
+  m_EditorClassIdentifier: 
+  Name: Boat
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &1651646517087553155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6122,12 +6539,12 @@ MonoBehaviour:
   guid: 4bf732856686c645aa4b0db58bd6f64c
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1168679150391128470}
+  - {fileID: 7870221944476788260}
   MinDistance: 0
   MaxDistance: 0
   Length: 94133
@@ -6234,6 +6651,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &1889994514257760472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Adrift/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
+  Exists: 0
 --- !u!114 &1894107850598311987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6473,6 +6907,23 @@ MonoBehaviour:
   lastModified: 637077988280000000
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &2288738318155016139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dock
+  m_EditorClassIdentifier: 
+  Name: Dock
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &2299215974562242325
 MonoBehaviour:
@@ -6750,6 +7201,40 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &2596390968716789623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dirt
+  m_EditorClassIdentifier: 
+  Name: Dirt
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &2600111984826276833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Lake Ambience/Lake Ambience Volume
+  m_EditorClassIdentifier: 
+  Name: Lake Ambience Volume
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
 --- !u!114 &2608088272442966316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6799,7 +7284,7 @@ MonoBehaviour:
   Path: event:/BEC Death
   guid: 54e115d2ff7811438b13675c44b7e676
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -6888,6 +7373,23 @@ MonoBehaviour:
   m_Name: parameter:/Footsteps/Regular
   m_EditorClassIdentifier: 
   Name: Regular
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &2706813774151591433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Motor Accelerate/Throttle
+  m_EditorClassIdentifier: 
+  Name: Throttle
   Min: 0
   Max: 1
   Default: 0
@@ -6992,7 +7494,7 @@ MonoBehaviour:
   Path: event:/Fish Splash Out
   guid: d42182eb2a5cc84e845d6f56c47d0b9e
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7086,23 +7588,6 @@ MonoBehaviour:
   Max: 10
   Default: 10
   Exists: 1
---- !u!114 &3002438494027606057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Footsteps/Boat
-  m_EditorClassIdentifier: 
-  Name: Boat
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &3002765310751615221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7119,7 +7604,7 @@ MonoBehaviour:
   guid: e9fbe874e3fecb4d92c3f00e7a06bda0
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -7179,6 +7664,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &3223075865756403177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Door Knock
+  m_EditorClassIdentifier: 
+  Path: event:/Door Knock
+  guid: b4ac3dd9e6a09149ab5223f3c886e065
+  Banks:
+  - {fileID: 4052181958217091955}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3241264802158654954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7712,6 +8220,24 @@ MonoBehaviour:
   Max: 10
   Default: 7
   Exists: 0
+--- !u!114 &4052181958217091955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637080964260000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &4062760199651947668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7865,12 +8391,12 @@ MonoBehaviour:
   guid: ba934181b010e34aba88031692afb946
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1285268439423250438}
+  - {fileID: -1327698535092992651}
   MinDistance: 0
   MaxDistance: 0
   Length: 86218
@@ -8148,6 +8674,23 @@ MonoBehaviour:
   Max: 10
   Default: 7
   Exists: 0
+--- !u!114 &4727401257229567971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Boat
+  m_EditorClassIdentifier: 
+  Name: Boat
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &4749768171083053866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8336,12 +8879,12 @@ MonoBehaviour:
   guid: 60a86bfaf3a48748850117dafcc2aa29
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -7308915704316272750}
+  - {fileID: 143811295622429057}
   MinDistance: 0
   MaxDistance: 0
   Length: 272938
@@ -8376,6 +8919,23 @@ MonoBehaviour:
   m_Name: parameter:/Footsteps/Dock
   m_EditorClassIdentifier: 
   Name: Dock
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &5040227300815429668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dirt
+  m_EditorClassIdentifier: 
+  Name: Dirt
   Min: 0
   Max: 1
   Default: 0
@@ -8604,6 +9164,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &5405656684455509962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637080938420000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &5405808909011119482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8654,7 +9232,7 @@ MonoBehaviour:
   guid: 022ac3b43cd18d46a386a0941e2527c9
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -8762,7 +9340,7 @@ MonoBehaviour:
   Path: event:/Water Horse Track
   guid: 0870ce154a8c434c9004d1ff27748283
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -8874,6 +9452,23 @@ MonoBehaviour:
   Default: 0
   Exists: 0
 --- !u!114 &6069697708584880032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Boat
+  m_EditorClassIdentifier: 
+  Name: Boat
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &6102671841238724410
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9061,6 +9656,46 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &6338265579323451448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Page Turn
+  m_EditorClassIdentifier: 
+  Path: event:/Page Turn
+  guid: ce93442e656f1241b0227083efffffb5
+  Banks:
+  - {fileID: 4052181958217091955}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6350144960697177438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
+  Exists: 0
 --- !u!114 &6361904590776435437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9163,7 +9798,7 @@ MonoBehaviour:
   guid: 7a09806a25b8444aa3a48ba8139811e3
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9224,6 +9859,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &6717710157065036641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Boat
+  m_EditorClassIdentifier: 
+  Name: Boat
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &6737550502261642384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9310,6 +9962,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &6894558278619406255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Adrift/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
+  Exists: 0
 --- !u!114 &6900520666973924582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9361,6 +10030,23 @@ MonoBehaviour:
   Max: 10
   Default: 7
   Exists: 1
+--- !u!114 &6925884659813607860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
+  Exists: 0
 --- !u!114 &6941734840258389220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9651,23 +10337,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &7378416535827978579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Footsteps/Dock
-  m_EditorClassIdentifier: 
-  Name: Dock
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &7423127029466787435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9738,6 +10407,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &7577492732028864068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Dirt
+  m_EditorClassIdentifier: 
+  Name: Dirt
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &7583898469578926047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9874,6 +10560,40 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &7870221944476788260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Motor Accelerate/Throttle
+  m_EditorClassIdentifier: 
+  Name: Throttle
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &7878941813050790907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Motor Accelerate/Throttle
+  m_EditorClassIdentifier: 
+  Name: Throttle
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &7923446609457205488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9891,6 +10611,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &7963811658820501313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Adrift/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  Min: 0
+  Max: 10
+  Default: 7
+  Exists: 0
 --- !u!114 &7986612599445521817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9907,6 +10644,23 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 0
+--- !u!114 &7988665951691571413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Lake Ambience/Lake Ambience Volume
+  m_EditorClassIdentifier: 
+  Name: Lake Ambience Volume
+  Min: 0
+  Max: 10
+  Default: 10
   Exists: 0
 --- !u!114 &8117859462740592751
 MonoBehaviour:
@@ -9974,11 +10728,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637080824681505423
+  lastModified: 637080964260000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 2600
+    Value: 2830
   Exists: 1
 --- !u!114 &8288352741566300381
 MonoBehaviour:
@@ -10119,6 +10873,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &8457433138003399196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Boat Motor Accelerate/Throttle
+  m_EditorClassIdentifier: 
+  Name: Throttle
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &8464583497038985716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10169,7 +10940,7 @@ MonoBehaviour:
   Path: event:/Reel In
   guid: a2e45f2c7450564b965c26480831cc61
   Banks:
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -10194,6 +10965,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &8581338634325748929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Lake Ambience/Lake Ambience Volume
+  m_EditorClassIdentifier: 
+  Name: Lake Ambience Volume
+  Min: 0
+  Max: 10
+  Default: 10
+  Exists: 0
 --- !u!114 &8581997624153918938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10331,6 +11119,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &8882172884133935557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Boat
+  m_EditorClassIdentifier: 
+  Name: Boat
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &8980477354966126078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10398,14 +11203,14 @@ MonoBehaviour:
   guid: e889324755958d498f78fb7d6786300a
   Banks:
   - {fileID: -91017446210500166}
-  - {fileID: -1082516682757402130}
+  - {fileID: 4052181958217091955}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 7378416535827978579}
-  - {fileID: -3779898608309236831}
-  - {fileID: 3002438494027606057}
+  - {fileID: -157181366453012753}
+  - {fileID: -7917471396297301625}
+  - {fileID: 6102671841238724410}
   MinDistance: 0
   MaxDistance: 0
   Length: 750
