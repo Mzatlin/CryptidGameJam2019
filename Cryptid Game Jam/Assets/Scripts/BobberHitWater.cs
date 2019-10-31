@@ -15,6 +15,7 @@ public class BobberHitWater : MonoBehaviour
         if ((layer.value & 1 << collision.gameObject.layer) == 1 << collision.gameObject.layer)
         {
             OnHitWater();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Bobber Splash", GetComponent<Transform>().position);
         }
         else if(collision.gameObject.tag == "Player")
         {

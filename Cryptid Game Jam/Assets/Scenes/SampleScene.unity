@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -970,6 +970,7 @@ GameObject:
   - component: {fileID: 264765858}
   - component: {fileID: 264765857}
   - component: {fileID: 264765866}
+  - component: {fileID: 264765867}
   m_Layer: 0
   m_Name: Black Eyed Kid (2)
   m_TagString: Untagged
@@ -1027,7 +1028,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74ab161a2722e04f85da933f2b8c144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: event:/Test
+  path1: event:/Blank
+  path2: event:/BEC Death
   currentHealth: 3
   maxHealth: 1
   isDead: 0
@@ -1129,6 +1131,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba345af8115a9d47939ddd1a8ba83cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &264765867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264765856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/BEC Laughter
+  PlayEvent: 1
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 15
 --- !u!1 &279170038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1563,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 16
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2129,7 +2154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74ab161a2722e04f85da933f2b8c144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: event:/Test
+  path1: event:/Player Take Damage
+  path2: event:/Blank
   currentHealth: 10
   maxHealth: 1
   isDead: 0
@@ -3073,7 +3099,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74ab161a2722e04f85da933f2b8c144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: event:/Test
+  path1: 
+  path2: 
   currentHealth: 10
   maxHealth: 1
   isDead: 0
@@ -3100,6 +3127,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3114,7 +3142,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -3174,6 +3202,19 @@ Transform:
   m_Father: {fileID: 672118480}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &1014461120
 GameObject:
   m_ObjectHideFlags: 0
@@ -3582,6 +3623,7 @@ GameObject:
   - component: {fileID: 1102742811}
   - component: {fileID: 1102742812}
   - component: {fileID: 1102742813}
+  - component: {fileID: 1102742814}
   m_Layer: 0
   m_Name: Black Eyed Kid
   m_TagString: Untagged
@@ -3613,7 +3655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74ab161a2722e04f85da933f2b8c144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: event:/Test
+  path1: event:/Blank
+  path2: event:/BEC Death
   currentHealth: 3
   maxHealth: 1
   isDead: 0
@@ -3741,6 +3784,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba345af8115a9d47939ddd1a8ba83cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1102742814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102742803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/BEC Laughter
+  PlayEvent: 1
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 15
 --- !u!1 &1157747361
 GameObject:
   m_ObjectHideFlags: 0
@@ -4207,11 +4273,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 121798539}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
-        type: 3}
-      propertyPath: m_Name
-      value: CGJ_Boat_02
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4282,6 +4343,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1489136
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
+        type: 3}
+      propertyPath: m_Name
+      value: CGJ_Boat_02
+      objectReference: {fileID: 0}
+    - target: {fileID: -7470084205984942874, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6923cda5431db77449e40fd92c043e06, type: 2}
     - target: {fileID: 89822273036913413, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -4292,11 +4363,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 10.3
       objectReference: {fileID: 0}
-    - target: {fileID: -7470084205984942874, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6923cda5431db77449e40fd92c043e06, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078, type: 3}
 --- !u!1 &1308336034
@@ -5567,7 +5633,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 12
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -6058,7 +6124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74ab161a2722e04f85da933f2b8c144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: event:/Test2
+  path1: 
+  path2: 
   currentHealth: 1
   maxHealth: 1
   isDead: 0
@@ -6169,6 +6236,7 @@ GameObject:
   - component: {fileID: 2098144274}
   - component: {fileID: 2098144273}
   - component: {fileID: 2098144282}
+  - component: {fileID: 2098144283}
   m_Layer: 0
   m_Name: Black Eyed Kid (1)
   m_TagString: Untagged
@@ -6226,7 +6294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74ab161a2722e04f85da933f2b8c144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: event:/Test
+  path1: event:/Blank
+  path2: event:/BEC Death
   currentHealth: 3
   maxHealth: 1
   isDead: 0
@@ -6328,6 +6397,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba345af8115a9d47939ddd1a8ba83cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2098144283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098144272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/BEC Laughter
+  PlayEvent: 1
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 15
 --- !u!1 &2098903599
 GameObject:
   m_ObjectHideFlags: 0
