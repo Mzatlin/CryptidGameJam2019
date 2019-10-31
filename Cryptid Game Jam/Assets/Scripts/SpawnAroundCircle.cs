@@ -11,14 +11,16 @@ public class SpawnAroundCircle : MonoBehaviour
     [SerializeField]
     int Circleradius= 50;
 
-    void Start()
+    void OnEnable()
     {
+        Debug.Log("I'm Active!");
         Vector3 center = transform.position;
         for (int i = 0; i < numObjects; i++)
         {
             Vector3 pos = RandomCircle(center, Circleradius);
             Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center - pos);
             Instantiate(prefab, pos, rot);
+            prefab.SetActive(true);
         }
     }
 

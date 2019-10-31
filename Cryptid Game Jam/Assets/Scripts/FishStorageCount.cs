@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class FishStorageCount : MonoBehaviour
 {
+    public event Action OnFilledup = delegate { };
+
     [SerializeField]
     GameObject rod;
     [SerializeField]
@@ -30,9 +33,10 @@ public class FishStorageCount : MonoBehaviour
             holster.SetItem(rod);
             Debug.Log("Stored");
             fishCount++;
-            if(fishCount >= 1)
+            if(fishCount >= 2)
             {
-                header.WriteHeader("Drive Home Using Boat");
+                OnFilledup();
+                header.WriteHeader("Escape Using The Boat");
             }
         }
 

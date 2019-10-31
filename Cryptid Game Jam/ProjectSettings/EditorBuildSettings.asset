@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1Lake.unity
     guid: a7a00a669725d91468c2e631e2e5298f
+  - enabled: 1
+    path: Assets/Scenes/FinalTown.unity
+    guid: b5731f8c666336f469a0d316779bf573
   m_configObjects: {}

@@ -15,6 +15,7 @@ public class FishingController : MonoBehaviour
     RodReelBackBobber reelBack;
     [SerializeField]
     PlayerStatsSO playerstats;
+    int index = 0;
 
     Coroutine fishRoutine = null;
 
@@ -68,7 +69,22 @@ public class FishingController : MonoBehaviour
     IEnumerator CatchDelay()
     {
         yield return new WaitForSeconds(.1f);
-        holster.SetItem(fish[Random.Range(0, fish.Count - 1)]);
+        //  holster.SetItem(fish[Random.Range(0, fish.Count - 1)]);
+        if (index >= fish.Capacity)
+        {
+            index = 0;
+        }
+        holster.SetItem(fish[index]);
+        if(index == 1)
+        {
+            Debug.Log("You caught the bridle!");
+        }
+
+        if(index >= fish.Capacity)
+        {
+            index = 0;
+        }
+        index++;
         header.WriteHeader("Place in Front Chest");
         playerstats.isOccupied = false;
     }
