@@ -44,6 +44,7 @@ public class RodCastBobber : MonoBehaviour
                 bobber.SetActive(true);
                 bobber.GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * castingRange);
                 bobber.transform.parent = null;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Rod Cast");
             }
         }
 
