@@ -9,6 +9,7 @@ public class RespawnPlayer : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Fall in water");
         var player = collision.gameObject.GetComponent<IMovable>();
         if(player != null)
         {

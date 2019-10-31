@@ -4273,6 +4273,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 121798539}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
+        type: 3}
+      propertyPath: m_Name
+      value: CGJ_Boat_02
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4343,16 +4348,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1489136
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
-        type: 3}
-      propertyPath: m_Name
-      value: CGJ_Boat_02
-      objectReference: {fileID: 0}
-    - target: {fileID: -7470084205984942874, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6923cda5431db77449e40fd92c043e06, type: 2}
     - target: {fileID: 89822273036913413, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -4363,6 +4358,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 10.3
       objectReference: {fileID: 0}
+    - target: {fileID: -7470084205984942874, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6923cda5431db77449e40fd92c043e06, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078, type: 3}
 --- !u!1 &1308336034

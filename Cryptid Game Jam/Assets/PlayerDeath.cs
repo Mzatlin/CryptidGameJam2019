@@ -14,6 +14,7 @@ public class PlayerDeath : MonoBehaviour
     }
 
     void HandleDie() {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Death Stinger");
         stats.isOccupied = true;
     }
 }
