@@ -605,6 +605,7 @@ GameObject:
   - component: {fileID: 1566501604}
   - component: {fileID: 1566501603}
   - component: {fileID: 1566501602}
+  - component: {fileID: 1566501605}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -619,7 +620,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566501601}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1566501603
 Camera:
   m_ObjectHideFlags: 0
@@ -677,6 +678,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1566501605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566501601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &1587351041
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +929,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703384536}
   m_CullTransparentMesh: 0
+--- !u!1 &1721861029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
+    type: 3}
+  m_PrefabInstance: {fileID: 1977836721}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1721861030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721861029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Wind
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Volume
+    Value: 5.77
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1721861031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721861029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Boat Adrift
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Volume
+    Value: 9.13
+  OverrideAttenuation: 1
+  OverrideMinDistance: 5
+  OverrideMaxDistance: 20
 --- !u!1001 &1977836721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -922,11 +992,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
-        type: 3}
-      propertyPath: m_Name
-      value: CGJ_Boat_02
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -981,6 +1046,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078,
+        type: 3}
+      propertyPath: m_Name
+      value: CGJ_Boat_02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c6b5f4ba60fbdf419ee2f618a7b9078, type: 3}

@@ -50,9 +50,11 @@ public class RepairController : MonoBehaviour
             {
                 if (Input.GetKeyDown(finalKeys[index]))
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Engine Fix Action");
                     keyText[index].faceColor = new Color32(255, 0, 0, 255);
                     if (index >= keyText.Length - 1)
                     {
+                        FMODUnity.RuntimeManager.PlayOneShot("event:/Engine Fix Success");
                         OnCompletion();
                     }
                     else
@@ -63,6 +65,7 @@ public class RepairController : MonoBehaviour
                 }
                 else
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Engine Fix Fail");
                     Debug.Log("Wrong Key!");
                     OnCompletion();
                 }
