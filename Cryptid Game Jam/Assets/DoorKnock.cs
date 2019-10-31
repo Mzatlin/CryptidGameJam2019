@@ -13,11 +13,8 @@ public class DoorKnock : MonoBehaviour
 
     IEnumerator Knock()
     {
-        yield return new WaitForSeconds(.3f);
-        Debug.Log("Knock");
-        yield return new WaitForSeconds(.3f);
-        Debug.Log("Knock");
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(3f);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Door Knock", GetComponent<Transform>().position);
         Debug.Log("Knock");
     }
 

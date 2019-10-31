@@ -17,6 +17,7 @@ public class OpenDoor : MonoBehaviour
 
     void HandleInteract()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Door Creak", GetComponent<Transform>().position);
         render.enabled = false;
         StartCoroutine(NewScene());
     }

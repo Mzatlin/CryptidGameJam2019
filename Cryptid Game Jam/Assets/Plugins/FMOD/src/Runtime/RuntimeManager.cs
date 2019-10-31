@@ -128,6 +128,11 @@ namespace FMODUnity
             }
         }
 
+        public static void AttachInstanceToGameObject(EventInstance fishOn, Vector3 position)
+        {
+            throw new NotImplementedException();
+        }
+
         public static FMOD.Studio.System StudioSystem
         {
             get { return Instance.studioSystem; }

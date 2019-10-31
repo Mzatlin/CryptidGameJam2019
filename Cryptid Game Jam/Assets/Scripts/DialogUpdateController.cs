@@ -39,14 +39,15 @@ public class DialogUpdateController : WriterBase
             }
         }
 
-        if(continueText.enabled && Input.GetKeyDown(KeyCode.Return))
+        if (continueText.enabled && Input.GetKeyDown(KeyCode.Return))
         {
-            if(index >= messageBox.dialogMessages.Count - 1)
+            if (index >= messageBox.dialogMessages.Count - 1)
             {
                 CloseDialog();
             }
             else
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Page Turn");
                 textContent.text = "";
                 index++;
                 StartDialog();

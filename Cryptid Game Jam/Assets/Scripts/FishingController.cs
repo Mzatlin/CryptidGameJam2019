@@ -17,6 +17,8 @@ public class FishingController : MonoBehaviour
     PlayerStatsSO playerstats;
     int index = 0;
 
+    FMOD.Studio.EventInstance FishOn;
+
     Coroutine fishRoutine = null;
 
     enum FishState {WatingForBite, Bite, Missed}
@@ -77,6 +79,7 @@ public class FishingController : MonoBehaviour
         holster.SetItem(fish[index]);
         if(index == 1)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Bridle Stinger");
             Debug.Log("You caught the bridle!");
         }
 
@@ -99,9 +102,13 @@ public class FishingController : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(5f,10f));
         Debug.Log("You got a Bite!");
+        FishOn = FMODUnity.RuntimeManager.CreateInstance("event:/Fish On the Hook");
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(FishOn, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        FishOn.start();
         fishing = FishState.Bite;
         yield return new WaitForSeconds(Random.Range(1f, 2f));
         Debug.Log("Too Slow!");
         fishing = FishState.Missed;
+        FishOn.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }
