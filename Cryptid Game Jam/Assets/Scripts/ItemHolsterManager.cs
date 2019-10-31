@@ -10,6 +10,8 @@ public class ItemHolsterManager : MonoBehaviour
     public GameObject child;
     [SerializeField]
     GameObject startingItem;
+    [SerializeField]
+    bool canRotate = false;
 
     void Awake()
     {
@@ -24,7 +26,10 @@ public class ItemHolsterManager : MonoBehaviour
         RemoveItem(child);
         child = item;
         child.transform.position = holsterPosition.transform.position;
+        if (canRotate)
+        {
         child.transform.rotation = holsterPosition.transform.rotation;
+        }
         child.transform.SetParent(holsterPosition.transform);
         child.SetActive(true);
     }
