@@ -14,7 +14,7 @@ public class SummonKelpie : MonoBehaviour
         SpawnManager.SetActive(false);
         storage = GetComponent<FishStorageCount>();
         storage.OnFilledup += HandleFill;
-        track = FMODUnity.RuntimeManager.CreateInstance("event:/Water Horse Track");
+        //track = FMODUnity.RuntimeManager.CreateInstance("event:/Water Horse Track");
     }
 
     void HandleFill()

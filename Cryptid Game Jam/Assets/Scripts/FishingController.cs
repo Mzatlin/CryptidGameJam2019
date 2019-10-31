@@ -103,7 +103,7 @@ public class FishingController : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(5f,10f));
         Debug.Log("You got a Bite!");
         FishOn = FMODUnity.RuntimeManager.CreateInstance("event:/Fish On the Hook");
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(FishOn, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(FishOn, bobber.GetComponent<Transform>(),bobber.GetComponent<Rigidbody>());
         FishOn.start();
         fishing = FishState.Bite;
         yield return new WaitForSeconds(Random.Range(1f, 2f));
