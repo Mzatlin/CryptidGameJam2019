@@ -37,7 +37,7 @@ public class ShootRifle : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Shotgun Shot");
             animate.Play("gunshot");
-            ray = new Ray(transform.position, -transform.up);
+            ray = new Ray(transform.position, transform.forward);
             Debug.DrawRay(ray.origin, ray.direction * shootRange);
             if (Physics.Raycast(ray, out hit, shootRange))
             {
