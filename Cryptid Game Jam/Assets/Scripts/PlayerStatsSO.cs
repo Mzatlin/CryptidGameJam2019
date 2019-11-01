@@ -6,6 +6,5 @@ using UnityEngine;
 public class PlayerStatsSO : ScriptableObject
 {
     public bool isOccupied;
-    public float health;
-    public float stamina; 
+    public bool isDead;
 }

@@ -9,7 +9,7 @@ public class SpawnToPositions : MonoBehaviour
     [SerializeField]
     List<GameObject> SpawnItems = new List<GameObject>();
     [SerializeField]
-    float spawnAmount=3f;
+    float spawnAmount=1f;
     [SerializeField]
     float delay = 3f;
     [SerializeField]
