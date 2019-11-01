@@ -7,6 +7,8 @@ public class OpenDoor : MonoBehaviour
 {
     InteractionController interact;
     MeshRenderer render;
+    [SerializeField]
+    string level;
 
     void Start()
     {
@@ -25,6 +27,6 @@ public class OpenDoor : MonoBehaviour
     IEnumerator NewScene()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Level1Diary", LoadSceneMode.Single);
+        SceneManager.LoadScene(level, LoadSceneMode.Single);
     }
 }
