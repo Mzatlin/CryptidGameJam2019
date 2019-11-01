@@ -7,7 +7,7 @@
 [WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7ffb6d858008 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fdaad6b2208 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,4 +17,161 @@
 [LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 121, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 31012608
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 85664
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000c8858bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x13eeb3aa2
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x13eeb3b59
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x13eeb3b89
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x13eeb3c29
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fda0f110908
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Door_Knock_ODY-1631-054', format=2, channels=1, frequency=48000, lengthbytes=10624, lengthpcm=65536, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.409454.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 31012608
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 85664
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000c8858bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x13eeb3aa2
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x13eeb3b59
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x13eeb3b89
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x13eeb3c29
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fda0f79eb58
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Wood_Door_Squeak_ODC-0019-480', format=2, channels=1, frequency=48000, lengthbytes=33984, lengthpcm=308224, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.034027.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 31012608
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 85664
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000c8858bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x13eeb3aa2
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x13eeb3b59
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x13eeb3b89
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x13eeb3c29
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fda0f79eb58
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Childs_Laughter_ODY-1185-083-01.6', format=2, channels=1, frequency=48000, lengthbytes=14080, lengthpcm=75300, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.195296.
+[LOG] SystemI::createSound                     : filename = FMOD/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fda0f0cf708 : node = 0x7fda0e5d2400
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fda0f0e7638.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fda0f0cf708
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 31012608
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 85664
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fda0e5d2510
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 7775
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Wood_Door_Open_Slam_ODC-0021-259-02', format=2, channels=2, frequency=48000, lengthbytes=137216, lengthpcm=566580, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.927912.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fda0f0cf708
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fda0fcf1068
+[LOG] SoundI::getSubSound                      :     sound 0x7fda0f0cf708.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fda0fcf1068
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fda0fc0a578
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fda0fc0a578
+[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7fda0ed8cfa8)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fda0fc96e88)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fda0fc97018)
+[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7fda0e5e3b88)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fda0fcf0ed8)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fda0fcf1068)
+[LOG] SoundI::release                          : Wood_Door_Open_Slam_ODC-0021-259-02 (0x7fda0f0cf708)
+[LOG] SoundI::release                          :     Wood_Door_Open_Slam_ODC-0021-259-02 (0x7fda0fba5c48)
+[LOG] SoundI::release                          :     Wood_Door_Open_Slam_ODC-0021-259-02 (0x7fda0fb6b788)
+[LOG] SoundI::release                          : CW005_Moody_Winds_Deep_Dark (0x7fda0f058e18)
+[LOG] SoundI::release                          :     CW005_Moody_Winds_Deep_Dark (0x7fda0fcc8668)
+[LOG] SoundI::release                          :     CW005_Moody_Winds_Deep_Dark (0x7fda0fc913e8)
+[LOG] SoundI::release                          : Boat_Adrift_FuMa_WWW.001 (0x7fda0ef70888)
+[LOG] SoundI::release                          :     Boat_Adrift_FuMa_WWW.001 (0x7fda0eb995d8)
+[LOG] SoundI::release                          :     Boat_Adrift_FuMa_WWW.001 (0x7fda0f430328)
+[LOG] SoundI::release                          : Water_Lap_Active_ODY-1553-030 (0x7fda0ed969a8)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fda0fc0a3e8)
+[LOG] SoundI::release                          :     Water_Lap_Active_ODY-1553-030 (0x7fda0fc0a578)
+[LOG] SoundI::release                          :  (0x7fda0c7084d8)
+[LOG] SoundI::release                          :     Door_Knock_ODY-1631-054 (0x7fda0f1df0b8)
+[LOG] SoundI::release                          :  (0x7fda0f76d3e8)
+[LOG] SoundI::release                          :     Childs_Laughter_ODY-1185-083-01.6 (0x7fda0f76d558)
+[LOG] SoundI::release                          :  (0x7fda0f75d028)
+[LOG] SoundI::release                          :     Wood_Door_Squeak_ODC-0019-480 (0x7fda0f790448)
+[LOG] SoundI::release                          :  (0x7fda0e58f7d8)
+[LOG] SoundI::release                          :     Dialogue Scroll Medium (0x7fda2c68e008)
+[LOG] SoundI::release                          :  (0x7fda0f063e48)
+[LOG] SoundI::release                          :     Footsteps_Dirt (0x7fda2c6665e8)
+[LOG] SoundI::release                          :  (0x7fda0e5f6088)
+[LOG] SoundI::release                          :     Footsteps_Dirt_1 (0x7fda0edcea08)
+[LOG] SoundI::release                          :  (0x7fda0f0de788)
+[LOG] SoundI::release                          :     Footsteps_Dirt_2 (0x7fda0ef2be58)
+[LOG] SoundI::release                          :  (0x7fda0eda09b8)
+[LOG] SoundI::release                          :     Footsteps_Dirt_3 (0x7fda0f045258)
+[LOG] SoundI::release                          :  (0x7fda0edcdd38)
+[LOG] SoundI::release                          :     Footsteps_Dirt_4 (0x7fda0ed923b8)
+[LOG] SoundI::release                          :  (0x7fda0f0a2948)
+[LOG] SoundI::release                          :     Footsteps_Dirt_5 (0x7fda0e5b98e8)
+[LOG] SoundI::release                          :  (0x7fda0e5c2208)
+[LOG] SoundI::release                          :     Footsteps_Dirt_6 (0x7fda0ef71fe8)
+[LOG] SoundI::release                          :  (0x7fda0ed21da8)
+[LOG] SoundI::release                          :     Footsteps_Dirt_7 (0x7fda0e562a58)
+[LOG] SoundI::release                          :  (0x7fda0efb0a48)
+[LOG] SoundI::release                          :     Footsteps_boat (0x7fda0e5ddf28)
+[LOG] SoundI::release                          :  (0x7fda0e5b52c8)
+[LOG] SoundI::release                          :     Footsteps_boat_1 (0x7fda0f0ee558)
+[LOG] SoundI::release                          :  (0x7fda0f04cf08)
+[LOG] SoundI::release                          :     Footsteps_boat_2 (0x7fda0ed0bb68)
+[LOG] SoundI::release                          :  (0x7fda0f067398)
+[LOG] SoundI::release                          :     Footsteps_boat_3 (0x7fda0ef02628)
+[LOG] SoundI::release                          :  (0x7fda0f06dcb8)
+[LOG] SoundI::release                          :     Footsteps_boat_4 (0x7fda0ef54f18)
+[LOG] SoundI::release                          :  (0x7fda0eff73c8)
+[LOG] SoundI::release                          :     Footsteps_boat_5 (0x7fda0e59ba98)
+[LOG] SoundI::release                          :  (0x7fda0efe59d8)
+[LOG] SoundI::release                          :     Footsteps_boat_6 (0x7fda0ef7bc48)
+[LOG] SoundI::release                          :  (0x7fda0ed50698)
+[LOG] SoundI::release                          :     Footsteps_boat_7 (0x7fda0e58edb8)
+[LOG] SoundI::release                          :  (0x7fda0edcc958)
+[LOG] SoundI::release                          :     Footsteps_wood (0x7fda0f032d98)
+[LOG] SoundI::release                          :  (0x7fda0ef7ff98)
+[LOG] SoundI::release                          :     Footsteps_wood_1 (0x7fda0ef790e8)
+[LOG] SoundI::release                          :  (0x7fda0edf9488)
+[LOG] SoundI::release                          :     Footsteps_wood_2 (0x7fda0e566b98)
+[LOG] SoundI::release                          :  (0x7fda0e5a4dd8)
+[LOG] SoundI::release                          :     Footsteps_wood_3 (0x7fda0e53e0d8)
+[LOG] SoundI::release                          :  (0x7fda0f0989d8)
+[LOG] SoundI::release                          :     Footsteps_wood_4 (0x7fda0f0a7c28)
+[LOG] SoundI::release                          :  (0x7fda0e5d1a48)
+[LOG] SoundI::release                          :     Footsteps_wood_5 (0x7fda0ef043d8)
+[LOG] SoundI::release                          :  (0x7fda0f0d2e98)
+[LOG] SoundI::release                          :     Footsteps_wood_6 (0x7fda0e5f09c8)
+[LOG] SoundI::release                          :  (0x7fda0efab688)
+[LOG] SoundI::release                          :     Footsteps_wood_7 (0x7fda2c6fa718)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
