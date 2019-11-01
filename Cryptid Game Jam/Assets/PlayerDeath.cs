@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDeath : MonoBehaviour
 {
     HealthController health;
+    [SerializeField]
     PlayerStatsSO stats;
     FMOD.Studio.Bus master;
     // Start is called before the first frame update
