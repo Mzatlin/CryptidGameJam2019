@@ -51,8 +51,8 @@ public class FishingController : MonoBehaviour
         {
             if (fishing == FishState.Bite)
             {
-
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Fish Splash Out");
+                FishOn.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 StartCoroutine(CatchDelay());
                 render.color = original;
             }
