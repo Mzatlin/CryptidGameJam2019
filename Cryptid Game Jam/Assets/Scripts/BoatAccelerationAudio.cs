@@ -12,6 +12,8 @@ public class BoatAccelerationAudio : MonoBehaviour
     [SerializeField]
     PlayerStatsSO playerStats;
 
+    bool drivingBoat = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class BoatAccelerationAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerStats.isOccupied && Input.GetKey(KeyCode.W) && (PlaybackState(accelerate) != (PLAYBACK_STATE.PLAYING)))
+        if (playerStats.isOccupied && Input.GetKey(KeyCode.W) && (PlaybackState(accelerate) != (PLAYBACK_STATE.PLAYING)) && drivingBoat)
         {
             accelerate = FMODUnity.RuntimeManager.CreateInstance(sound);
 
@@ -45,4 +47,13 @@ public class BoatAccelerationAudio : MonoBehaviour
         accelerate.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        drivingBoat = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        drivingBoat = false;
+    }
 }

@@ -23,5 +23,4 @@ public class StartMotor : MonoBehaviour
             OnStartMotor();
         }
     }
-
 }
