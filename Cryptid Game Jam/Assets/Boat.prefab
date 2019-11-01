@@ -311,6 +311,7 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
   player: {fileID: 0}
   boatCam: {fileID: 8121463598052830187}
+  Items: []
 --- !u!114 &5712418539601498588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +364,8 @@ GameObject:
   - component: {fileID: 8121463596639449456}
   - component: {fileID: 8121463596639449457}
   - component: {fileID: 8121463596639449462}
+  - component: {fileID: 1255902149608515690}
+  - component: {fileID: 6560617849453950883}
   m_Layer: 0
   m_Name: Motor
   m_TagString: Untagged
@@ -431,6 +434,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
+--- !u!114 &1255902149608515690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8121463596639449460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24a3e27b223a9144b22af94f89c5f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6560617849453950883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8121463596639449460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc041848865de9f41b3b6c66de4df935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descObject: {fileID: 11400000, guid: a64f2d7c597c5094f85859481b8507c6, type: 2}
+  description: 'Drive Boat '
 --- !u!1 &8121463597417625344
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +570,7 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
   player: {fileID: 0}
   boatCam: {fileID: 8121463598052830187}
+  Items: []
 --- !u!114 &4977913364454760228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,7 +583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74ab161a2722e04f85da933f2b8c144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: event:/Shotgun Shot
+  path1: 
+  path2: 
   currentHealth: 5
   maxHealth: 1
   isDead: 0

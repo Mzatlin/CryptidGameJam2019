@@ -3,18 +3,25 @@ using System;
 
 public class StartMotor : MonoBehaviour
 {
-
+    InteractionController interact;
     public event Action OnStartMotor = delegate { };
 
     [SerializeField]
     PlayerStatsSO playerStats;
 
-    private void OnTriggerStay(Collider other)
+    void Start()
     {
-        var player = other.GetComponent<PlayerMoveController>();
-        if (player != null && !playerStats.isOccupied && Input.GetKeyDown(KeyCode.E) && !BoatMovementController.isMotorActive)
+        interact = GetComponent<InteractionController>();
+        interact.OnInteract += HandleInteract;
+    }
+
+    void HandleInteract()
+    {
+       // var player = other.GetComponent<PlayerMoveController>();
+        if (!playerStats.isOccupied && Input.GetKeyDown(KeyCode.E) && !BoatMovementController.isMotorActive)
         {
             OnStartMotor();
         }
     }
+
 }

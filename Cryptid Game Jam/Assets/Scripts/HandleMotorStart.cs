@@ -14,6 +14,8 @@ public class HandleMotorStart : MonoBehaviour
     [SerializeField]
     Camera boatCam;
     HandleMotorStart start;
+    [SerializeField]
+    List<GameObject> Items = new List<GameObject>();
    
   
     void Awake()
@@ -47,6 +49,11 @@ public class HandleMotorStart : MonoBehaviour
         Debug.Log("Motor Started");
         BoatMovementController.isMotorActive = true;
         playerStats.isOccupied = true;
+        for(int i = 0; i<Items.Capacity; i++)
+        {
+            Items[i].transform.parent = transform;
+        }
+
         player.parent = transform;
         player.gameObject.SetActive(false);
         boatCam.enabled = true;
@@ -58,6 +65,10 @@ public class HandleMotorStart : MonoBehaviour
         BoatMovementController.isMotorActive = false;
         playerStats.isOccupied = false;
         player.parent = null;
+        for (int i = 0; i < Items.Capacity; i++)
+        {
+            Items[i].transform.parent = null;
+        }
         player.gameObject.SetActive(true);
         boatCam.enabled = false;
     }

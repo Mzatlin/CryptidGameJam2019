@@ -70,7 +70,7 @@ public class FishingController : MonoBehaviour
 
     IEnumerator CatchDelay()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.4f);
         //  holster.SetItem(fish[Random.Range(0, fish.Count - 1)]);
         if (index >= fish.Capacity)
         {
@@ -90,6 +90,8 @@ public class FishingController : MonoBehaviour
         index++;
         header.WriteHeader("Place in Front Chest");
         playerstats.isOccupied = false;
+       // reelBack.RetrieveBobber();
+
     }
 
     void HandleMinigame()

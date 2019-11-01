@@ -25,7 +25,8 @@ public class PlayerInteract : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * interactDist);
         if (Physics.Raycast(ray, out hit, interactDist, interactLayer) && !playerStats.isOccupied)
         {
-            interact = hit.transform.GetComponent<IInteractable>();
+
+            interact = hit.collider.transform.GetComponent<IInteractable>();
             if (interact != null)
             {
                 lastTouched = true;
@@ -42,7 +43,11 @@ public class PlayerInteract : MonoBehaviour
             if (lastTouched)
             {
                 lastTouched = false;
-                interact.ReceiveHoverLeave();
+                if (interact != null)
+                {
+                    interact.ReceiveHoverLeave();
+                }
+
             }
 
         }

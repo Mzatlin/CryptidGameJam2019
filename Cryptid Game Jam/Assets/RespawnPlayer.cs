@@ -10,7 +10,7 @@ public class RespawnPlayer : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/Fall in water");
-        var player = collision.gameObject.GetComponent<IMovable>();
+        var player = collision.gameObject.GetComponent<PlayerMoveController>();
         if(player != null)
         {
             collision.transform.position = respawnPosition.position;
