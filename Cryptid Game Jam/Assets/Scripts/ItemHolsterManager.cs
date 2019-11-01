@@ -30,7 +30,7 @@ public class ItemHolsterManager : MonoBehaviour
         {
         child.transform.rotation = holsterPosition.transform.rotation;
         }
-        child.transform.SetParent(holsterPosition.transform);
+        child.transform.parent = (holsterPosition.transform);
         child.SetActive(true);
     }
 

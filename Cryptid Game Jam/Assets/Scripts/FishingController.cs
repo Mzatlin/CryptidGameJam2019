@@ -15,7 +15,11 @@ public class FishingController : MonoBehaviour
     RodReelBackBobber reelBack;
     [SerializeField]
     PlayerStatsSO playerstats;
+    SpriteRenderer render;
     int index = 0;
+    [SerializeField]
+    Animator animate;
+    Color original;
 
     FMOD.Studio.EventInstance FishOn;
 
@@ -34,7 +38,10 @@ public class FishingController : MonoBehaviour
         //bobber = FindObjectOfType<BobberHitWater>();
         reelBack.OnReel += HandleReel;
         bobber.OnHitWater += HandleMinigame;
+        render = bobber.GetComponentInChildren<SpriteRenderer>();
+        animate = bobber.GetComponentInChildren<Animator>();
         fishing = FishState.Missed;
+        original = render.color;
     }
 
     // Update is called once per frame
@@ -44,12 +51,14 @@ public class FishingController : MonoBehaviour
         {
             if (fishing == FishState.Bite)
             {
+
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Fish Splash Out");
                 StartCoroutine(CatchDelay());
-              
+                render.color = original;
             }
             else
             {
+                render.color = original;
                 fishing = FishState.Missed;
             }
 
@@ -60,6 +69,7 @@ public class FishingController : MonoBehaviour
 
     void HandleReel()
     {
+        render.color = original;
         fishing = FishState.Missed;
         if(fishRoutine != null)
         {
@@ -77,7 +87,7 @@ public class FishingController : MonoBehaviour
             index = 0;
         }
         holster.SetItem(fish[index]);
-        if(index == 1)
+        if(index == 2)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Bridle Stinger");
             Debug.Log("You caught the bridle!");
@@ -104,11 +114,13 @@ public class FishingController : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(5f,10f));
         Debug.Log("You got a Bite!");
+        render.color = Color.red;
         FishOn = FMODUnity.RuntimeManager.CreateInstance("event:/Fish On the Hook");
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(FishOn, bobber.GetComponent<Transform>(),bobber.GetComponent<Rigidbody>());
         FishOn.start();
         fishing = FishState.Bite;
         yield return new WaitForSeconds(Random.Range(1f, 2f));
+        render.color = original;
         Debug.Log("Too Slow!");
         fishing = FishState.Missed;
         FishOn.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);

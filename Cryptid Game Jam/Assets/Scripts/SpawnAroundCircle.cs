@@ -9,29 +9,58 @@ public class SpawnAroundCircle : MonoBehaviour
     [SerializeField]
     GameObject prefab;
     [SerializeField]
-    int Circleradius= 50;
+    int Circleradius = 50;
+    HealthController health;
+    [SerializeField]
+    int startingHealth = 1;
+    Vector3 center;
+
+    public static bool isActive;
 
     void OnEnable()
     {
-        Debug.Log("I'm Active!");
-        Vector3 center = transform.position;
-        for (int i = 0; i < numObjects; i++)
-        {
-            Vector3 pos = RandomCircle(center, Circleradius);
-            Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center - pos);
-            Instantiate(prefab, pos, rot);
-            prefab.SetActive(true);
-        }
+        isActive = true;
+        prefab.SetActive(true);
+        InvokeRepeating("CheckActive", 7f, 3f);
+        /*  Vector3 center = transform.position;
+          for (int i = 0; i < numObjects; i++)
+          {
+              Vector3 pos = RandomCircle(center, Circleradius);
+              Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center - pos);
+              Instantiate(prefab, pos, rot);
+              prefab.SetActive(true);
+          }*/
     }
 
-    Vector3 RandomCircle(Vector3 center, float radius)
+    void CheckActive()
     {
-        float ang = Random.value * 360;
-        Vector3 pos;
-        pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
-        pos.z = center.z + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
-        pos.y = center.y;
-        return pos;
-    }
+        if (!prefab.activeInHierarchy)
+        {
+            Vector3 center = transform.position;
+            prefab.transform.position = RandomCircle(center, Circleradius);
+            prefab.SetActive(true);
 
+            health = prefab.GetComponent<HealthController>();
+            if (health != null)
+            {
+                health.CurrentHealth = startingHealth;
+                prefab.GetComponent<HealthController>().IsDead = false;
+
+            }
+
+        }
+
+
+
+        Vector3 RandomCircle(Vector3 center, float radius)
+        {
+            float ang = Random.value * 360;
+            Vector3 pos;
+            pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
+            pos.z = center.z + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+            pos.y = center.y;
+            return pos;
+        }
+
+    }
 }

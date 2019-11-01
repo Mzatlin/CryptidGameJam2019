@@ -10,6 +10,8 @@ public class FishStorageCount : MonoBehaviour
     [SerializeField]
     GameObject rod;
     [SerializeField]
+    GameObject gun;
+    [SerializeField]
     int fishCount = 0;
     InteractionController interact;
     ItemHolsterManager holster;
@@ -33,7 +35,7 @@ public class FishStorageCount : MonoBehaviour
             holster.SetItem(rod);
             Debug.Log("Stored");
             fishCount++;
-            if(fishCount >= 2)
+            if(fishCount >= 3)
             {
                 OnFilledup();
                 header.WriteHeader("Escape Using The Boat");
