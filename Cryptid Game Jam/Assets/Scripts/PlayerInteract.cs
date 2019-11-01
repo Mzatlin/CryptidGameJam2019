@@ -23,7 +23,7 @@ public class PlayerInteract : MonoBehaviour
     {
         ray = new Ray(transform.position, transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * interactDist);
-        if (Physics.Raycast(ray, out hit, interactDist, interactLayer) && !playerStats.isOccupied)
+        if (Physics.Raycast(ray, out hit, interactDist, interactLayer) && !playerStats.isOccupied && !playerStats.isDead)
         {
 
             interact = hit.collider.transform.GetComponent<IInteractable>();

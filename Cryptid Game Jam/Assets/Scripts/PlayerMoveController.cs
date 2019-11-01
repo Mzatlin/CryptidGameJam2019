@@ -26,7 +26,7 @@ public class PlayerMoveController : MonoBehaviour, IMovable
     // Update is called once per frame
     void Update()
     {
-        if (player.isOccupied)
+        if (player.isOccupied || player.isDead)
         {
             physics.SetVelocity(Vector3.zero);
             physics.SetRotation(Vector3.zero);

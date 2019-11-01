@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
+    [SerializeField]
+    ItemHolsterManager holster;
     HealthController health;
     [SerializeField]
     PlayerStatsSO stats;
@@ -11,6 +13,7 @@ public class PlayerDeath : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        stats.isDead = false;
         health = GetComponent<HealthController>();
         health.OnDie += HandleDie;
         master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
@@ -20,6 +23,7 @@ public class PlayerDeath : MonoBehaviour
     {
         master.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         FMODUnity.RuntimeManager.PlayOneShot("event:/Death Stinger");
-        stats.isOccupied = true;
+        stats.isDead = true;
+        holster.RemoveItem(holster.child);
     }
 }
