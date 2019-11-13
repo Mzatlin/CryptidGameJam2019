@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7ab8fd9cf2b444a469f3b20822856b0b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Digis Handwriting
+  fontNames:
+  - Digis Handwriting
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2a16ef3d95af9384d9caf0eb2e153d4c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

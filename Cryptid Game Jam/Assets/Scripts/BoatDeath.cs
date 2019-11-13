@@ -7,22 +7,23 @@ public class BoatDeath : MonoBehaviour
     [SerializeField]
     ShipHealthSO ship;
     [SerializeField]
-    PlayerStatsSO player;
+    GameObject player;
     HealthController health;
 
 
     void Start()
     {
         ship.isDead = false;
-        player.isDead = false;
         health = GetComponent<HealthController>();
         health.OnDie += HandleDie;
+        player.GetComponent<PlayerMoveController>();
     }
 
 
     void HandleDie()
     {
-        player.isDead = true;
+        player.GetComponent<PlayerMoveController>().enabled = false;
+        player.GetComponent<RodCastBobber>().enabled = false;
         BoatMovementController.isMotorActive = false;
         ship.isDead = true;
     }

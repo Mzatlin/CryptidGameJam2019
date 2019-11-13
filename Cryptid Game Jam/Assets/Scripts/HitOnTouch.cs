@@ -9,7 +9,7 @@ public class HitOnTouch : MonoBehaviour
         var movableCharacter = other.GetComponent<IMovable>();
         if(movableCharacter != null)
         {
-            var health = other.GetComponent<IHittable>();
+            var health = other.GetComponent<Collider>().transform.GetComponent<IHittable>();
             if (health != null)
             {
                 health.RecieveDamage();
