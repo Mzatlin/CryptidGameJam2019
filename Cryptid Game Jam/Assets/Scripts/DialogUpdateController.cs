@@ -74,7 +74,7 @@ public class DialogUpdateController : WriterBase
 
     void HandleWrite()
     {
-        if (!panel.enabled)
+        if (panel != null && !panel.enabled)
         {
             panel.enabled = true;
             index = 0;
