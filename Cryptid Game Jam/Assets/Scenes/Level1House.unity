@@ -5780,6 +5780,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836c9985fbb9ccf49b3bb987bb5d881d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objective:
+    isActive: 1
+    ObjectiveText: Open The Door
   header: {fileID: 11400000, guid: 7df10baaba8c56745970f3bab8d01c41, type: 2}
   objectives:
   - 'Open The Door '

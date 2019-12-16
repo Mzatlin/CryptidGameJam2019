@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NewObjectiveController : MonoBehaviour
 {
+    public Objective objective; 
     [SerializeField]
     HeaderText header;
     [SerializeField]

@@ -70,6 +70,7 @@ public class DialogUpdateController : WriterBase
         textContent.text = "";
         continueText.enabled = false;
         OnCloseDialog();
+        messageBox.CompleteDialog();
     }
 
     void HandleWrite()

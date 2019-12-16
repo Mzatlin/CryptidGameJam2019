@@ -6,8 +6,7 @@ using UnityEngine;
 public struct Objective 
 {
     [SerializeField]
-    bool isActive;
+    public bool isActive;
     [SerializeField]
-    string ObjectiveText;
-
+    public string objectiveText;
 }

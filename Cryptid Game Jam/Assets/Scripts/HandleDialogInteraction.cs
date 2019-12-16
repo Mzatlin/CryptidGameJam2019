@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class HandleDialogInteraction : MonoBehaviour
 {
+    public event Action OnClosed = delegate { };
+
+
     [SerializeField]
     MessageBoxText writer;
     [SerializeField]
@@ -15,16 +19,17 @@ public class HandleDialogInteraction : MonoBehaviour
     {
         interact = GetComponent<InteractionController>();
         interact.OnInteract += HandleInteract;
+        writer.OnFinish += HandleClosedDialog;
     }
-    
+
     void HandleInteract()
     {
-        Debug.Log("Interacted");
         writer.WriteDialog(dialog);
     }
-    // Update is called once per frame
-    void Update()
+
+    void HandleClosedDialog()
     {
-        
+        OnClosed();
     }
+
 }
