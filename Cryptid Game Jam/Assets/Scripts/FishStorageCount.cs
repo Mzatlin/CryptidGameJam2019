@@ -31,9 +31,9 @@ public class FishStorageCount : MonoBehaviour
     {
         if(holster.child != rod)
         {
+            header.WriteHeader("");
             FMODUnity.RuntimeManager.PlayOneShot("event:/Item Put Away");
             holster.SetItem(rod);
-            Debug.Log("Stored");
             fishCount++;
             if(fishCount >= 3)
             {

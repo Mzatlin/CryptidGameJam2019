@@ -6,17 +6,20 @@ public class ObjectiveOnDialogClose : MonoBehaviour
 {
     [SerializeField]
     HeaderText header;
+    [SerializeField]
+    ObjectiveSystem objectiveSystem;
     HandleDialogInteraction dialog;
+    Objective playerObjective;
     // Start is called before the first frame update
     void Start()
     {
+        playerObjective = new Objective("Head to boat");
         dialog = GetComponent<HandleDialogInteraction>();
         dialog.OnClosed += HandleCloseDialog;
     }
 
     void HandleCloseDialog()
     {
-        Debug.Log("clicked");
-        header.WriteHeader("Get onto the boat.");
+        objectiveSystem.ChangeObjective(playerObjective);
     }
 }

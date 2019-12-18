@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class NewObjectiveController : MonoBehaviour
 {
-    public Objective objective; 
+    [SerializeField]
+    ObjectiveSystem objectiveSystem;
     [SerializeField]
     HeaderText header;
     [SerializeField]
-    List<string> objectives = new List<string>();
+    List<Objective> objectives = new List<Objective>();
+    [SerializeField]
+    Objective startingObjective;
     // Start is called before the first frame update
     void Start()
     {
-      if(objectives.Count >=1)
+        if(startingObjective.objectiveText != null)
         {
-            header.WriteHeader(objectives[0]);
-        }  
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+            objectiveSystem.ChangeObjective(startingObjective);
+        }
     }
 }

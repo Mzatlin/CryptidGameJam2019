@@ -9,4 +9,10 @@ public struct Objective
     public bool isActive;
     [SerializeField]
     public string objectiveText;
+
+    public Objective(string text)
+    {
+        objectiveText = text;
+        isActive = false;
+    }
 }
