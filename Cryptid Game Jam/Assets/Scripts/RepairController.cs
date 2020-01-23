@@ -33,7 +33,7 @@ public class RepairController : MonoBehaviour
 
         for (int i = 0; i < keyText.Length; i++)
         {
-            finalKeys.Add(keys[UnityEngine.Random.Range(0, keys.Length-1)]);
+            finalKeys.Add(keys[UnityEngine.Random.Range(0, keys.Length - 1)]);
         }
         for (int i = 0; i < keyText.Length; i++)
         {
@@ -51,11 +51,10 @@ public class RepairController : MonoBehaviour
                 if (Input.GetKeyDown(finalKeys[index]))
                 {
                     FMODUnity.RuntimeManager.PlayOneShot("event:/Engine Fix Action");
-                    keyText[index].faceColor = new Color32(255, 0, 0, 255);
+                    keyText[index].faceColor = new Color32(0, 255, 0, 255);
                     if (index >= keyText.Length - 1)
                     {
-                        FMODUnity.RuntimeManager.PlayOneShot("event:/Engine Fix Success");
-                        OnCompletion();
+                        StartCoroutine(WinDelay());
                     }
                     else
                     {
@@ -73,4 +72,12 @@ public class RepairController : MonoBehaviour
             }
         }
     }
+
+ IEnumerator WinDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Engine Fix Success");
+        OnCompletion();
+    }
 }
+
