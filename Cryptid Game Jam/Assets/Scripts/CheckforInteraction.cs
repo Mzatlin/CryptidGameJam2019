@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CheckforInteraction : MonoBehaviour
 {
@@ -16,8 +17,10 @@ public class CheckforInteraction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(interaction.Hit.collider.transform.GetComponent<IInteractable>() != null)
+            var checker = interaction.Hit.collider.transform.GetComponent<IInteractable>();
+            if (checker != null)
             {
+                checker.ReceiveInteraction();
                 Debug.Log("can interact");
             }
         }

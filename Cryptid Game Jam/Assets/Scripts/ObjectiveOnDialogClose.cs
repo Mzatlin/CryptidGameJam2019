@@ -5,6 +5,8 @@ using UnityEngine;
 public class ObjectiveOnDialogClose : MonoBehaviour
 {
     [SerializeField]
+    string objectiveTitle;
+    [SerializeField]
     HeaderText header;
     [SerializeField]
     ObjectiveSystem objectiveSystem;
@@ -13,7 +15,7 @@ public class ObjectiveOnDialogClose : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerObjective = new Objective("Head to boat");
+        playerObjective = new Objective(objectiveTitle);
         dialog = GetComponent<HandleDialogInteraction>();
         dialog.OnClosed += HandleCloseDialog;
     }

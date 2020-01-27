@@ -9,13 +9,14 @@ public abstract class InteractionBase : MonoBehaviour, IInteractable
     public event Action OnHover = delegate { };
     public event Action OnLeaveHover = delegate { };
 
-    private bool isInteractable = true;
+    [SerializeField]
+    bool _isInteractable = true;
 
-    public bool IsInteractable { get => isInteractable; set => isInteractable = value; }
+    public bool IsInteractable { get => _isInteractable; set => _isInteractable = value; }
 
     public void ReceiveInteraction()
     {
-        if (isInteractable)
+        if (_isInteractable)
         {
             ProcessInteraction();
         }
@@ -23,7 +24,11 @@ public abstract class InteractionBase : MonoBehaviour, IInteractable
 
     public void ReceiveMouseHover()
     {
-        ProcessHover();
+        if (_isInteractable)
+        {
+            ProcessHover();
+        }
+ 
     }
 
     public void ReceiveHoverLeave()
