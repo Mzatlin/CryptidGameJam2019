@@ -11,11 +11,18 @@ public class NewObjectiveController : MonoBehaviour
     [SerializeField]
     List<Objective> objectives = new List<Objective>();
     [SerializeField]
-    Objective startingObjective;
+    ObjectiveSO startingObjective;
     // Start is called before the first frame update
     void Start()
     {
-        if(startingObjective.objectiveText != null)
+        if(objectiveSystem.objectives.Count > 0)
+        {
+            foreach(ObjectiveSO obj in objectiveSystem.objectives)
+            {
+                obj.isActive = false;
+            }
+        }
+        if(startingObjective != null)
         {
             objectiveSystem.ChangeObjective(startingObjective);
         }

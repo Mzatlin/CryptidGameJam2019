@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2441854268ad14aa90dc206e9010d9, type: 3}
+  m_Name: Message Box Text
+  m_EditorClassIdentifier: 
+  dialogMessages:
+  - '''Ey there, stranger! Yer lookin'' to fish ''round here?'
+  - Good! Not a whole lotta ya come by 'ere nowadays, what with all the rumors lately.
+  - 'Aah, don''t ye worry though. It''s all just gobbledygook anyhow. '
+  - Now, yer' be wantin' to go fishing, aye? Hop on board and start up the engine!

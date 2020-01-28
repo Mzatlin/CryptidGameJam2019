@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Objective System
   m_EditorClassIdentifier: 
   text: {fileID: 11400000, guid: 7df10baaba8c56745970f3bab8d01c41, type: 2}
-  currentObjective:
-    isActive: 0
-    objectiveText: Head to boat
-  objectives: []
+  currentObjective: {fileID: 11400000, guid: 7d60b2e83c55ff545a5406fed96b7319, type: 2}
+  objectives:
+  - {fileID: 11400000, guid: f386cb2f0be9986468c188712b5791dd, type: 2}
+  - {fileID: 11400000, guid: 7d60b2e83c55ff545a5406fed96b7319, type: 2}

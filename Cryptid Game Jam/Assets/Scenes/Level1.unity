@@ -1224,6 +1224,7 @@ GameObject:
   - component: {fileID: 398060434}
   - component: {fileID: 398060440}
   - component: {fileID: 398060441}
+  - component: {fileID: 398060442}
   m_Layer: 8
   m_Name: Transition
   m_TagString: Untagged
@@ -1355,6 +1356,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4120b7d4a69679e4c8ded187a13877e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &398060442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398060433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a72033eb2fdc2c4ea45aeabcb314888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objective: {fileID: 11400000, guid: 7d60b2e83c55ff545a5406fed96b7319, type: 2}
 --- !u!1 &435217946
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,6 +3168,7 @@ MonoBehaviour:
   objectiveTitle: 'Head To Boat '
   header: {fileID: 11400000, guid: 7df10baaba8c56745970f3bab8d01c41, type: 2}
   objectiveSystem: {fileID: 11400000, guid: c487db059afd6624595e248c55390549, type: 2}
+  playerObjective: {fileID: 11400000, guid: 7d60b2e83c55ff545a5406fed96b7319, type: 2}
 --- !u!1001 &691008564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7040,6 +7055,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4224794298600578581, guid: 54f8ad9c53ddd034386984cd9f1f5054,
+        type: 3}
+      propertyPath: startingObjective
+      value: 
+      objectReference: {fileID: 11400000, guid: f386cb2f0be9986468c188712b5791dd,
+        type: 2}
     - target: {fileID: 4224794298600578586, guid: 54f8ad9c53ddd034386984cd9f1f5054,
         type: 3}
       propertyPath: m_Name

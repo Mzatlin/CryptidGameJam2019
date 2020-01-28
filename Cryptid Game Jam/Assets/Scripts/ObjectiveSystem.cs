@@ -9,16 +9,22 @@ public class ObjectiveSystem : ScriptableObject
     [SerializeField]
     HeaderText text;
 
-    public event Action<string> OnObjectiveChange = delegate {};
-    public Objective currentObjective;
+    public ObjectiveSO currentObjective;
 
-    public List<Objective> objectives = new List<Objective>();
+    public List<ObjectiveSO> objectives = new List<ObjectiveSO>();
 
-    public void ChangeObjective(Objective _currentObj)
+    public void ChangeObjective(ObjectiveSO _currentObj)
     {
-        text.WriteHeader(_currentObj.objectiveText);
-       currentObjective.isActive = _currentObj.isActive;
-       currentObjective.objectiveText = _currentObj.objectiveText;
-       OnObjectiveChange(currentObjective.objectiveText);
+        if(currentObjective != null)
+        {
+            currentObjective.CompleteObjective();
+        }
+
+        currentObjective = _currentObj;
+
+        text.WriteHeader(currentObjective.objectiveTitle);
+
+        currentObjective.BeginObjective();
+
     }
 }
