@@ -12,7 +12,7 @@ public class ShipEngineHandleInteract : MonoBehaviour
     InteractionController interact;
     RepairController repair;
     public static bool isActive = false;
-    // Start is called before the first frame update
+    
     void Start()
     {
         if (RepairMinigame != null)
@@ -29,6 +29,7 @@ public class ShipEngineHandleInteract : MonoBehaviour
     {
         if (!isActive)
         {
+            interact.IsInteractable = false;
             StartCoroutine(StartDelay());
         }
     }
@@ -36,8 +37,12 @@ public class ShipEngineHandleInteract : MonoBehaviour
     {
         RepairMinigame.enabled = false;
         isActive = false;
+        interact.IsInteractable = true;
 
     }
+
+    //void HandleFailure() {}
+
     IEnumerator StartDelay()
     {
         yield return new WaitForSeconds(0.1f);

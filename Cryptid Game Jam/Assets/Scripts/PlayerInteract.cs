@@ -30,11 +30,9 @@ public class PlayerInteract : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * interactDist);
         if (Physics.Raycast(ray, out _hit, interactDist, interactLayer) && !playerStats.isOccupied && !playerStats.isDead)
         {
-
-         interact = _hit.collider.transform.GetComponent<IInteractable>();
+            interact = _hit.collider.transform.GetComponent<IInteractable>();
             if (interact != null)
             {
-                lastTouched = true;
                 interact.ReceiveMouseHover();
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -45,16 +43,10 @@ public class PlayerInteract : MonoBehaviour
         }
         else
         {
-            if (lastTouched)
+            if (interact != null)
             {
-                lastTouched = false;
-                if (interact != null)
-                {
-                    interact.ReceiveHoverLeave();
-                }
-
+                interact.ReceiveHoverLeave();
             }
-
         }
     }
 
