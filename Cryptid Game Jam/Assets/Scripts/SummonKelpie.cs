@@ -6,12 +6,16 @@ public class SummonKelpie : MonoBehaviour
 {
     FishStorageCount storage;
     [SerializeField]
-    GameObject SpawnManager;
+    List<GameObject> SpawnManager = new List<GameObject>();
     FMOD.Studio.EventInstance track;
     // Start is called before the first frame update
     void Start()
     {
-        SpawnManager.SetActive(false);
+        foreach(GameObject obj in SpawnManager)
+        {
+            obj.SetActive(false);
+        }
+
         storage = GetComponent<FishStorageCount>();
         storage.OnFilledup += HandleFill;
         //track = FMODUnity.RuntimeManager.CreateInstance("event:/Water Horse Track");
@@ -19,7 +23,11 @@ public class SummonKelpie : MonoBehaviour
 
     void HandleFill()
     {
-        SpawnManager.SetActive(true);
-        track.start();
+        foreach (GameObject obj in SpawnManager)
+        {
+            obj.SetActive(true);
+        }
+
+       // track.start();
     }
 }

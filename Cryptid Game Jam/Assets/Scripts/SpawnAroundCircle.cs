@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class SpawnAroundCircle : MonoBehaviour
 {
+    public event Action OnSpawned = delegate { };
     [SerializeField]
     int numObjects = 10;
     [SerializeField]
@@ -21,6 +23,7 @@ public class SpawnAroundCircle : MonoBehaviour
     {
         isActive = true;
         prefab.SetActive(true);
+        OnSpawned();
         InvokeRepeating("CheckActive", 7f, 3f);
         /*  Vector3 center = transform.position;
           for (int i = 0; i < numObjects; i++)
@@ -54,7 +57,7 @@ public class SpawnAroundCircle : MonoBehaviour
 
         Vector3 RandomCircle(Vector3 center, float radius)
         {
-            float ang = Random.value * 360;
+            float ang = UnityEngine.Random.value * 360;
             Vector3 pos;
             pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
             pos.z = center.z + radius * Mathf.Cos(ang * Mathf.Deg2Rad);

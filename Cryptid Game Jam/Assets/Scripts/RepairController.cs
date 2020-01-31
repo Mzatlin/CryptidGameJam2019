@@ -8,7 +8,8 @@ using System;
 [RequireComponent(typeof(ShipEngineHandleInteract))]
 public class RepairController : MonoBehaviour
 {
-    public event Action OnCompletion = delegate { };
+    public event Action OnExit = delegate { };
+    public event Action OnSuccess = delegate { };
 
     [SerializeField]
     KeyCode[] keys;
@@ -44,7 +45,7 @@ public class RepairController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ShipEngineHandleInteract.isActive)
+        if (ShipEngineHandleInteract.isMiniGameActive)
         {
             if (Input.anyKeyDown)
             {
@@ -66,7 +67,7 @@ public class RepairController : MonoBehaviour
                 {
                     FMODUnity.RuntimeManager.PlayOneShot("event:/Engine Fix Fail");
                     Debug.Log("Wrong Key!");
-                    OnCompletion();
+                    OnExit();
                 }
 
             }
@@ -77,7 +78,8 @@ public class RepairController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         FMODUnity.RuntimeManager.PlayOneShot("event:/Engine Fix Success");
-        OnCompletion();
+        OnSuccess();
+        OnExit();
     }
 }
 

@@ -21,9 +21,6 @@ public class PlayerInteract : MonoBehaviour
     public RaycastHit Hit => _hit;
 
 
-
-    // Update is called once per frame
-    //todo: have another class that attempts an interaction based on the hit variable. CanInteract - interact != null - Also based on other criteria  
     void FixedUpdate()
     {
         ray = new Ray(transform.position, transform.forward);

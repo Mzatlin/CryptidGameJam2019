@@ -11,7 +11,7 @@ public class ShipEngineHandleInteract : MonoBehaviour
     Canvas RepairMinigame;
     InteractionController interact;
     RepairController repair;
-    public static bool isActive = false;
+    public static bool isMiniGameActive = false;
     
     void Start()
     {
@@ -21,33 +21,31 @@ public class ShipEngineHandleInteract : MonoBehaviour
             interact = GetComponent<InteractionController>();
             interact.OnInteract += HandleInteract;
             repair = GetComponent<RepairController>();
-            repair.OnCompletion += HandleCompletion;
+            repair.OnExit += HandleExit;
         }
     }
 
     void HandleInteract()
     {
-        if (!isActive)
+        if (!isMiniGameActive)
         {
             interact.IsInteractable = false;
             StartCoroutine(StartDelay());
         }
     }
-    void HandleCompletion()
+    void HandleExit()
     {
         RepairMinigame.enabled = false;
-        isActive = false;
+        isMiniGameActive = false;
         interact.IsInteractable = true;
-
     }
 
-    //void HandleFailure() {}
 
     IEnumerator StartDelay()
     {
         yield return new WaitForSeconds(0.1f);
         RepairMinigame.enabled = true;
-        isActive = true;
+        isMiniGameActive = true;
         OnRepairStart();
     }
 }

@@ -23,7 +23,7 @@ public class BoatDeath : MonoBehaviour
     void HandleDie()
     {
         player.GetComponent<PlayerMoveController>().enabled = false;
-        player.GetComponent<RodCastBobber>().enabled = false;
+        //player.GetComponent<RodCastBobber>().enabled = false;
         BoatMovementController.isMotorActive = false;
         ship.isDead = true;
     }

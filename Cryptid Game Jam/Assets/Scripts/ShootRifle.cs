@@ -12,6 +12,8 @@ public class ShootRifle : MonoBehaviour
     Ray ray;
     RaycastHit hit;
     Animator animate;
+    [SerializeField]
+    LayerMask hittableLayer;
     // Start is called before the first frame update
     void Awake()
     {
@@ -39,7 +41,7 @@ public class ShootRifle : MonoBehaviour
             animate.Play("gunshot");
             ray = new Ray(transform.position, transform.forward);
             Debug.DrawRay(ray.origin, ray.direction * shootRange);
-            if (Physics.Raycast(ray, out hit, shootRange))
+            if (Physics.Raycast(ray, out hit, shootRange,hittableLayer))
             {
                 var target = hit.transform.GetComponent<IHittable>();
                 if (target != null)

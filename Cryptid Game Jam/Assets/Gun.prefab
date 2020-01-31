@@ -144,5 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5eecac16ff683d43aab347f39de5c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootRange: 1000
+  shootRange: 10000
   timeBeforeFire: 0.01
+  hittableLayer:
+    serializedVersion: 2
+    m_Bits: 512

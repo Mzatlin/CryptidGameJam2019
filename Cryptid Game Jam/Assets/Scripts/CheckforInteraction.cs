@@ -15,7 +15,7 @@ public class CheckforInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && interaction != null)
         {
             var checker = interaction.Hit.collider.transform.GetComponent<IInteractable>();
             if (checker != null)

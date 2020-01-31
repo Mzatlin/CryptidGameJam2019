@@ -21,8 +21,8 @@ public class HolsterSystemSO : ScriptableObject
     {
         if (child != null)
         {
-            child.transform.SetParent(null);
             child.SetActive(false);
+            child.transform.SetParent(null);
             child = null;
         }
     }

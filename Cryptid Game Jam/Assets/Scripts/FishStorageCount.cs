@@ -38,6 +38,7 @@ public class FishStorageCount : MonoBehaviour
             if(fishCount >= 3)
             {
                 OnFilledup();
+                holster.SetItem(gun);
                 header.WriteHeader("Escape Using The Boat");
             }
         }
