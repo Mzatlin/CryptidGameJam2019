@@ -37,7 +37,6 @@ public class HandleMotorStart : MonoBehaviour
             if (child != null)
             {
                 child.OnStopMotor += HandleStop;
-              
 
             }
         }

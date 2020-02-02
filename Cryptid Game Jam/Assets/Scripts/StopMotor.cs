@@ -11,9 +11,14 @@ public class StopMotor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerStats.isOccupied && Input.GetKeyDown(KeyCode.Escape) && BoatMovementController.isMotorActive)
+        if (playerStats.isOccupied && Input.GetKeyDown(KeyCode.X) && BoatMovementController.isMotorActive)
         {
-            OnStopMotor();
+            StopBoat();
         }
+    }
+
+    public void StopBoat()
+    {
+        OnStopMotor();
     }
 }

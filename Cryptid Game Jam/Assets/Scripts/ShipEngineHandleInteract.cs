@@ -6,6 +6,7 @@ using System;
 public class ShipEngineHandleInteract : MonoBehaviour
 {
     public event Action OnRepairStart = delegate { };
+    public event Action OnRepairSuccess = delegate { };
 
     [SerializeField]
     Canvas RepairMinigame;
@@ -22,6 +23,7 @@ public class ShipEngineHandleInteract : MonoBehaviour
             interact.OnInteract += HandleInteract;
             repair = GetComponent<RepairController>();
             repair.OnExit += HandleExit;
+            repair.OnSuccess += HandleSuccess;
         }
     }
 
@@ -35,11 +37,21 @@ public class ShipEngineHandleInteract : MonoBehaviour
     }
     void HandleExit()
     {
-        RepairMinigame.enabled = false;
-        isMiniGameActive = false;
+        StopMinigame();
         interact.IsInteractable = true;
     }
 
+    void HandleSuccess()
+    {
+        StopMinigame();
+        OnRepairSuccess();
+    }
+
+    void StopMinigame()
+    {
+        RepairMinigame.enabled = false;
+        isMiniGameActive = false;
+    }
 
     IEnumerator StartDelay()
     {
