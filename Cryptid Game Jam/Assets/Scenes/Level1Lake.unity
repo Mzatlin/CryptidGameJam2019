@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebb516251bf6af6498a335511fd4a844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kelpieStats: {fileID: 11400000, guid: 1a3dccdea76aebe41b88e1052efbb1a4, type: 2}
   SpawnManager:
   - {fileID: 1107201359}
   - {fileID: 1259067152}
@@ -571,7 +572,7 @@ PrefabInstance:
     - target: {fileID: 6162030016144328081, guid: ab890ec1f40ba8a44a5557495ea95cf5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.9999695
+      value: 2.999939
       objectReference: {fileID: 0}
     - target: {fileID: 6162030016543651680, guid: ab890ec1f40ba8a44a5557495ea95cf5,
         type: 3}
@@ -1819,6 +1820,7 @@ GameObject:
   - component: {fileID: 579891216}
   - component: {fileID: 579891217}
   - component: {fileID: 579891218}
+  - component: {fileID: 579891219}
   m_Layer: 9
   m_Name: Kelpie
   m_TagString: Untagged
@@ -1845,7 +1847,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579891206}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 612a7fa20cb6c124696ccd2556243999, type: 3}
   m_Name: 
@@ -2025,6 +2027,21 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 350
+--- !u!114 &579891219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579891206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a5df9753cd64145adf9543c2e8cac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 672118480}
+  speed: 12
+  kelpieStats: {fileID: 11400000, guid: 1a3dccdea76aebe41b88e1052efbb1a4, type: 2}
 --- !u!1 &611255467
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,6 +3281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kelpie: {fileID: 579891206}
+  kelpieStats: {fileID: 11400000, guid: 1a3dccdea76aebe41b88e1052efbb1a4, type: 2}
+  speedIncrease: 0
 --- !u!1 &1221537972
 GameObject:
   m_ObjectHideFlags: 0

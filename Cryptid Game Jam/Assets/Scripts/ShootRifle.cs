@@ -27,7 +27,7 @@ public class ShootRifle : MonoBehaviour
       //  if (fireTime >= timeBeforeFire)
     //    {
             FireWeapon();
-      //      fireTime = 0;
+      //    fireTime = 0;
      //   }
       //  fireTime += Time.fixedDeltaTime;
 

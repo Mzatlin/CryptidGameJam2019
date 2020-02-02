@@ -24,7 +24,7 @@ public class SpawnAroundCircle : MonoBehaviour
         isActive = true;
         prefab.SetActive(true);
         OnSpawned();
-        InvokeRepeating("CheckActive", 7f, 3f);
+        InvokeRepeating("CheckActive", 11f, 6f);
         /*  Vector3 center = transform.position;
           for (int i = 0; i < numObjects; i++)
           {
@@ -42,6 +42,7 @@ public class SpawnAroundCircle : MonoBehaviour
             Vector3 center = transform.position;
             prefab.transform.position = RandomCircle(center, Circleradius);
             prefab.SetActive(true);
+            OnSpawned();
 
             health = prefab.GetComponent<HealthController>();
             if (health != null)

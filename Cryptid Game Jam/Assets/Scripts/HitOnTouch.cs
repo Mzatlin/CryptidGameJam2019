@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class HitOnTouch : MonoBehaviour
 {
+    public event Action OnTouched = delegate { };
+
     void OnTriggerEnter(Collider other)
     {
         var movableCharacter = other.GetComponent<IMovable>();
@@ -13,6 +16,7 @@ public class HitOnTouch : MonoBehaviour
             if (health != null)
             {
                 health.RecieveDamage();
+                OnTouched();
                 gameObject.SetActive(false);
             }
         }

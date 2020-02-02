@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class SummonKelpie : MonoBehaviour
 {
-    FishStorageCount storage;
+
+    [SerializeField]
+    KelpieStats kelpieStats;
     [SerializeField]
     List<GameObject> SpawnManager = new List<GameObject>();
+
+    FishStorageCount storage;
     FMOD.Studio.EventInstance track;
-    // Start is called before the first frame update
+   
     void Start()
     {
         foreach(GameObject obj in SpawnManager)
@@ -23,6 +27,8 @@ public class SummonKelpie : MonoBehaviour
 
     void HandleFill()
     {
+        kelpieStats.ResetSpeed();
+        kelpieStats.isAlive = true;
         foreach (GameObject obj in SpawnManager)
         {
             obj.SetActive(true);
