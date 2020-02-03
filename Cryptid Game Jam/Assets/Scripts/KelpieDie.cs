@@ -18,8 +18,8 @@ public class KelpieDie : MonoBehaviour
 
     void HandleDie()
     {
-       // hit.enabled = false;
-       // follow.enabled = false;
+        hit.enabled = false;
+        follow.enabled = false;
         gameObject.SetActive(false);
     }
 }

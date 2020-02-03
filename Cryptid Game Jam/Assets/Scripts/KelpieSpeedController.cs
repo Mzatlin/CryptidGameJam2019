@@ -13,12 +13,16 @@ public class KelpieSpeedController : MonoBehaviour
     KelpieStats kelpieStats;
     [SerializeField]
     float speedIncrease;
+    KelpieChaseTarget chase;
     // Start is called before the first frame update
     void Start()
     {
         kelpieStats.isAlive = false;
         touch = kelpie.GetComponent<HitOnTouch>();
         touch.OnTouched += HandleTouch;
+        touch.enabled = true;
+        chase = kelpie.GetComponent<KelpieChaseTarget>();
+        chase.enabled = true;
         spawn = GetComponent<SpawnAroundCircle>();
         spawn.OnSpawned += HandleSpawnSpeed;
         health = kelpie.GetComponent<HealthController>();
@@ -49,12 +53,16 @@ public class KelpieSpeedController : MonoBehaviour
     {
         HandleTouch();
         kelpieStats.KelpieMoveSpeed = 0;
+        touch.enabled = false;
+        chase.enabled = false;
     }
 
     void HandleSpawnSpeed()
     {
         kelpieStats.isAlive = true;
         kelpieStats.ResetSpeed();
+        touch.enabled = true;
+        chase.enabled = true;
     }
 
 

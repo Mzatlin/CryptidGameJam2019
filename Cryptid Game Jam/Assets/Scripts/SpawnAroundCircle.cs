@@ -24,7 +24,7 @@ public class SpawnAroundCircle : MonoBehaviour
         isActive = true;
         prefab.SetActive(true);
         OnSpawned();
-        InvokeRepeating("CheckActive", 11f, 6f);
+        InvokeRepeating("CheckActive", 14f, 9f);
         /*  Vector3 center = transform.position;
           for (int i = 0; i < numObjects; i++)
           {
