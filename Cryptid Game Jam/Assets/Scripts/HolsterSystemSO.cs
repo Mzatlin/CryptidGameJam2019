@@ -8,7 +8,7 @@ public class HolsterSystemSO : ScriptableObject
     public GameObject holsterPosition;
     public GameObject child;
 
-    void SetItem(GameObject item)
+    public void SetItem(GameObject item)
     {
         RemoveItem(child);
         child = item;
@@ -17,7 +17,7 @@ public class HolsterSystemSO : ScriptableObject
         child.SetActive(true);
     }
 
-    void RemoveItem(GameObject item)
+    public void RemoveItem(GameObject item)
     {
         if (child != null)
         {

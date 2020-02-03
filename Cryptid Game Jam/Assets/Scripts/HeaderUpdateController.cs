@@ -11,7 +11,6 @@ public class HeaderUpdateController : WriterBase
 
     void Awake()
     {
-        Debug.Log("Test");
         header.message = "";
         textContent.text = "";
         header.OnWrite += HandleWrite;
@@ -29,7 +28,7 @@ public class HeaderUpdateController : WriterBase
     void OnDestroy()
     {
         header.OnWrite -= HandleWrite;
-        StopCoroutine(headerRoutine);
+        StopAllCoroutines();
     }
 
 

@@ -9,6 +9,8 @@ public class BoatDeath : MonoBehaviour
     [SerializeField]
     GameObject player;
     HealthController health;
+    [SerializeField]
+    HolsterSystemSO holster;
 
 
     void Start()
@@ -22,10 +24,12 @@ public class BoatDeath : MonoBehaviour
 
     void HandleDie()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Death Stinger");
         player.GetComponent<PlayerMoveController>().enabled = false;
         //player.GetComponent<RodCastBobber>().enabled = false;
         BoatMovementController.isMotorActive = false;
         ship.isDead = true;
+        holster.RemoveItem(holster.child);
     }
 
 }

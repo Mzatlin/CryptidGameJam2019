@@ -13,7 +13,7 @@ public class SpawnToPositions : MonoBehaviour
     [SerializeField]
     float delay = 3f;
     [SerializeField]
-    int startingHealth = 3;
+    int startingHealth = 1;
     HealthController health;
 
     void Start()
@@ -48,9 +48,22 @@ public class SpawnToPositions : MonoBehaviour
             enemyToSpawn.transform.position = GetRandomSpawnLocation().transform.position;
             health.IsDead = false;
             health.CurrentHealth = startingHealth;
+            StartCoroutine("FadeIn", enemyToSpawn);
             enemyToSpawn.SetActive(true);
         }
 
+    }
+    IEnumerator FadeIn(GameObject enemy)
+    {
+        SpriteRenderer sprite = enemy.GetComponentInChildren<SpriteRenderer>();
+        for (float f = 0f; f <= 1.05f; f += 0.05f)
+        {
+            Color c = sprite.material.color;
+            c.a = f;
+            sprite.material.color = c;
+            yield return new WaitForSeconds(0.005f);
+        }
+        enemy.GetComponent<EnemyFollowTarget>().enabled = true;
     }
 
     GameObject GetRandomSpawnLocation()

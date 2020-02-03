@@ -19,6 +19,7 @@ public class EnemyFlashOnHit : MonoBehaviour
     void HandleHit()
     {
         StartCoroutine(Flash());
+        render.color = originalColor;
     }
     IEnumerator Flash()
     {
