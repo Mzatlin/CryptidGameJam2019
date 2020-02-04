@@ -28,15 +28,20 @@ public class PlayerMoveController : MonoBehaviour, IMovable
     {
         if (player.isOccupied || player.isDead)
         {
-            physics.SetVelocity(Vector3.zero);
-            physics.SetRotation(Vector3.zero);
-            physics.CameraRotation(0f);
+            StopMovement();
             return;
         }
 
 
         CalculateMovement();
         CalculateRotation();
+    }
+
+    public void StopMovement()
+    {
+        physics.SetVelocity(Vector3.zero);
+        physics.SetRotation(Vector3.zero);
+        physics.CameraRotation(0f);
     }
 
     public void CalculateRotation()

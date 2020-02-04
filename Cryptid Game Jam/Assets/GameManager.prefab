@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3557285040665585336}
   - component: {fileID: 3557285040665585341}
   - component: {fileID: 3557285040665585338}
+  - component: {fileID: 7625971124064380140}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -72,6 +73,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 7268227345831550113}
+--- !u!114 &7625971124064380140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557285040665585337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df54140b07ef5a44494557bda784cd8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
 --- !u!1001 &3558229366407069787
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be885b373942967498b58e661e7240dc, type: 3}
   m_Name: Player Stats SO
   m_EditorClassIdentifier: 
-  isOccupied: 1
+  isOccupied: 0
   isDead: 0
