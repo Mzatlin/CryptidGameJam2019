@@ -13,6 +13,7 @@ public class HandleDialogInteraction : MonoBehaviour
     [SerializeField]
     List<string> dialog = new List<string>();
     InteractionController interact;
+    bool isTalking;
 
     // Start is called before the first frame update
     void Start()
@@ -20,16 +21,23 @@ public class HandleDialogInteraction : MonoBehaviour
         interact = GetComponent<InteractionController>();
         interact.OnInteract += HandleInteract;
         writer.OnFinish += HandleClosedDialog;
+        isTalking = false;
     }
 
     void HandleInteract()
     {
+        isTalking = true;
         writer.WriteDialog(dialog);
     }
 
     void HandleClosedDialog()
     {
-        OnClosed();
+        if (isTalking)
+        {
+            isTalking = false;
+            OnClosed();
+        }
+
     }
 
 }

@@ -18,7 +18,7 @@ public class ConcealOnDoorOpen : MonoBehaviour
 
     void HandleDoorOpen()
     {
-        itemToConceal.SetActive(true);
+        itemToConceal.SetActive(false);
     }
 
 }

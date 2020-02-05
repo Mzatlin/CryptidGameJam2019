@@ -11,6 +11,9 @@ public class BoatDeath : MonoBehaviour
     HealthController health;
     [SerializeField]
     HolsterSystemSO holster;
+    [SerializeField]
+    PlayerStatsSO playerStats;
+    PlayerMoveController move;
 
 
     void Start()
@@ -18,7 +21,7 @@ public class BoatDeath : MonoBehaviour
         ship.isDead = false;
         health = GetComponent<HealthController>();
         health.OnDie += HandleDie;
-        player.GetComponent<PlayerMoveController>();
+        move = player.GetComponent<PlayerMoveController>();
     }
 
 
@@ -30,6 +33,9 @@ public class BoatDeath : MonoBehaviour
         BoatMovementController.isMotorActive = false;
         ship.isDead = true;
         holster.RemoveItem(holster.child);
+        playerStats.KillPlayer();
+        move.ResetPlayerMovement();
+        
     }
 
 }
