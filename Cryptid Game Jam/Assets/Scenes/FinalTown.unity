@@ -448,7 +448,7 @@ Animator:
   m_GameObject: {fileID: 79409023}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a4c7d1c31d66d1c48947531803852c64, type: 2}
+  m_Controller: {fileID: 9100000, guid: 71cc94c16ecfc2f46962d774ae25867a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -495,7 +495,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d84f4085eb045140b265f72dfbecb6a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da63bcc7316fd01429ef51f763e4097b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1647,19 +1647,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1469398918}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &366328080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366328079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed70b7f733e17f941b6f9e5a57005faa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: TitleScene
 --- !u!114 &366328081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1759,6 +1746,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToConceal: {fileID: 1482571150}
+--- !u!114 &366328089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366328079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed70b7f733e17f941b6f9e5a57005faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: Credits
 --- !u!1 &382359903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2407,7 +2407,7 @@ Animator:
   m_GameObject: {fileID: 501642485}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a4c7d1c31d66d1c48947531803852c64, type: 2}
+  m_Controller: {fileID: 9100000, guid: 71cc94c16ecfc2f46962d774ae25867a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2454,7 +2454,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d84f4085eb045140b265f72dfbecb6a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da63bcc7316fd01429ef51f763e4097b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4765,6 +4765,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c,
         type: 2}
+    - target: {fileID: 2512930882619744846, guid: 7d7ef5b0e3c08d643a1aa59ecf0d43a5,
+        type: 3}
+      propertyPath: fadeCanvas
+      value: 
+      objectReference: {fileID: 106309364}
     - target: {fileID: 4573061265350620742, guid: 7d7ef5b0e3c08d643a1aa59ecf0d43a5,
         type: 3}
       propertyPath: m_Name
@@ -5244,33 +5249,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 837758770}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1065868606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065868595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4a326f54693b6a499f497f5051dfd99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeCanvas: {fileID: 106309364}
---- !u!114 &1065868607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065868595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 245e2f60d3d94d14889fc59dfe053a96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeAlpha: 1
-  fadeDuration: 2.5
 --- !u!1001 &1086982281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7630,7 +7608,7 @@ Animator:
   m_GameObject: {fileID: 1577519244}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a4c7d1c31d66d1c48947531803852c64, type: 2}
+  m_Controller: {fileID: 9100000, guid: 71cc94c16ecfc2f46962d774ae25867a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -25,6 +25,11 @@ public class SpawnToPositions : MonoBehaviour
         InvokeRepeating("SpawnItem", Random.Range(spawnAmount,spawnAmount+2),delay);
     }
 
+    void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     void SetupItems()
     {
         for (int i = 0; i < SpawnItems.Count; i++)
