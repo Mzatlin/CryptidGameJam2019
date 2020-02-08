@@ -28,6 +28,7 @@ public class SpawnToPositions : MonoBehaviour
     void OnDisable()
     {
         StopAllCoroutines();
+        CancelInvoke();
     }
 
     void SetupItems()
