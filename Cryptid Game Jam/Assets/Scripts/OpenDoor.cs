@@ -9,8 +9,6 @@ public class OpenDoor : MonoBehaviour
     public event Action OnDoorOpen = delegate { };
     InteractionController interact;
     MeshRenderer render;
-    [SerializeField]
-    string level;
 
     void Start()
     {
@@ -24,12 +22,6 @@ public class OpenDoor : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot("event:/Door Creak", GetComponent<Transform>().position);
         render.enabled = false;
         OnDoorOpen();
-        StartCoroutine(NewScene());
     }
 
-    IEnumerator NewScene()
-    {
-        yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(level, LoadSceneMode.Single);
-    }
 }

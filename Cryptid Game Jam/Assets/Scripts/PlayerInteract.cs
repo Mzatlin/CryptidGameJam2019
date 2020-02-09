@@ -12,6 +12,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField]
     PlayerStatsSO playerStats;
 
+    Camera playerCamera;
     Ray ray;
     bool lastTouched = false;
     bool isInteracted = false;
@@ -21,9 +22,19 @@ public class PlayerInteract : MonoBehaviour
     public RaycastHit Hit => _hit;
 
 
+    void Start()
+    {
+        playerCamera = GetComponentInChildren<Camera>();
+    }
+
     void FixedUpdate()
     {
-        ray = new Ray(transform.position, transform.forward);
+        DrawRaycast();
+    }
+
+    void DrawRaycast()
+    {
+        ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * interactDist);
         if (Physics.Raycast(ray, out _hit, interactDist, interactLayer) && !playerStats.isOccupied && !playerStats.isDead)
         {
@@ -46,6 +57,5 @@ public class PlayerInteract : MonoBehaviour
             }
         }
     }
-
 
 }

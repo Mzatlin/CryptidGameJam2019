@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootRange: 10000
-  timeBeforeFire: 0.01
+  timeBeforeFire: 1
   hittableLayer:
     serializedVersion: 2
     m_Bits: 512
