@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 890163474}
   - component: {fileID: 890163479}
   - component: {fileID: 890163478}
+  - component: {fileID: 890163480}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -577,7 +578,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeAlpha: 1
-  fadeDuration: 3
+  fadeDuration: 2.5
+  fadeCanvas: {fileID: 1079145098}
 --- !u!114 &890163479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,6 +593,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeCanvas: {fileID: 1079145098}
+--- !u!114 &890163480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890163472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e831a2f21ca7e418b3847622ed87a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &998723285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -706,17 +720,32 @@ PrefabInstance:
     - target: {fileID: 6356780335695503651, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216,
         type: 3}
       propertyPath: m_RenderMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6356780335695503651, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216,
         type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356780335695503651, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216,
+        type: 3}
+      propertyPath: m_PixelPerfect
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6356780335695503652, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216,
         type: 3}
       propertyPath: m_Name
       value: FadeCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356780335695503652, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356780335940424284, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216, type: 3}
@@ -919,7 +948,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 12
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1331,7 +1360,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1545,7 +1574,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0

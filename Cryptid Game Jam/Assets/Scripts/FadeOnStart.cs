@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using System;
 
 public class FadeOnStart : MonoBehaviour
 {
@@ -6,13 +8,16 @@ public class FadeOnStart : MonoBehaviour
     float fadeAlpha;
     [SerializeField]
     float fadeDuration;
+    [SerializeField]
+    float delayTime = 0f;
+    IFade fade;
 
     void Start()
     {
-        var fade = GetComponent<IFade>();
+        fade = GetComponent<IFade>();
         if (fade != null)
         {
-            fade.Fade(fadeAlpha, fadeDuration);
+            StartCoroutine(FadeDelay());
         }
         else
         {
@@ -20,4 +25,11 @@ public class FadeOnStart : MonoBehaviour
         }
     }
 
+    IEnumerator FadeDelay()
+    {
+        yield return new WaitForSeconds(delayTime);
+        fade.Fade(fadeAlpha, fadeDuration);
+    }
+
 }
+
