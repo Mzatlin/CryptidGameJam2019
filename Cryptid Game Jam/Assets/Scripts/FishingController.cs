@@ -114,13 +114,14 @@ public class FishingController : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(5f,10f));
         Debug.Log("You got a Bite!");
-        render.color = Color.red;
+        animate.SetBool("HasBite", true);
+      //  render.color = Color.red;
         FishOn = FMODUnity.RuntimeManager.CreateInstance("event:/Fish On the Hook");
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(FishOn, bobber.GetComponent<Transform>(),bobber.GetComponent<Rigidbody>());
         FishOn.start();
         fishing = FishState.Bite;
         yield return new WaitForSeconds(Random.Range(1f, 2f));
-        render.color = original;
+        animate.SetBool("HasBite", false);
         Debug.Log("Too Slow!");
         fishing = FishState.Missed;
         FishOn.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);

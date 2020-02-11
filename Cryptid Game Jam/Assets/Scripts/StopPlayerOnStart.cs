@@ -18,7 +18,14 @@ public class StopPlayerOnStart : MonoBehaviour
             cursor.enabled = false;
         }
         fade = GetComponent<IFade>();
-        fade.OnEndFade += HandleFade;
+        if(fade != null)
+        {
+            fade.OnEndFade += HandleFade;
+        }
+        else
+        {
+            Debug.Log("No fade found");
+        }
         playerStats.isOccupied = true;
     }
 
@@ -34,6 +41,6 @@ public class StopPlayerOnStart : MonoBehaviour
         {
             cursor.enabled = true;
         }
-        playerStats.isOccupied = false;
+        playerStats.ResetPlayerStats();
     }
 }

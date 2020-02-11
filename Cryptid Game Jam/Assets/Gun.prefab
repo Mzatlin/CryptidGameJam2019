@@ -89,7 +89,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5265332485481129916}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 745d18d1a953c7d4380af167323b7875, type: 2}
   m_CullingMode: 0
@@ -110,6 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5265332486960470971}
   - component: {fileID: 5265332486960470970}
+  - component: {fileID: 9055771023759216593}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -149,3 +150,15 @@ MonoBehaviour:
   hittableLayer:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &9055771023759216593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5265332486960470968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2913ea7babb68c1428e2fc0cfaa09d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

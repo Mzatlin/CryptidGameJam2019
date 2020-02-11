@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ShootRifle : MonoBehaviour
 {
-    public static Action OnShoot = delegate { };
+    public event Action OnShoot = delegate { };
 
     public static bool isShootable = true;
     [SerializeField]
