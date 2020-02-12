@@ -637,7 +637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Press Enter]'
+  m_text: '[Press Space]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e8da8da7fe86794ba7c0eaae31a1957, type: 2}
   m_sharedMaterial: {fileID: -8568974044964549650, guid: 0e8da8da7fe86794ba7c0eaae31a1957,
@@ -1729,6 +1729,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeAlpha: 0
   fadeDuration: 2.5
+  delayTime: 0
+--- !u!114 &488951260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488951252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f1e4e454b18ce4dba4a736b1e82ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 53aeeff98c0cc6e4e81ce70bdd75bb9b, type: 3}
 --- !u!114 &501729345 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1039521576914437995, guid: b613e35ef3ea3014ebdde0e65fc22e55,
@@ -2051,7 +2065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.111250006, y: 0.07349066}
   m_AnchorMax: {x: 0.87750006, y: 0.5}
-  m_AnchoredPosition: {x: 7.269989, y: -1.6999817}
+  m_AnchoredPosition: {x: 7.2699585, y: -1.6999817}
   m_SizeDelta: {x: 13.16, y: -0.6899986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556057832

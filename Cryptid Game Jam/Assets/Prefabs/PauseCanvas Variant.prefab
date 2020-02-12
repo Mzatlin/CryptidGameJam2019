@@ -330,6 +330,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ResumeGame
       objectReference: {fileID: 0}
+    - target: {fileID: 6162030015090622185, guid: ab890ec1f40ba8a44a5557495ea95cf5,
+        type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162030015090622185, guid: ab890ec1f40ba8a44a5557495ea95cf5,
+        type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 5394975272845032723, guid: dc37ff4371009eb41ac0c97fd830fc1a,
+        type: 3}
     - target: {fileID: 6162030015090622186, guid: ab890ec1f40ba8a44a5557495ea95cf5,
         type: 3}
       propertyPath: m_Sprite
@@ -352,6 +363,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2.999939
       objectReference: {fileID: 0}
+    - target: {fileID: 6162030016144328083, guid: ab890ec1f40ba8a44a5557495ea95cf5,
+        type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162030016144328083, guid: ab890ec1f40ba8a44a5557495ea95cf5,
+        type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 5394975272845032723, guid: dc37ff4371009eb41ac0c97fd830fc1a,
+        type: 3}
     - target: {fileID: 6162030016543651680, guid: ab890ec1f40ba8a44a5557495ea95cf5,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -415,7 +437,7 @@ PrefabInstance:
     - target: {fileID: 6162030016543651680, guid: ab890ec1f40ba8a44a5557495ea95cf5,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6162030016543651680, guid: ab890ec1f40ba8a44a5557495ea95cf5,
         type: 3}

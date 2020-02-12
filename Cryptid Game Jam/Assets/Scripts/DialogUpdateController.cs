@@ -39,7 +39,7 @@ public class DialogUpdateController : WriterBase
             }
         }
 
-        if (continueText.enabled && Input.GetKeyDown(KeyCode.Return))
+        if (continueText.enabled && Input.GetKeyDown(KeyCode.Space))
         {
             if (index >= messageBox.dialogMessages.Count - 1)
             {

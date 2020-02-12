@@ -18,5 +18,6 @@ public static class PlayerExtensionMethods
     public static void ResetPlayerMovement(this PlayerMoveController movement)
     {
         movement.StopMovement();
+        movement.GetComponent<Rigidbody>().Sleep();
     }
 }

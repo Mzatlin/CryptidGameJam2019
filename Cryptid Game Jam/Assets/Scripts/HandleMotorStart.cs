@@ -76,7 +76,7 @@ public class HandleMotorStart : MonoBehaviour
 
     IEnumerator DelayStop()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         move.ResetPlayerMovement();
         player.gameObject.SetActive(true);
         playerStats.isOccupied = false;

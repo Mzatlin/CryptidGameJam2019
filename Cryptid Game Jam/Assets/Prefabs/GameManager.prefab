@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3557285040665585341}
   - component: {fileID: 3557285040665585338}
   - component: {fileID: 7625971124064380140}
+  - component: {fileID: 7261446700048556676}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -86,6 +87,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
+--- !u!114 &7261446700048556676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557285040665585337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f1e4e454b18ce4dba4a736b1e82ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 53aeeff98c0cc6e4e81ce70bdd75bb9b, type: 3}
 --- !u!1001 &3558229366407069787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,6 +216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178006865510448372, guid: 46ca558067778ac418a3fe51107b92fa,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46ca558067778ac418a3fe51107b92fa, type: 3}

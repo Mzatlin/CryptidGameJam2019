@@ -31,7 +31,6 @@ public class RodReelBackBobber : MonoBehaviour
     {
         if (isReelable && Input.GetButtonDown("Fire1"))
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Reel In");
             RetrieveBobber();
         }
     }
@@ -47,6 +46,7 @@ public class RodReelBackBobber : MonoBehaviour
 
     public void RetrieveBobber()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Reel In");
         StartCoroutine(Delay());
 
     }

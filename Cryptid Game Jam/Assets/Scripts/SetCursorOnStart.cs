@@ -8,12 +8,12 @@ public class SetCursorOnStart : MonoBehaviour
     private Texture2D cursorTexture;
     void Start()
     {
-        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        ChangeCursor();
     }
 
     // Update is called once per frame
-    void Update()
+    public void ChangeCursor()
     {
-        
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
     }
 }

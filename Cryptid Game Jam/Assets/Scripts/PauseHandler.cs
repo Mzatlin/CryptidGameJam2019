@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PauseHandler : MonoBehaviour
 {
+    public event Action OnUnpause = delegate { };
+
     [SerializeField]
     Canvas pauseCanvas;
     PauseController controller;
@@ -26,6 +29,7 @@ public class PauseHandler : MonoBehaviour
         {
             pauseCanvas.enabled = false;
             Time.timeScale = 1;
+            OnUnpause();
         }
         else
         {

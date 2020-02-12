@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class RodCastBobber : MonoBehaviour
 {
+    public event Action OnCast = delegate { };
+
     [SerializeField]
     float castingRange = 20f;
     [SerializeField]
@@ -40,6 +43,7 @@ public class RodCastBobber : MonoBehaviour
         {
             if (!bobber.activeInHierarchy)
             {
+                OnCast();
                 stats.isOccupied = true;
                 bobber.SetActive(true);
                 bobber.GetComponent<Rigidbody>().AddForce(gameObject.transform.forward * castingRange);

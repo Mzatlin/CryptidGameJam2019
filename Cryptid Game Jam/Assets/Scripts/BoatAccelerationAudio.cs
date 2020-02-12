@@ -23,13 +23,13 @@ public class BoatAccelerationAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerStats.isOccupied && Input.GetKey(KeyCode.W) && (PlaybackState(accelerate) != (PLAYBACK_STATE.PLAYING)) && drivingBoat)
+        if (playerStats.isOccupied && (Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.S)) && (PlaybackState(accelerate) != (PLAYBACK_STATE.PLAYING)) && drivingBoat)
         {
             accelerate = FMODUnity.RuntimeManager.CreateInstance(sound);
 
             accelerate.start();
         }
-        if(playerStats.isOccupied && Input.GetKeyUp(KeyCode.W) && (PlaybackState(accelerate) == PLAYBACK_STATE.PLAYING) && BoatMovementController.isMotorActive) 
+        if(playerStats.isOccupied && (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S)) && (PlaybackState(accelerate) == PLAYBACK_STATE.PLAYING) && BoatMovementController.isMotorActive) 
         {
             accelerate.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             accelerate.release();
