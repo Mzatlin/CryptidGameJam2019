@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class PauseHandler : MonoBehaviour
 {
@@ -11,30 +12,50 @@ public class PauseHandler : MonoBehaviour
     Canvas pauseCanvas;
     PauseController controller;
     ResumeButton resume;
+    Button button;
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<PauseController>();
         controller.OnPause += HandlePause;
+        controller.OnUnPause += HandleUnPause;
 
         resume = GetComponentInChildren<ResumeButton>();
-        resume.OnResume += HandlePause;
+        resume.OnResume += HandleUnPause;
+
+        button = GetComponentInChildren<Button>();
+        button.interactable = false;
 
         pauseCanvas.enabled = false;
     }
 
+    void HandleUnPause()
+    {
+        PauseController.isPaused = false;
+        pauseCanvas.enabled = false;
+        Time.timeScale = 1;
+        OnUnpause();
+        button.interactable = false;
+    }
+
     void HandlePause()
     {
-        if (pauseCanvas.enabled)
+        StartCoroutine(PauseDelay());
+    }
+
+    IEnumerator PauseDelay()
+    {
+        yield return new WaitForSeconds(.1f);
+        if (PauseController.isPaused)
         {
-            pauseCanvas.enabled = false;
-            Time.timeScale = 1;
-            OnUnpause();
+            HandleUnPause();
         }
         else
         {
-            pauseCanvas.enabled = true;
             Time.timeScale = 0;
+            PauseController.isPaused = true;
+            pauseCanvas.enabled = true;
+            button.interactable = true;
         }
     }
 }

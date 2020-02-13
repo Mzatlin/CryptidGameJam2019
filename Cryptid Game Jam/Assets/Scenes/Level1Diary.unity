@@ -414,7 +414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Press Enter]'
+  m_text: '[Press Space]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01d5aa721541f834aab7efa8c3cbf83b, type: 2}
   m_sharedMaterial: {fileID: 2397622155166348264, guid: 01d5aa721541f834aab7efa8c3cbf83b,
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 49.968285, y: 23.257683, z: 0, w: 0}
+  m_margin: {x: 43.474503, y: 23.257683, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 549782473}
     characterCount: 13
