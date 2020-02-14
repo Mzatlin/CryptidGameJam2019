@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PauseHandler : MonoBehaviour
 {
     public event Action OnUnpause = delegate { };
+    public event Action OnPause = delegate { };
 
     [SerializeField]
     Canvas pauseCanvas;
@@ -18,7 +19,6 @@ public class PauseHandler : MonoBehaviour
     {
         controller = GetComponent<PauseController>();
         controller.OnPause += HandlePause;
-        controller.OnUnPause += HandleUnPause;
 
         resume = GetComponentInChildren<ResumeButton>();
         resume.OnResume += HandleUnPause;
@@ -34,24 +34,19 @@ public class PauseHandler : MonoBehaviour
         PauseController.isPaused = false;
         pauseCanvas.enabled = false;
         Time.timeScale = 1;
-        OnUnpause();
         button.interactable = false;
+        OnUnpause();
     }
 
     void HandlePause()
     {
-        StartCoroutine(PauseDelay());
-    }
-
-    IEnumerator PauseDelay()
-    {
-        yield return new WaitForSeconds(.1f);
         if (PauseController.isPaused)
         {
             HandleUnPause();
         }
         else
         {
+            OnPause();
             Time.timeScale = 0;
             PauseController.isPaused = true;
             pauseCanvas.enabled = true;

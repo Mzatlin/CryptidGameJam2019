@@ -9,7 +9,6 @@ public class ResumeButton : MonoBehaviour
     // Update is called once per frame
     public void ResumeGame()
     {
-        Debug.Log("Pressed");
         OnResume();
     }
 }

@@ -3,12 +3,11 @@ using UnityEngine;
 
 public class CursorVisibility : MonoBehaviour
 {
-    PauseController pause;
-    PauseHandler unpause;
+    PauseHandler pause, unpause;
     // Start is called before the first frame update
     void Start()
     {
-        pause = GetComponent<PauseController>();
+        pause = GetComponent<PauseHandler>();
         pause.OnPause += HandlePause;
         unpause = GetComponent<PauseHandler>();
         unpause.OnUnpause += HandleUnPause;

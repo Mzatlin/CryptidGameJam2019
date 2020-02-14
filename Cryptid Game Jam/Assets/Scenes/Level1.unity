@@ -1735,19 +1735,6 @@ MonoBehaviour:
   fadeAlpha: 0
   fadeDuration: 2.5
   delayTime: 0
---- !u!114 &488951260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488951252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f1e4e454b18ce4dba4a736b1e82ab2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 53aeeff98c0cc6e4e81ce70bdd75bb9b, type: 3}
 --- !u!114 &501729345 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1039521576914437995, guid: b613e35ef3ea3014ebdde0e65fc22e55,
@@ -3418,6 +3405,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073648069301766082, guid: b29e96633aafc35479f47e197ef43bac,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3073648069486231306, guid: b29e96633aafc35479f47e197ef43bac,
         type: 3}
@@ -6130,6 +6122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261446700048556676, guid: 4153dae74db62c644874ea0b51ed98c1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7268227345732680819, guid: 4153dae74db62c644874ea0b51ed98c1,
         type: 3}

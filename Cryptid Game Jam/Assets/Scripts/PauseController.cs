@@ -5,7 +5,7 @@ public class PauseController : MonoBehaviour
 {
 
     public event Action OnPause = delegate { };
-    public event Action OnUnPause = delegate { };
+
     [SerializeField]
     PlayerStatsSO playerStats;
 
@@ -18,7 +18,7 @@ public class PauseController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isPaused && Input.GetKeyUp(KeyCode.Escape) && !playerStats.isDead)
+        if (Input.GetKeyUp(KeyCode.Escape) && !playerStats.isDead)
         {
             OnPause();
         }
