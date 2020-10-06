@@ -379,10 +379,10 @@ RectTransform:
   m_Father: {fileID: 2054014352}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.19625, y: 0.15351555}
-  m_AnchorMax: {x: 0.84875, y: 0.33578795}
-  m_AnchoredPosition: {x: -113, y: 46.6}
-  m_SizeDelta: {x: -322, y: -52}
+  m_AnchorMin: {x: 0.19625, y: 0.16244216}
+  m_AnchorMax: {x: 0.85, y: 0.38900003}
+  m_AnchoredPosition: {x: -113.5, y: 32.6}
+  m_SizeDelta: {x: -323, y: -72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &93675507
 CanvasRenderer:
@@ -391,7 +391,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93675505}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!114 &93675508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -48.023544, y: -4.158438, z: -274.87558, w: -68.10072}
+  m_margin: {x: -48.023544, y: -4.158438, z: -274.87558, w: -57.639317}
   m_textInfo:
     textComponent: {fileID: 93675508}
     characterCount: 8
@@ -4106,7 +4106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb88093a696c7343809e043dc274501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.05
+  typingSpeed: 0.001
   textContent: {fileID: 93675508}
   messageBox: {fileID: 11400000, guid: 5aaa15f94ed556a4bb6e8ff1977aaf6c, type: 2}
   playerStats: {fileID: 11400000, guid: c04d4b7a340729140b19d3ae6ef24f5c, type: 2}
@@ -6178,6 +6178,16 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7268227346663095464, guid: 4153dae74db62c644874ea0b51ed98c1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7268227346663095464, guid: 4153dae74db62c644874ea0b51ed98c1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.6000004
+      objectReference: {fileID: 0}
     - target: {fileID: 7268227346663095471, guid: 4153dae74db62c644874ea0b51ed98c1,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -6267,7 +6277,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 1.25
+  m_padding: 1.7
   m_canvasRenderer: {fileID: 1691192466}
   m_TextComponent: {fileID: 135789016}
   m_materialReferenceIndex: 1
@@ -7353,6 +7363,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FadeCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356780335695503652, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216, type: 3}

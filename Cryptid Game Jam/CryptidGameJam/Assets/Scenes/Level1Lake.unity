@@ -4998,7 +4998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rod: {fileID: 612096040}
   gun: {fileID: 193415019}
-  fishCount: 2
+  fishCount: 0
   header: {fileID: 11400000, guid: 7df10baaba8c56745970f3bab8d01c41, type: 2}
 --- !u!114 &57827284
 MonoBehaviour:
@@ -5356,6 +5356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DeathCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162030014688860019, guid: ab890ec1f40ba8a44a5557495ea95cf5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6162030014791415740, guid: ab890ec1f40ba8a44a5557495ea95cf5,
         type: 3}
@@ -6428,7 +6433,12 @@ PrefabInstance:
     - target: {fileID: 4977913364454760228, guid: dd2cf61f8c6c72f4d96e4b78bd361b6f,
         type: 3}
       propertyPath: currentHealth
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4977913364454760228, guid: dd2cf61f8c6c72f4d96e4b78bd361b6f,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5663980718202339731, guid: dd2cf61f8c6c72f4d96e4b78bd361b6f,
         type: 3}
@@ -8646,6 +8656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FadeCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6356780335695503652, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c9dbeb8d6c5fd74a98bb3c1ec5cb216, type: 3}
