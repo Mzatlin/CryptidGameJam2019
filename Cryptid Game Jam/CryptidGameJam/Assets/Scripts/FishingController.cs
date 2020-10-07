@@ -49,6 +49,7 @@ public class FishingController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            animate.SetBool("HasBite", false);
             if (fishing == FishState.Bite)
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Fish Splash Out");
@@ -80,27 +81,25 @@ public class FishingController : MonoBehaviour
 
     IEnumerator CatchDelay()
     {
-        yield return new WaitForSeconds(.4f);
+        yield return new WaitForSeconds(.8f);
         //  holster.SetItem(fish[Random.Range(0, fish.Count - 1)]);
         if (index >= fish.Capacity)
         {
             index = 0;
         }
-        holster.SetItem(fish[index]);
+
         if(index == 2)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Bridle Stinger");
             Debug.Log("You caught the bridle!");
         }
 
-        if(index >= fish.Capacity)
-        {
-            index = 0;
-        }
+        holster.SetItem(fish[index]);
         index++;
         header.WriteHeader("Place in Front Chest");
         playerstats.isOccupied = false;
-       // reelBack.RetrieveBobber();
+
+        //reelBack.RetrieveBobber();
 
     }
 
