@@ -6070,6 +6070,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3339925468216880097, guid: da6731617a2e767449d3793700710814,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3339925468216880111, guid: da6731617a2e767449d3793700710814,
         type: 3}
       propertyPath: m_LocalPosition.z
