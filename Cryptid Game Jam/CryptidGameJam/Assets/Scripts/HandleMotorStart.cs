@@ -70,13 +70,11 @@ public class HandleMotorStart : MonoBehaviour
         {
             Items[i].transform.parent = null;
         }
-
-
     }
 
     IEnumerator DelayStop()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.2f);
         move.ResetPlayerMovement();
         player.gameObject.SetActive(true);
         playerStats.isOccupied = false;

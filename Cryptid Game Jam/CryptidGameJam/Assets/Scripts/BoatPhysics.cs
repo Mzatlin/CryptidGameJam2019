@@ -21,13 +21,15 @@ public class BoatPhysics : MonoBehaviour
     {
         rotation = _rotation; 
     }
+    public void StopBoat()
+    {
+        rb.velocity = Vector3.zero;
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
-
-        rb.AddTorque(transform.up * rotation * Time.deltaTime);
         rb.AddForce(velocity);
-
+        rb.AddTorque(transform.up * rotation * Time.deltaTime);
         // rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
         // rb.AddForce(-Vector3.Project(rb.velocity, transform.right) * rotation);
         //  transform.Translate(velocity*Time.deltaTime);

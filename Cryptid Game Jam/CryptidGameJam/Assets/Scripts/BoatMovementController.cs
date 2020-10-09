@@ -27,6 +27,7 @@ public class BoatMovementController : MonoBehaviour, IMovable
         if (!isMotorActive)
         {
             physics.SetVelocity(Vector3.zero);
+            StopBoat();
             return;
         }
         CalculateMovement();
@@ -45,5 +46,10 @@ public class BoatMovementController : MonoBehaviour, IMovable
         xMove = Input.GetAxis("Horizontal");
      //   moveHorizontal = (transform.right * xMove);
         physics.SetRotation(xMove * boatTorque);
+    }
+
+    private void StopBoat()
+    {
+        physics.StopBoat();
     }
 }
