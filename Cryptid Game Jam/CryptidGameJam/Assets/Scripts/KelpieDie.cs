@@ -20,6 +20,12 @@ public class KelpieDie : MonoBehaviour
     {
         hit.enabled = false;
         follow.enabled = false;
+        StartCoroutine(HitDelay());
+    }
+
+    IEnumerator HitDelay()
+    {
+        yield return new WaitForSeconds(.5f);
         gameObject.SetActive(false);
     }
 }

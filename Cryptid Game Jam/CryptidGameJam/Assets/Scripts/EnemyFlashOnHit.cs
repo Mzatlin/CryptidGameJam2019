@@ -18,8 +18,16 @@ public class EnemyFlashOnHit : MonoBehaviour
 
     void HandleHit()
     {
-        StartCoroutine(Flash());
-        render.color = originalColor;
+
+        if (render)
+        {
+            StartCoroutine(Flash());
+        }
+        else
+        {
+            Debug.Log("No Renderer Attached");
+        }
+
     }
     IEnumerator Flash()
     {
