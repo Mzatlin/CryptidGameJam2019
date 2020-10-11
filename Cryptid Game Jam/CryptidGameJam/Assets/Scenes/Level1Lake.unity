@@ -4998,7 +4998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rod: {fileID: 612096040}
   gun: {fileID: 193415019}
-  fishCount: 0
+  fishCount: 2
   header: {fileID: 11400000, guid: 7df10baaba8c56745970f3bab8d01c41, type: 2}
 --- !u!114 &57827284
 MonoBehaviour:
@@ -6549,6 +6549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8121463596473332106, guid: dd2cf61f8c6c72f4d96e4b78bd361b6f,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8121463596639449456, guid: dd2cf61f8c6c72f4d96e4b78bd361b6f,
         type: 3}
