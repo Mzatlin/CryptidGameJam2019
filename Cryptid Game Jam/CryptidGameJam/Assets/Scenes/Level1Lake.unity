@@ -7023,7 +7023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ad39d29a1db4243b6e0d443fda9cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowerAmount: 5
+  amountToMove: 10
   lowerTime: 5
 --- !u!1 &611255467
 GameObject:

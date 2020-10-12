@@ -2,20 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SinkOnDeath : MonoBehaviour
+public class RiseOnSpawn : MonoBehaviour
 {
-    public float amountToMove = 10f;
+    public float amountToMove = -10f;
     public float lowerTime = 3f;
-    HealthController health;
     Vector3 moveTransform;
-    // Start is called before the first frame update
-    void Start()
-    {
-        health = GetComponent<HealthController>();
-        health.OnDie += HandleDie;
-    }
 
-    void HandleDie()
+    void OnEnable()
     {
         float startTime = Time.time;
         moveTransform = transform.position - new Vector3(0f, amountToMove, 0f);
@@ -26,10 +19,10 @@ public class SinkOnDeath : MonoBehaviour
     {
         float time = 0;
 
-        while(time < lowerTime)
+        while (time < lowerTime)
         {
-            transform.position = Vector3.Lerp(transform.position, lowerTransform,  time/lowerAmount);
-            time+=Time.deltaTime;
+            transform.position = Vector3.Lerp(lowerTransform, transform.position, time / lowerAmount);
+            time += Time.deltaTime;
             yield return null;
         }
         transform.position = lowerTransform;
