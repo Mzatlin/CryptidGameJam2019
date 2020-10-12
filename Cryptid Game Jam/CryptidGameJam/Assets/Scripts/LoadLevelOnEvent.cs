@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class LoadLevelOnEvent : MonoBehaviour
+public class LoadLevelOnEvent : MonoBehaviour, ILoadScene
 {
+    public event Action OnStartLoad = delegate {};
     OpenDoor door;
     LoadLevel level;
     // Start is called before the first frame update
@@ -25,6 +27,7 @@ public class LoadLevelOnEvent : MonoBehaviour
     IEnumerator NewScene()
     {
         yield return new WaitForSeconds(3f);
+        OnStartLoad();
         level.LevelLoad();
     }
 }
