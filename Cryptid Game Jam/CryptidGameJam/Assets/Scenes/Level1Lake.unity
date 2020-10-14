@@ -5460,19 +5460,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 219603996}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &123183980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123183979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f1e4e454b18ce4dba4a736b1e82ab2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 53aeeff98c0cc6e4e81ce70bdd75bb9b, type: 3}
 --- !u!114 &123183985
 MonoBehaviour:
   m_ObjectHideFlags: 0
