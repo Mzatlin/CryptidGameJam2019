@@ -46,7 +46,6 @@ public class SpawnToPositions : MonoBehaviour
 
     void SpawnItem()
     {
-        Debug.Log("Spawn");
         var enemyToSpawn = GetInactiveItem();
         if (enemyToSpawn != null)
         {
@@ -74,7 +73,7 @@ public class SpawnToPositions : MonoBehaviour
 
     GameObject GetRandomSpawnLocation()
     {
-        return SpawnLocations[Random.Range(0, SpawnLocations.Capacity)];
+        return SpawnLocations[Random.Range(0, SpawnLocations.Count)];
     }
 
     GameObject GetInactiveItem()
