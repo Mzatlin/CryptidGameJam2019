@@ -53,12 +53,12 @@ public class SpawnToPositions : MonoBehaviour
             enemyToSpawn.transform.position = GetRandomSpawnLocation().transform.position;
             health.IsDead = false;
             health.CurrentHealth = startingHealth;
-            StartCoroutine("FadeIn", enemyToSpawn);
+            StartCoroutine("FadeSpriteIn", enemyToSpawn);
             enemyToSpawn.SetActive(true);
         }
 
     }
-    IEnumerator FadeIn(GameObject enemy)
+    IEnumerator FadeSpriteIn(GameObject enemy)
     {
         SpriteRenderer sprite = enemy.GetComponentInChildren<SpriteRenderer>();
         for (float f = 0f; f <= 1.05f; f += 0.05f)
