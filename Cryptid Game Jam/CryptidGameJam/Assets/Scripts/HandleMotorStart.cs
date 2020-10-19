@@ -46,7 +46,6 @@ public class HandleMotorStart : MonoBehaviour
 
     void HandleStart()
     {
-        Debug.Log("Motor Started");
         BoatMovementController.isMotorActive = true;
         playerStats.isOccupied = true;
         for(int i = 0; i<Items.Capacity; i++)
@@ -61,7 +60,6 @@ public class HandleMotorStart : MonoBehaviour
 
     void HandleStop()
     {
-        Debug.Log("Motor Stopped");
         BoatMovementController.isMotorActive = false;
  
         StartCoroutine("DelayStop");
