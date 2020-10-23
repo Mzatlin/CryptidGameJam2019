@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &728341 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8121463598052830187, guid: dd2cf61f8c6c72f4d96e4b78bd361b6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 377822370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &37070697 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5663980718202339731, guid: dd2cf61f8c6c72f4d96e4b78bd361b6f,
@@ -7590,6 +7596,7 @@ GameObject:
   - component: {fileID: 579891219}
   - component: {fileID: 579891208}
   - component: {fileID: 579891220}
+  - component: {fileID: 579891221}
   m_Layer: 9
   m_Name: Kelpie
   m_TagString: Untagged
@@ -7657,7 +7664,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579891206}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b5a1c4c61bd2694eb6c5e7290cfee2b, type: 3}
   m_Name: 
@@ -7823,6 +7830,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountToMove: 10
   lowerTime: 5
+--- !u!114 &579891221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579891206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872ba8141f24ab84ca5155215da0e62e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &611255467
 GameObject:
   m_ObjectHideFlags: 0
@@ -8771,6 +8790,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 377822370}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &838112855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838112853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5142a1965ea15cf4181cb55b87266909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeCam: {fileID: 728341}
 --- !u!114 &838112862
 MonoBehaviour:
   m_ObjectHideFlags: 0
