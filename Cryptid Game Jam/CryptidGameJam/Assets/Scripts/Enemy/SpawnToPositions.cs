@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnToPositions : MonoBehaviour
+public class SpawnToPositions : SpawnGameObjectBase
 {
-    [SerializeField]
-    List<GameObject>SpawnLocations = new List<GameObject>();
-    [SerializeField]
-    List<GameObject> SpawnItems = new List<GameObject>();
     [SerializeField]
     float spawnAmount=1f;
     [SerializeField]
@@ -33,18 +29,18 @@ public class SpawnToPositions : MonoBehaviour
 
     void SetupItems()
     {
-        for (int i = 0; i < SpawnItems.Count; i++)
+        for (int i = 0; i < SpawnObjects.Count; i++)
         {
-            SpawnItems[i].SetActive(false);
-            health = SpawnItems[i].GetComponent<HealthController>();
+            SpawnObjects[i].SetActive(false);
+            health = SpawnObjects[i].GetComponent<HealthController>();
             if (health != null)
             {
-                SpawnItems[i].GetComponent<HealthController>().IsDead = true;
+                SpawnObjects[i].GetComponent<HealthController>().IsDead = true;
             }
         }
     }
 
-    void SpawnItem()
+    protected override void SpawnItem()
     {
         var enemyToSpawn = GetInactiveItem();
         if (enemyToSpawn != null)
@@ -71,7 +67,7 @@ public class SpawnToPositions : MonoBehaviour
         enemy.GetComponent<EnemyFollowTarget>().enabled = true;
     }
 
-    GameObject GetRandomSpawnLocation()
+    Transform GetRandomSpawnLocation()
     {
         return SpawnLocations[Random.Range(0, SpawnLocations.Count)];
     }
@@ -79,15 +75,14 @@ public class SpawnToPositions : MonoBehaviour
     GameObject GetInactiveItem()
     {
         GameObject _enemy = null;
-        for (int i = 0; i < SpawnItems.Count; i++)
+        for (int i = 0; i < SpawnObjects.Count; i++)
         {
-            if (SpawnItems[i].activeInHierarchy == false)
+            if (SpawnObjects[i].activeInHierarchy == false)
             {
-                _enemy = SpawnItems[i];
+                _enemy = SpawnObjects[i];
                 break;
             }
         }
         return _enemy;
     }
-
 }

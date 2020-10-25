@@ -7251,14 +7251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad13d9eaf87c9944f891a82dd5acd317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnLocations:
-  - {fileID: 1335835347}
-  - {fileID: 614080142}
-  - {fileID: 425512244}
-  - {fileID: 528978017}
-  - {fileID: 801390391}
-  - {fileID: 166854988}
-  SpawnItems:
+  SpawnObjects:
   - {fileID: 1328444958}
   - {fileID: 420973694}
   - {fileID: 503550938}
@@ -7267,6 +7260,13 @@ MonoBehaviour:
   - {fileID: 1720800613}
   - {fileID: 2039872955}
   - {fileID: 1394112182}
+  SpawnLocations:
+  - {fileID: 1335835348}
+  - {fileID: 614080143}
+  - {fileID: 425512245}
+  - {fileID: 528978018}
+  - {fileID: 801390392}
+  - {fileID: 166854989}
   spawnAmount: 1
   delay: 2
   startingHealth: 1
