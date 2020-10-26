@@ -40,20 +40,16 @@ public class SpawnToPositions : SpawnGameObjectBase
         }
     }
 
-    protected override void SpawnItem()
+    protected override void SetupObject(GameObject enemyToSpawn)
     {
-        var enemyToSpawn = GetInactiveItem();
-        if (enemyToSpawn != null)
-        {
-            health = enemyToSpawn.GetComponent<HealthController>();
-            enemyToSpawn.transform.position = GetRandomSpawnLocation().transform.position;
-            health.IsDead = false;
-            health.CurrentHealth = startingHealth;
-            StartCoroutine("FadeSpriteIn", enemyToSpawn);
-            enemyToSpawn.SetActive(true);
-        }
-
+        health = enemyToSpawn.GetComponent<HealthController>();
+        enemyToSpawn.transform.position = GetRandomSpawnLocation().transform.position;
+        health.IsDead = false;
+        health.CurrentHealth = startingHealth;
+        StartCoroutine("FadeSpriteIn", enemyToSpawn);
+        base.SetupObject(enemyToSpawn);
     }
+
     IEnumerator FadeSpriteIn(GameObject enemy)
     {
         SpriteRenderer sprite = enemy.GetComponentInChildren<SpriteRenderer>();
@@ -72,17 +68,4 @@ public class SpawnToPositions : SpawnGameObjectBase
         return SpawnLocations[Random.Range(0, SpawnLocations.Count)];
     }
 
-    GameObject GetInactiveItem()
-    {
-        GameObject _enemy = null;
-        for (int i = 0; i < SpawnObjects.Count; i++)
-        {
-            if (SpawnObjects[i].activeInHierarchy == false)
-            {
-                _enemy = SpawnObjects[i];
-                break;
-            }
-        }
-        return _enemy;
-    }
 }

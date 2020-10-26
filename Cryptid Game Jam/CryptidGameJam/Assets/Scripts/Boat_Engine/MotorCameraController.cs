@@ -47,9 +47,4 @@ public class MotorCameraController : MonoBehaviour
         boatCamera = changeCam;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
