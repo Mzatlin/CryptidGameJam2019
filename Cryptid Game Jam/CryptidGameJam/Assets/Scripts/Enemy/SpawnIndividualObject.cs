@@ -9,6 +9,8 @@ public class SpawnIndividualObject : SpawnGameObjectBase
     int timeBetweenSpawns = 4;
     int delay = 3;
     FishStorageCount storage;
+    [SerializeField]
+    GameObject fishStorageObject;
     Dictionary<GameObject, Transform> enemyGroupings = new Dictionary<GameObject, Transform>();
 
     protected override void SpawnItem()
@@ -18,14 +20,18 @@ public class SpawnIndividualObject : SpawnGameObjectBase
 
     protected override void SetupObject(GameObject enemyToSpawn)
     {
-          
+        enemyToSpawn.transform.position = enemyGroupings[enemyToSpawn].position;
         base.SetupObject(enemyToSpawn);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        storage = GetComponent<FishStorageCount>();
+        if(fishStorageObject != null)
+        {
+            storage = fishStorageObject.GetComponent<FishStorageCount>();
+        }
+       
         if(storage != null)
         {
             storage.OnFilledup += HandleFill;
