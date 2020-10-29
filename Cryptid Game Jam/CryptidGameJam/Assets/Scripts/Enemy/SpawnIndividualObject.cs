@@ -12,6 +12,8 @@ public class SpawnIndividualObject : SpawnGameObjectBase
     [SerializeField]
     GameObject fishStorageObject;
     Dictionary<GameObject, Transform> enemyGroupings = new Dictionary<GameObject, Transform>();
+    HealthController health;
+    ISpriteFade sprite;
 
     protected override void SpawnItem()
     {
@@ -20,7 +22,15 @@ public class SpawnIndividualObject : SpawnGameObjectBase
 
     protected override void SetupObject(GameObject enemyToSpawn)
     {
+        health = enemyToSpawn.GetComponent<HealthController>();
+        health.IsDead = false;
+        health.CurrentHealth = 1;
         enemyToSpawn.transform.position = enemyGroupings[enemyToSpawn].position;
+        if(sprite != null)
+        {
+            sprite.FadeSpriteIn(enemyToSpawn);
+        }
+       
         base.SetupObject(enemyToSpawn);
     }
 
@@ -36,6 +46,9 @@ public class SpawnIndividualObject : SpawnGameObjectBase
         {
             storage.OnFilledup += HandleFill;
         }
+
+        sprite = GetComponent<ISpriteFade>();
+
         SetupDictionary();
     }
 

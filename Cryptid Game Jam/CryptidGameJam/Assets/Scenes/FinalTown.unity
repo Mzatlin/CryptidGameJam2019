@@ -7232,6 +7232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1482571152}
   - component: {fileID: 1482571151}
+  - component: {fileID: 1482571153}
   m_Layer: 0
   m_Name: RunnerSpawnManager
   m_TagString: Untagged
@@ -7298,6 +7299,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1482571153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482571150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edbad5ebfafaea644924b98f86c971d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1534582352
 GameObject:
   m_ObjectHideFlags: 0
@@ -8933,7 +8946,7 @@ PrefabInstance:
     - target: {fileID: 7268227347060428382, guid: 4153dae74db62c644874ea0b51ed98c1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3
+      value: 2.9999542
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5029838807174508050, guid: 4153dae74db62c644874ea0b51ed98c1, type: 3}
@@ -9886,7 +9899,7 @@ PrefabInstance:
     - target: {fileID: 6162030016144328081, guid: ab890ec1f40ba8a44a5557495ea95cf5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3
+      value: 2.9999542
       objectReference: {fileID: 0}
     - target: {fileID: 6162030016543651687, guid: ab890ec1f40ba8a44a5557495ea95cf5,
         type: 3}

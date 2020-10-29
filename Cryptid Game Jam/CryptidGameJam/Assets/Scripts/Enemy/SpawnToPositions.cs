@@ -11,9 +11,11 @@ public class SpawnToPositions : SpawnGameObjectBase
     [SerializeField]
     int startingHealth = 1;
     HealthController health;
+    ISpriteFade sprite;
 
     void Start()
     {
+        sprite = GetComponent<ISpriteFade>();
         SetupItems();  
     }
     void OnEnable()
@@ -46,21 +48,12 @@ public class SpawnToPositions : SpawnGameObjectBase
         enemyToSpawn.transform.position = GetRandomSpawnLocation().transform.position;
         health.IsDead = false;
         health.CurrentHealth = startingHealth;
-        StartCoroutine("FadeSpriteIn", enemyToSpawn);
-        base.SetupObject(enemyToSpawn);
-    }
-
-    IEnumerator FadeSpriteIn(GameObject enemy)
-    {
-        SpriteRenderer sprite = enemy.GetComponentInChildren<SpriteRenderer>();
-        for (float f = 0f; f <= 1.05f; f += 0.05f)
+        if(sprite != null)
         {
-            Color c = sprite.material.color;
-            c.a = f;
-            sprite.material.color = c;
-            yield return new WaitForSeconds(0.005f);
+            sprite.FadeSpriteIn(enemyToSpawn);
         }
-        enemy.GetComponent<EnemyFollowTarget>().enabled = true;
+        enemyToSpawn.GetComponent<EnemyFollowTarget>().enabled = true;
+        base.SetupObject(enemyToSpawn);
     }
 
     Transform GetRandomSpawnLocation()
