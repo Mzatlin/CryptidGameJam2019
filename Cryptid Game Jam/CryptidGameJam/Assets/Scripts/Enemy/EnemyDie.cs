@@ -17,15 +17,28 @@ public class EnemyDie : MonoBehaviour
         health = GetComponent<HealthController>();
         render = GetComponentInChildren<SpriteRenderer>();
         originalColor = render.color;
-        health.OnDie += HandleDie;
+        if(health != null)
+        {
+            health.OnDie += HandleDie;
+        }
     }
 
     void HandleDie()
     {
         //render.color = new Color(1f, 1f, 1f, Mathf.PingPong(Time.time * 5f,1f));
-        render.color = originalColor;
-        hit.enabled = false;
-        follow.enabled = false;
+        if(render != null)
+        {
+            render.color = originalColor;
+        }
+        if(hit != null)
+        {
+            hit.enabled = false;
+        }
+        if(follow != null)
+        {
+            follow.enabled = false;
+        }
+
         StartCoroutine("Fade");
         StartCoroutine("DeathDelay");
     }

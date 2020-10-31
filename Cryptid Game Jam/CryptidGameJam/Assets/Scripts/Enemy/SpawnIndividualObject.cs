@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SpawnIndividualObject : SpawnGameObjectBase
 {
-    int timeBeforeFirstSpawn = 10;
+    int timeBeforeFirstSpawn = 1;
     int timeBetweenSpawns = 4;
     int delay = 3;
     FishStorageCount storage;
@@ -19,6 +19,7 @@ public class SpawnIndividualObject : SpawnGameObjectBase
     {
         base.SpawnItem();
     }
+
 
     protected override void SetupObject(GameObject enemyToSpawn)
     {
