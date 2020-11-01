@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class SpawnIndividualObject : SpawnGameObjectBase
 {
-    int timeBeforeFirstSpawn = 1;
-    int timeBetweenSpawns = 4;
+    int timeBeforeFirstSpawn = 20;
+    int timeBetweenSpawns = 5;
     int delay = 3;
     FishStorageCount storage;
     [SerializeField]
@@ -19,7 +19,6 @@ public class SpawnIndividualObject : SpawnGameObjectBase
     {
         base.SpawnItem();
     }
-
 
     protected override void SetupObject(GameObject enemyToSpawn)
     {
@@ -72,6 +71,6 @@ public class SpawnIndividualObject : SpawnGameObjectBase
     IEnumerator TimeToSpawnDelay()
     {
         yield return new WaitForSeconds(timeBeforeFirstSpawn);
-        InvokeRepeating("SpawnItem", UnityEngine.Random.Range(timeBetweenSpawns, timeBetweenSpawns + 2), delay);
+        InvokeRepeating("SpawnItem", UnityEngine.Random.Range(timeBetweenSpawns, timeBetweenSpawns + 2), UnityEngine.Random.Range(delay,delay+4));
     }
 }

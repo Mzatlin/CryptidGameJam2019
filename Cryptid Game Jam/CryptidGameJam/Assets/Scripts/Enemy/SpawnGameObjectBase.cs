@@ -23,7 +23,7 @@ public class SpawnGameObjectBase : MonoBehaviour
         enemyToSpawn.SetActive(true);
     }
 
-    protected GameObject GetInactiveItem()
+    protected virtual GameObject GetInactiveItem()
     {
         GameObject _enemy = null;
         for (int i = 0; i < SpawnObjects.Count; i++)
